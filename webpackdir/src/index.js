@@ -1,9 +1,4 @@
-console.log("WoW!")
-// index.js
-// создаем элемент заголовка
-const heading = document.createElement('h1')
-heading.textContent = 'Как интересно!'
-
-// добавляем заголовок в DOM
-const root = document.querySelector('#root')
-root.append(heading)
+function importAll(resolve) {
+    resolve.keys().forEach(resolve);
+}
+importAll(require.context('../src/', true,/\.js$|\.scss$/));

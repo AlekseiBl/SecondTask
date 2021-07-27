@@ -28,6 +28,7 @@ module.exports = {
             filename: 'index.html', // название выходного файла
         }),
         new HtmlWebpackPlugin({
+            //template: 'src/views/test.pug',
             filename: 'output.pug',
             minify: false
           }),
