@@ -3,19 +3,28 @@
 .btn {
     position: relative;
     width: 99px;
-    height: 44px;
-    border-radius: 22px;    
-    // border-image: linear-gradient($button-primary-color, $button-second-color);
-    // border-image-slice: 1;
-    &:before{
-        content: "";
-        position: absolute;
-        top: -2px;
-        bottom: -2px;
-        left: -2px;
-        right: -2px;
-        background: linear-gradient($button-primary-color, $button-second-color);
-        border-radius: 22px;
-        z-index: -1;
-    }
+    height: 44px;     
+    box-sizing: border-box;
+    $border: 5px;
+    background: #FFF;
+    background-clip: padding-box; /* !important */
+    border: transparent; /* !important */
+    border-radius: 22px;
+  &:before {
+    content: '';
+    position: absolute;
+    top: -2; right: -2; bottom: -2; left: -2;
+    z-index: -1;
+    margin: -$border; /* !important */
+    border-radius: inherit; /* !important */
+    background: linear-gradient(180deg, $button-primary-color 0%, $button-second-color 100%);
+  }
+}
+
+.btn-color {
+    background: linear-gradient(180deg, $button-primary-color 0%, $button-second-color 100%);
+}
+
+.btn-color-opacity {
+    opacity: 0.5;
 }
