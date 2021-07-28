@@ -18,13 +18,20 @@
     margin: -$border; /* !important */
     border-radius: inherit; /* !important */
     background: linear-gradient(180deg, $button-primary-color 0%, $button-second-color 100%);
+    
   }
 }
 
 .btn-color {
     background: linear-gradient(180deg, $button-primary-color 0%, $button-second-color 100%);
+    color:#FFF;
 }
 
 .btn-color-opacity {
     opacity: 0.5;
+}
+
+.btn-circle {
+    width: 44px;
+    height: 44px; 
 }
