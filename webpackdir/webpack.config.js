@@ -22,14 +22,15 @@ module.exports = {
         filename: '[name].bundle.js',
     },
     plugins: [
+        // new HtmlWebpackPlugin({
+        //     title: 'webpack Boilerplate',
+        //     template: path.resolve(__dirname, './src/template.html'), // шаблон
+        //     filename: 'index.html', // название выходного файла
+        // }),
         new HtmlWebpackPlugin({
             title: 'webpack Boilerplate',
-            template: path.resolve(__dirname, './src/template.html'), // шаблон
-            filename: 'index.html', // название выходного файла
-        }),
-        new HtmlWebpackPlugin({
-            //template: 'src/views/test.pug',
-            filename: 'output.pug',
+            template: './src/index.pug',
+            filename: 'index.html',
             minify: false
           }),
         new CleanWebpackPlugin(),
@@ -40,6 +41,13 @@ module.exports = {
 
     module: {
         rules: [
+            {
+                test: /\.pug$/,
+                loader: 'pug-loader',
+                options:{
+                    pretty:true,
+                }
+              },
             // изображения
             {
                 test: /\.(?:ico|gif|png|jpg|jpeg)$/i,

@@ -1,0 +1,9 @@
+@import "fonts.scss";
+@import "color.scss";
+$font-stack: montserrat;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  opacity: 75%;
+}
