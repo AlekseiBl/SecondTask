@@ -1,37 +1,54 @@
 /* Rectangle 2 */
 @import "./src/color.scss";
-.btn {
+
+.btn {          
     position: relative;
     width: 99px;
-    height: 44px;     
+    height: 44px; 
+    padding: 2px;
     box-sizing: border-box;
-    $border: 5px;
+    $border: 2px;
+    color: $button-primary-color;
     background: #FFF;
-    background-clip: padding-box; /* !important */
-    border: transparent; /* !important */
+    background-clip: padding-box; /* !importanté */
+    border: solid transparent; /* !importanté */
     border-radius: 22px;
-  &:before {
-    content: '';
-    position: absolute;
-    top: -2; right: -2; bottom: -2; left: -2;
-    z-index: -1;
-    margin: -$border; /* !important */
-    border-radius: inherit; /* !important */
-    background: linear-gradient(180deg, $button-primary-color 0%, $button-second-color 100%);
+    font-family: inherit;
     
-  }
 }
 
-.btn-color {
+.btn-border {
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        z-index: -1;
+        margin: -2px; /* !importanté */
+        border-radius: inherit; /* !importanté */
+        background: linear-gradient(180deg, $button-primary-color 0%, $button-second-color 100%);
+    }
+}
+
+.btn--border-opacity {
+    &:before{
+        opacity: 0.5;
+    }
+}
+
+.btn-color {    
+    border: transparent; /* !important */
     background: linear-gradient(180deg, $button-primary-color 0%, $button-second-color 100%);
-    color:#FFF;
+    color:#FFF;    
 }
 
 .btn-color-opacity {
-    opacity: 0.5;
+    opacity: 0.5;    
 }
 
 .btn-circle {
+    border: transparent;
     width: 44px;
     height: 44px; 
+    background: linear-gradient(180deg, $button-primary-color 0%, $button-second-color 100%);
+    color:#FFF;
 }
