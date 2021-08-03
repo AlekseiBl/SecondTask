@@ -6,27 +6,6 @@ html(lang="ru")
       //include style.scss
     title 1
   body
-    //- p Pug - node template engine  
-    //- include block/button/button.pug
-    //- - var list = ["square square-dark-shade-100", "square square-dark-shade-75", "square square-dark-shade-50","square square-dark-shade-25","square square-dark-shade-5", "square square-purple"] 
-    //- - var text_color = "#1F2041"   
-    //- - var list_text = ["Dark Shade 100%", "Dark Shade 75%", "Dark Shade 50%","Dark Shade 25%", "Dark Shade 5%","Purple"]
-    //- mixin div-square()
-    //-   each item in list
-    //-     div(class=item)
-    //- mixin div-text()
-    //-   each text in list_text       
-    //-     div(class="div-color-text")
-    //-       p= text
-    //-       p= text_color      
-    //- div(class="container")
-    //-   div(class="row")
-    //-     div(class="col-1-4")
-    //-       div(class="div-color-block")
-    //-         +div-square()
-    //-     div(class="col-1-4") 
-    //-       div(class="div-color-text")
-    //-         +div-text()
     - var text_color = "#1F2041"  
     - 
       var color_array = [
@@ -38,12 +17,11 @@ html(lang="ru")
         {style: "square square-purple", data:"Purple"}]
     mixin div-square()
       each item in color_array
-        div(class=item.style)
-        div(class="div-color-text")
-          p(class="text-color")=item.data
-          p(class="text-color")=text_color
-    div(class="container")
-      div(class="row")
-        div(class="col-1-4")
+        div(class="div-color")
           div(class="div-color-block")
-            +div-square()
+            div(class=item.style)
+          div(class="div-color-text")
+            p(class="text-color")=item.data
+            p(class="text-color")=text_color
+    div(class="container")      
+        +div-square()
