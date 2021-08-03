@@ -4,6 +4,71 @@ $font-stack: montserrat;
 
 body {
   font: 100% $font-stack;
-  color: $primary-color;
-  opacity: 75%;
+  color: $dark-shade-100;
+  //opacity: 75%;
+}
+.container {
+  width: 100%;
+  //max-width: 1024px; /*максимальная ширина может иметь другое значение*/
+  padding: 0 15px;
+  //margin: 0 auto;
+}
+
+.col-1-2 {
+  width: 50%;
+}
+.col-1-4 {
+  width: 25%;
+}
+
+.row {
+  margin-top: 145px;
+  //margin-left: 150px;
+}
+.container:after, .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.text-color {
+  margin-top: 1em;
+  margin-bottom: 1em;  
+  
+}
+.div-color-block { 
+  margin-left: 150px;   
+  display: inline-block;
+  
+}
+
+.div-color-text{
+  font-size: 19px;
+  display: inline-block;
+}
+
+.square {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  //margin-top: 20px;
+  margin-right: 40px;
+}
+.square-dark-shade-100 {  
+  background-color: $dark-shade-100;
+}
+.square-dark-shade-75 {  
+  background-color: $dark-shade-75;
+}
+.square-dark-shade-50 { 
+  background-color: $dark-shade-50;
+}
+.square-dark-shade-25 { 
+  background-color: $dark-shade-25;
+}
+.square-dark-shade-5 {
+  background-color: $dark-shade-5;
+}
+.square-purple {
+  background-color: $button-primary-color;
 }
