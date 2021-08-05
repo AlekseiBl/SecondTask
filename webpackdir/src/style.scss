@@ -1,6 +1,8 @@
-@import "fonts.scss";
+@import "fonts/Montserrat/fonts.css";
+@import "fonts/Montserrat-Bold/fonts.css";
 @import "color.scss";
-$font-stack: montserrat;
+$font-stack: Montserrat;
+$font-stack-bold: Montserrat-Bold;
 
 body {
   font: 100% $font-stack;
@@ -8,57 +10,47 @@ body {
   
 }
 .container {
+  position: absolute;
   width: 100%;
-  //max-width: 1024px; /*максимальная ширина может иметь другое значение*/
-  //padding: 0 15px;
-  //margin: 0 auto;
   display: flex;
   flex-direction: column;
-}
-
-.container2 {
-  width: 100%;
-  //max-width: 1024px; /*максимальная ширина может иметь другое значение*/
-  padding: 0 15px;
-  //margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.container3 {
-  width: 100%;
-  //max-width: 1024px; /*максимальная ширина может иметь другое значение*/
-  padding: 0 15px;
-  //margin: 0 auto;
-  display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .div-color { 
+  position: relative;
   display: flex;
   flex-direction: row; 
-  align-items: center;  
-  margin-left: 150px;
+  align-items: center;
+  left: 132px; 
+  top: 127px;
+  margin: 10px;
+  box-sizing: border-box;
 }
 
-// .text-color {
-//   margin-top: 1em;
-//   margin-bottom: 1em; 
-// }
 .div-color-block {
-  margin-right: 40px;
 }
 
-.div-color-text{
+.div-color-text{    
+  position: relative;
+  left: 40px;
   font-size: 19px;
-  font-weight: bold;
 }
 
+.text-color{ 
+  position: relative; 
+  margin: 5px 0;
+}
+
+.text-color-bold{
+  font: 100% $font-stack-bold;
+  font-weight: 900;
+}
 .square {
   width: 70px;
   height: 70px;
   border-radius: 6px;
-  //margin-right: 40px;
 }
 .square-dark-shade-100 {  
   background-color: $dark-shade-100;
