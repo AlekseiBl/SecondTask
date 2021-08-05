@@ -4,6 +4,7 @@
 $font-stack: Montserrat;
 $font-stack-bold: Montserrat-Bold;
 
+
 body {
   font: 100% $font-stack;
   color: $dark-shade-100;
@@ -37,7 +38,11 @@ body {
   left: 40px;
   font-size: 19px;
 }
-
+.logo{
+  position: absolute;
+  top:30px;
+  left: 30px;
+}
 .text-color{ 
   position: relative; 
   margin: 5px 0;
