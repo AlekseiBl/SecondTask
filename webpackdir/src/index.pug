@@ -5,24 +5,24 @@ html(lang="ru")
     style
       //include style.scss
     title 1
-  body
-    - var text_color = "#1F2041"  
+  body  
     - 
       var color_array = [
-        {style: "square square-dark-shade-100", data:"Dark Shade 100%"}, 
-        {style: "square square-dark-shade-75", data:"Dark Shade 75%"},
-        {style: "square square-dark-shade-50", data:"Dark Shade 50%"},
-        {style: "square square-dark-shade-25", data:"Dark Shade 25%"},
-        {style: "square square-dark-shade-5", data:"Dark Shade 5%"},
-        {style: "square square-purple", data:"Purple"}]
+        {style: "square square-dark-shade-100", color_name:"Dark Shade 100%", color_hex:"#1F2041"}, 
+        {style: "square square-dark-shade-75", color_name:"Dark Shade 75%", color_hex:"#1F2041"},
+        {style: "square square-dark-shade-50", color_name:"Dark Shade 50%", color_hex:"#1F2041"},
+        {style: "square square-dark-shade-25", color_name:"Dark Shade 25%", color_hex:"#1F2041"},
+        {style: "square square-dark-shade-5", color_name:"Dark Shade 5%", color_hex:"#1F2041"},
+        {style: "square square-purple", color_name:"Purple", color_hex:"#BC9CFF"},
+        {style: "square square-green", color_name:"Green", color_hex:"#6FCF97"}]
     mixin div-square()
       each item in color_array
         div(class="div-color")
           div(class="div-color-block")
             div(class=item.style)
           div(class="div-color-text")
-            p(class="text-color text-color-bold")=item.data
-            p(class="text-color")=text_color
+            p(class="text-color text-color-bold")=item.color_name
+            p(class="text-color")=item.color_hex
     div(class="container")      
         +div-square()
     //p This is the body text which is used for most of the design, like paragraphs, lists, etc.
