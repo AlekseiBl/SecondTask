@@ -1,8 +1,8 @@
-console.log("WoW!")
+//console.log("WoW!")
 
 // создаем элемент заголовка
-const heading = document.createElement('h1')
-heading.textContent = 'Как интересно!'
+//const heading = document.createElement('h1')
+//heading.textContent = 'Как интересно!'
 
 // добавляем заголовок в DOM
 // const root = document.querySelector('#root')
