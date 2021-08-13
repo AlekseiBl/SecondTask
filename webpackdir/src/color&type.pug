@@ -3,48 +3,50 @@ html(lang="ru")
   head
     //meta charset="utf-8" - косяк синтаксиса, разобраться       
     title
-  body
-    div(class="logo") 
-      include /block/logo/logo.pug      
+  body                
     - 
       var color_array = [
-        {style: "square square-dark-shade-100", color_name:"Dark Shade 100%", color_hex:"#1F2041"}, 
-        {style: "square square-dark-shade-75", color_name:"Dark Shade 75%", color_hex:"#1F2041"},
-        {style: "square square-dark-shade-50", color_name:"Dark Shade 50%", color_hex:"#1F2041"},
-        {style: "square square-dark-shade-25", color_name:"Dark Shade 25%", color_hex:"#1F2041"},
-        {style: "square square-dark-shade-5", color_name:"Dark Shade 5%", color_hex:"#1F2041"},
-        {style: "square square-purple", color_name:"Purple", color_hex:"#BC9CFF"},
-        {style: "square square-green", color_name:"Green", color_hex:"#6FCF97"}]
+        {style: "square square--dark-shade-100", color_name:"Dark Shade 100%", color_hex:"#1F2041"}, 
+        {style: "square square--dark-shade-75", color_name:"Dark Shade 75%", color_hex:"#1F2041"},
+        {style: "square square--dark-shade-50", color_name:"Dark Shade 50%", color_hex:"#1F2041"},
+        {style: "square square--dark-shade-25", color_name:"Dark Shade 25%", color_hex:"#1F2041"},
+        {style: "square square--dark-shade-5", color_name:"Dark Shade 5%", color_hex:"#1F2041"},
+        {style: "square square--purple", color_name:"Purple", color_hex:"#BC9CFF"},
+        {style: "square square--green", color_name:"Green", color_hex:"#6FCF97"}]
+    mixin logo()
+      include /block/logo/logo.pug 
     mixin div-square()
       each item in color_array
         div(class="row-1-1")
           div(class="column-1-1")
             div(class=item.style)
           div(class="column-1-2")
-            p(class="text-color text-color-bold")=item.color_name
-            p(class="text-color")=item.color_hex
+            p(class="square_desription square_desription--bold")=item.color_name
+            p(class="square_desription")=item.color_hex
+    div(class="logo")
+      +logo()
     div(class="container")
       div(class="column-1")      
           +div-square()
       div(class="column-2")
         row(class="row-2-1")
           div(class="column-2-1")
-            div(class="span spanh1") H1
+            div(class="heading heading--h1") H1
           div(class="column-2-2")
-            h1(class="h1colorpage") This one is the sub-section or widget title
+            h1(class="heading__desription--h1") This one is the sub-section or widget title
         row(class="row-2-1") 
           div(class="column-2-1")
-            div(class="span spanh2") H2
+            div(class="heading heading--h2") H2
           div(class="column-2-2")
-            h2(class="h2colorpage") Next one is the item title inside widgets
-        row(class="row-2-1 special") 
+            h2(class="heading__desription--h2") Next one is the item title inside widgets
+        row(class="row-2-1 row-2-1--height") 
           div(class="column-2-1")
-            div(class="span spanh3") H3
+            div(class="heading heading--h3") H3
           div(class="column-2-2")
-            h3(class="h3colorpage") THIS IS A LABEL OR CTA TEXT
+            h3(class="heading__desription--h3") THIS IS A LABEL OR CTA TEXT
         row(class="row-2-1") 
           div(class="column-2-1")
-            div(class="span spanp") Body
-          div(class="column-2-2 special2")
-            p(class="pcolorpage") This is the body text which is used for most of the design, like paragraphs, lists, etc.
+            div(class="heading heading--p") Body
+          div(class="column-2-2 column-2-2--width")
+            p(class="heading__desription--p") This is the body text which is used for most of the design, like paragraphs, lists, etc.
         

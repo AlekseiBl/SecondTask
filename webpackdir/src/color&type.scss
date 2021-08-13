@@ -1,14 +1,4 @@
-@import "fonts/Montserrat/fonts.css";
-@import "fonts/Montserrat-Bold/fonts.css";
-@import "color.scss";
-$font-stack: Montserrat, Arial, sans-serif;
-$font-stack-bold: Montserrat-Bold, Arial, sans-serif;
-
-
-html {
-  font: 100% $font-stack;
-  color: $dark-shade-100;  
-}
+@import "index.scss";
 
 .container {
   position:absolute;
@@ -78,7 +68,7 @@ html {
   margin-left: 22px;
 }
 
-.h1colorpage {
+.heading__desription--h1{
   display: flex;
   font: 100% $font-stack-bold;
   font-weight: 900;
@@ -86,19 +76,19 @@ html {
   margin-left: 30px;
   margin-bottom: 36px;
 }
-.span {
+.heading {
   width: auto;
   display: flex;
   height: 70px;
   margin-top: 16px;
 }
 
-.spanh1 {
+.heading--h1 {
   font-size: 24px;
   color: $dark-shade-25;
 }
 
-.h2colorpage {
+.heading__desription--h2 {
   display: flex;
   font: 100% $font-stack-bold;
   font-weight: 900;
@@ -107,23 +97,23 @@ html {
   margin-bottom: 40px;
   line-height: 1.3;
 }
-.spanh2 {
+.heading--h2 {
   font-size: 19px;
   color: $dark-shade-25;
 }
-.h3colorpage {
+.heading__desription--h3 {
   display: flex;
   font: 100% $font-stack-bold;
   font-weight: 900;
   font-size: 12px;
   margin-left: 30px;
 }
-.spanh3 {
+.heading--h3 {
   font-size: 12px;
   color: $dark-shade-25;
   margin-top: 12px;
 }
-.pcolorpage {
+.heading__desription--p {
   display: flex;
   font-weight: 900;
   font-size: 14px;
@@ -131,24 +121,25 @@ html {
   color: $dark-shade-50;
   line-height: 1.75;
 }
-.special {
+.row-2-1--height {
   height: 60px;
+  margin-top: 7px;
 }
 
-.special2 {
+.column-2-2--width {
   width: 60%;
 }
-.spanp {
+.heading--p {
   font-size: 14px;
   color: $dark-shade-25;
   //margin-top: 12px;
 }
-.text-color{ 
+.square_desription{ 
   position: relative; 
   margin: 5px 0;
 }
 
-.text-color-bold{
+.square_desription--bold{
   font: 100% $font-stack-bold;
   font-weight: 900;
 }
@@ -157,24 +148,24 @@ html {
   height: 70px;
   border-radius: 6px;
 }
-.square-dark-shade-100 {  
+.square--dark-shade-100 {  
   background-color: $dark-shade-100;
 }
-.square-dark-shade-75 {  
+.square--dark-shade-75 {  
   background-color: $dark-shade-75;
 }
-.square-dark-shade-50 { 
+.square--dark-shade-50 { 
   background-color: $dark-shade-50;
 }
-.square-dark-shade-25 { 
+.square--dark-shade-25 { 
   background-color: $dark-shade-25;
 }
-.square-dark-shade-5 {
+.square--dark-shade-5 {
   background-color: $dark-shade-5;
 }
-.square-purple {
+.square--purple {
   background-color: $button-primary-color;
 }
-.square-green {
+.square--green {
   background-color: $button-green-color;
 }

@@ -1,0 +1,11 @@
+@import "fonts/Montserrat/fonts.css";
+@import "fonts/Montserrat-Bold/fonts.css";
+@import "color.scss";
+$font-stack: Montserrat, Arial, sans-serif;
+$font-stack-bold: Montserrat-Bold, Arial, sans-serif;
+
+
+html {
+  font: 100% $font-stack;
+  color: $dark-shade-100;  
+}
