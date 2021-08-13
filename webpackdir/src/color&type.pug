@@ -1,6 +1,7 @@
 doctype html
 html(lang="ru")
   head
+    include /block/logo/logo.pug
     //meta charset="utf-8" - косяк синтаксиса, разобраться       
     title
   body                
@@ -13,8 +14,7 @@ html(lang="ru")
         {style: "square square--dark-shade-5", color_name:"Dark Shade 5%", color_hex:"#1F2041"},
         {style: "square square--purple", color_name:"Purple", color_hex:"#BC9CFF"},
         {style: "square square--green", color_name:"Green", color_hex:"#6FCF97"}]
-    mixin logo()
-      include /block/logo/logo.pug 
+         
     mixin div-square()
       each item in color_array
         div(class="row-1-1")
