@@ -1,0 +1,24 @@
+//@import "../../index.scss";
+
+.input-description {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;  
+  width: 328px;
+}
+
+.input-default {
+  position:relative;
+  display: flex;
+  width: 320px;
+  height: 44px;
+}
+
+.input-desription__left {
+  display: flex;
+}
+
+.input-desription__right {
+  display: flex;
+}

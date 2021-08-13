@@ -22,11 +22,7 @@ module.exports = {
         filename: '[name].bundle.js',
     },
     plugins: [
-        // new HtmlWebpackPlugin({
-        //     title: 'webpack Boilerplate',
-        //     template: path.resolve(__dirname, './src/template.html'), // шаблон
-        //     filename: 'index.html', // название выходного файла
-        // }),
+        
         new HtmlWebpackPlugin({
             title: 'webpack Boilerplate',
             template: './src/index.pug',
@@ -39,6 +35,12 @@ module.exports = {
             filename: 'color&type.html',
             minify: false
           }),
+          new HtmlWebpackPlugin({
+            title: 'webpack Boilerplate',
+            template: './src/form-elements.pug',
+            filename: 'form-elements.html',
+            minify: false
+          }),  
         new CleanWebpackPlugin(),
         // применять изменения только при горячей перезагрузке
         new webpack.HotModuleReplacementPlugin(),

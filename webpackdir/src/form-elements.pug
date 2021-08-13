@@ -1,0 +1,13 @@
+doctype html
+html(lang="ru")
+  head
+    include /block/input/input.pug
+    include /block/logo/logo.pug
+    //meta charset="utf-8" - косяк синтаксиса, разобраться       
+    title
+  body
+    div(class="logo")
+      +logo()
+    div(class="container-1")
+      form(action="error.js")
+        +input-default()   
