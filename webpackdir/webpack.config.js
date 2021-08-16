@@ -3,6 +3,7 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 var HtmlWebpackPugPlugin = require('html-webpack-pug-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+//const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     mode: "development",
@@ -41,6 +42,12 @@ module.exports = {
             filename: 'form-elements.html',
             minify: false
           }),  
+        //   new MiniCssExtractPlugin({
+        //     // Options similar to the same options in webpackOptions.output
+        //     // both options are optional
+        //     filename: 'style.css',
+        //     chunkFilename: '[id].css'
+        //   }),
         new CleanWebpackPlugin(),
         // применять изменения только при горячей перезагрузке
         new webpack.HotModuleReplacementPlugin(),
@@ -67,14 +74,29 @@ module.exports = {
                 type: 'asset/inline',
             },
             {
-                test: /\.s[ac]ss$/i,
+                test: /\.scss$/i,
                 use: [
                   // Creates `style` nodes from JS strings
                   "style-loader",
+                  //MiniCssExtractPlugin.loader,
                   // Translates CSS into CommonJS
                   "css-loader",
                   // Compiles Sass to CSS
                   "sass-loader",
+                //   {
+                //     loader: 'sass-resources-loader',
+                //     options: {
+                //       // Provide path to the file with resources
+                //       resources: './index.scss',
+          
+                //       // Or array of paths
+                //     //   resources: [
+                //     //     './path/to/vars.scss',
+                //     //     './path/to/mixins.scss',
+                //     //     './path/to/functions.scss'
+                //     //   ]
+                //     },
+                //   },
                 ],
               },
         ],

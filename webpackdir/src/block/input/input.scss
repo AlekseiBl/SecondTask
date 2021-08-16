@@ -1,4 +1,8 @@
-//@import "../../index.scss";
+@import "../../fonts/Montserrat/fonts.css";
+@import "../../fonts/Montserrat-Bold/fonts.css";
+@import "../../color.scss";
+$font-stack: Montserrat, Arial, sans-serif;
+$font-stack-bold: Montserrat-Bold, Arial, sans-serif;
 
 .input-description {
   position: relative;
@@ -9,16 +13,36 @@
 }
 
 .input-default {
-  position:relative;
+  position: relative;
   display: flex;
   width: 320px;
   height: 44px;
+  font-size: 12px;
+  color: $dark-shade-50;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+
+  &:focus {
+    color: rgba(31, 32, 65, 1);
+    border: 1px solid rgba(31, 32, 65, 1);   
+  }
+  
+}
+
+textarea:hover{
+  color: $dark-shade-100;
 }
 
 .input-desription__left {
-  display: flex;
+  display: flex;  
+  font: 100% $font-stack-bold;
+  font-size: 12px;
+  color: $dark-shade-100; 
 }
 
 .input-desription__right {
   display: flex;
+  font-size: 12px;
+  color: $dark-shade-50;
 }

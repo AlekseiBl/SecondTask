@@ -1,13 +1,19 @@
 doctype html
 html(lang="ru")
   head
+    style
+      include /block/dropdown/item-quantity-dropdown.min.css
     include /block/input/input.pug
     include /block/logo/logo.pug
-    //meta charset="utf-8" - косяк синтаксиса, разобраться       
+    include /block/dropdown/dropdown.pug      
     title
   body
-    div(class="logo")
-      +logo()
-    div(class="container-1")
-      form(action="error.js")
-        +input-default()   
+      div(class="logo")
+        +logo()
+      div(class="container-1")
+        form(action="error.js")
+          +input-default("TEXT FIELD","DEFAULT", "    Email")   
+        form(action="error.js")
+          +input-default("TEXT FIELD","HOVER/FOCUS", "    This is pretty awesome") 
+        div(class="drop")       
+          +adddropdown() 
