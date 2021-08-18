@@ -9,7 +9,7 @@
 
 mixin adddropdown()
   div(class="iqdropdown")
-    p(class="iqdropdown-selection")
+    p(class="iqdropdown-selection" data-selection-text="Гость" data-text-plural="Гостей")
     div(class="iqdropdown-menu")
       div(class="iqdropdown-menu-option" data-id="item1")
         div
@@ -26,4 +26,6 @@ mixin adddropdown()
       div(class="iqdropdown-menu-option" data-id="item4")
         div
           p(class="iqdropdown-item") Item 4
-          p(class="iqdropdown-description") A short description    
+          p(class="iqdropdown-description") A short description
+      div(class="iqdropdown-menu-control")
+       
