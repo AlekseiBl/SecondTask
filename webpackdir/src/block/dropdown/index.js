@@ -56,7 +56,7 @@
         };
       }
 
-      function addControls (id, $item) {
+      function addControls (id, $item, lastItem) {        
         const $controls = $('<div />').addClass(settings.controls.controlsCls);
         const $decrementButton = $(`
           <button class="button-decrement">
@@ -68,11 +68,30 @@
             <i class="icon-decrement icon-increment"></i>
           </button>
         `);
+        const $applyButton = $(`
+          <div  class="button">
+            <button>
+              apply
+            </button>
+          </div>
+          `);
+        const $clearButton = $(`
+        <div class="button">
+          <button>
+            clear
+          </button>
+        </div>
+        `);
+
         const $counter = $(`<span>${itemCount[id]}</span>`).addClass(settings.controls.counterCls);
 
         $item.children('div').addClass(settings.controls.displayCls);
         $controls.append($decrementButton, $counter, $incrementButton);
 
+        if(lastItem.value===true){          
+          $control.append($clearButton, $applyButton);
+        } 
+        
         if (settings.controls.position === 'right') {
           $item.append($controls);
         } else {
@@ -109,6 +128,11 @@
           event.preventDefault();
         });
 
+        $clearButton.click((event) => {
+          console.log("clearButton");
+          event.preventDefault();
+        });
+
         $item.click(event => event.stopPropagation());
 
         return $item;
@@ -122,30 +146,16 @@
         const $item = $(this);
         const id = $item.data('id');
         const defaultCount = Number($item.data('defaultcount') || '0');
-
+        var lastItem = {value: false};
         itemCount[id] = defaultCount;
         totalItems += defaultCount;
-        setItemSettings(id, $item);
-        addControls(id, $item);
-
         if($item[0]===$items.last()[0]){
-          console.log('Last field, submit form here');
-          const $applyButton = $(`
-          <div  class="button">
-            <button>
-              apply
-            </button>
-          </div>
-          `);
-          const $clearButton = $(`
-          <div class="button">
-            <button>
-              clear
-            </button>
-          </div>
-          `);
-          $control.append($clearButton, $applyButton);
+          lastItem.value = true;                   
         }
+
+        setItemSettings(id, $item);
+        addControls(id, $item, lastItem);
+        
       });
 
       updateDisplay();
