@@ -126,14 +126,25 @@
           }
 
           event.preventDefault();
-        });
+        });               
 
         $clearButton.click((event) => {
-          console.log("clearButton");
+          totalItems = 0;
+          $items.each(function () {
+            const $span = $items.find('span.counter');
+            const $item = $(this);
+            const id = $item.data('id');            
+            itemCount[id] = 0;
+            $span.html(itemCount[id]);;
+            updateDisplay();
+            
+          });
+          updateDisplay();
           event.preventDefault();
         });
 
         $item.click(event => event.stopPropagation());
+        $control.click(event => event.stopPropagation());
 
         return $item;
       }
@@ -149,6 +160,7 @@
         var lastItem = {value: false};
         itemCount[id] = defaultCount;
         totalItems += defaultCount;
+
         if($item[0]===$items.last()[0]){
           lastItem.value = true;                   
         }
