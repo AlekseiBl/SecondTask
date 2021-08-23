@@ -10,6 +10,10 @@
     minItems: 0,
     selectionText: 'item',
     textPlural: 'items',
+    Guest: ['Гость', 'Гостя', 'Гостей'],
+    Bedroom: ['Спальня', 'Спальни', 'Спален'],
+    Bed: ['Кровать', 'Кровати', 'Кроватей'],    
+    textPlural: 'items',
     controls: {
       position: 'right',
       displayCls: 'iqdropdown-content',
@@ -20,11 +24,31 @@
     onChange: () => {},
     beforeDecrement: () => true,
     beforeIncrement: () => true,
-    setSelectionText (itemCount, totalItems) {
-      const usePlural = totalItems !== 1 && this.textPlural.length > 0;
-      const text = usePlural ? this.textPlural : this.selectionText;
-      return `${totalItems} ${text}`;
+    setSelectionText (itemCount, totalItems, type) {          
+      if(type===2){
+        let numberBedroom = itemCount.item1;
+        let textBedroom = declOfNum(numberBedroom, defaults.Bedroom); 
+        let numberBed = itemCount.item2;
+        let textBed = declOfNum(numberBed, defaults.Bed);
+        if(totalItems===0){
+          numberBedroom = 0;
+          numberBed = 0;
+        };        
+        return `${numberBedroom} ${textBedroom}, ${numberBed} ${textBed}...`;
+      } else {
+        // const usePlural = totalItems !== 1 && this.textPlural.length > 0;
+        // const text = usePlural ? this.textPlural : this.selectionText;
+        //return `${totalItems} ${text}`;
+        const textGuest = declOfNum(totalItems, defaults.Guest);                
+        return `${totalItems} ${textGuest}`;  
+      }
+      
     },
+  };
+
+  function declOfNum(number, titles) {  
+    cases = [2, 0, 1, 1, 1, 2];  
+    return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];  
   };
 
   $.fn.iqDropdown = function (options) {
@@ -37,13 +61,14 @@
       const dataAttrOptions = {
         selectionText: $selection.data('selection-text'),
         textPlural: $selection.data('text-plural'),
-      };
+      };            
+      const type = $selection.data('type');
       const settings = $.extend(true, {}, defaults, dataAttrOptions, options);
       const itemCount = {};
       let totalItems = 0;
 
       function updateDisplay () {
-        $selection.html(settings.setSelectionText(itemCount, totalItems));
+        $selection.html(settings.setSelectionText(itemCount, totalItems, type));
       }
 
       function setItemSettings (id, $item) {
@@ -71,14 +96,14 @@
         const $applyButton = $(`
           <div  class="button">
             <button>
-              apply
+              ПРИМЕНИТЬ
             </button>
           </div>
           `);
         const $clearButton = $(`
         <div class="button">
           <button>
-            clear
+            ОЧИСТИТЬ
           </button>
         </div>
         `);
@@ -107,9 +132,9 @@
             totalItems -= 1;
             $counter.html(itemCount[id]);
             updateDisplay();
-            onChange(id, itemCount[id], totalItems);
+            //onChange(id, itemCount[id], totalItems);
           }
-
+          
           event.preventDefault();
         });
 
@@ -122,22 +147,21 @@
             totalItems += 1;
             $counter.html(itemCount[id]);
             updateDisplay();
-            onChange(id, itemCount[id], totalItems);
+            //onChange(id, itemCount[id], totalItems);
           }
-
+          
           event.preventDefault();
         });               
 
         $clearButton.click((event) => {
           totalItems = 0;
           $items.each(function () {
-            const $span = $items.find('span.counter');
             const $item = $(this);
             const id = $item.data('id');            
+            const $span = $items.find('span.counter');                  
             itemCount[id] = 0;
-            $span.html(itemCount[id]);;
+            $span.html(itemCount[id]);
             updateDisplay();
-            
           });
           updateDisplay();
           event.preventDefault();
