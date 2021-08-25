@@ -1,11 +1,13 @@
 doctype html
 html(lang="ru")
   head
-    //style
-      include /block/dropdown/item-quantity-dropdown.min.css
+    style
+      //include /block/dropdown/item-quantity-dropdown.min.css
+      include /block/datapicker/datepicker.css
     include /block/input/input.pug
     include /block/logo/logo.pug
-    include /block/dropdown/dropdown.pug      
+    include /block/dropdown/dropdown.pug
+    include /block/input_date/input_date.pug      
     title
   body
       div(class="logo")
@@ -15,5 +17,22 @@ html(lang="ru")
           +input-default("TEXT FIELD","DEFAULT", "    Email")   
         form(action="error.js")
           +input-default("TEXT FIELD","HOVER/FOCUS", "    This is pretty awesome") 
-        div(class="drop")       
+        div(class="drop") 
+          div(class="input-desription__left") DROPDOWN      
           +adddropdown() 
+        div
+          div(class="input-desription__left") MASKED TEXT FIELD
+          +addinputdate()
+        div(class="row-1")
+          div(class="datapicker")
+            div(class="input-desription__left") DATE DROPDOWN
+            input(type="text" class="datepicker-here datapicker__small" value="ДД.ММ.ГГГГ")
+          div(class="datapicker")
+            div(class="input-desription__left") DATE DROPDOWN
+            input(type="text" class="datepicker-here datapicker__small" value="ДД.ММ.ГГГГ")
+        div() 
+          div(class="input-desription__left") FILTER DATE DROPDOWN
+          input(type="text" class="datepicker-here datapicker-filter" data-range="true" data-multiple-dates-separator=" - " value="ДД.ММ.ГГГГ")
+        div
+          div(class="input-desription__left") SUBSCRIPTION TEXT FILED 
+          input(type="email")

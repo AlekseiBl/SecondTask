@@ -167,6 +167,13 @@
           event.preventDefault();
         });
 
+        $applyButton.click((event) => {
+          //updateDisplay();
+          event.preventDefault();          
+          $this.toggleClass('menu-open');
+          //action Input
+        });
+
         $item.click(event => event.stopPropagation());
         $control.click(event => event.stopPropagation());
 

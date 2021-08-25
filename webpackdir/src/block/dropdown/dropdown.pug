@@ -1,15 +1,6 @@
-
-//- require("jquery.js")
-
-//- require("item-quantity-dropdown.min.css")
-//-require("item-quantity-dropdown.min.js")
-
-//- import "item-quantity-dropdown";
-//- import "item-quantity-dropdown/lib/item-quantity-dropdown.css";
-
 mixin adddropdown()
   div(class="iqdropdown")
-    p(class="iqdropdown-selection" data-type="2" data-selection-text="Гость" data-text-plural="Гостей")
+    p(class="iqdropdown-selection" data-type="1" data-selection-text="Гость" data-text-plural="Гостей")
     div(class="iqdropdown-menu")
       div(class="iqdropdown-menu-option" data-id="item1")
         div
@@ -23,9 +14,5 @@ mixin adddropdown()
         div
           p(class="iqdropdown-item") Item 3
           p(class="iqdropdown-description") A short description
-      div(class="iqdropdown-menu-option" data-id="item4")
-        div
-          p(class="iqdropdown-item") Item 4
-          p(class="iqdropdown-description") A short description
       div(class="iqdropdown-menu-control")
-       
+        

@@ -1,12 +1,41 @@
+
 .container-1 {
   position:absolute;
-  width: 100%;
+  width: 320px;
   display: flex;
   flex-direction: column;
   margin: 143px 0px 10px 141px;
 }
 
+.row-1 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .drop {
-  margin: 10px 0 0 0;
-  width:17%;
+  margin: 10px 0 10px 0;
+  width: 320px;
+}
+
+.datepicker-here {
+  display: flex;
+  margin: 10px 0 0 0;  
+  height: 44px;
+  font-size: 14px;
+}
+
+.datapicker__small{
+  width: 150px;
+}
+
+.datepicker {
+  margin: 10px 10px 10px 10px;
+  width: 160px;  
+}
+
+.datepicker-filter {
+  margin: 10px 10px 10px 10px;
+  width: 266px;  
 }
