@@ -16,7 +16,7 @@ module.exports = {
         port: 8080,
     },
     entry: {
-        main: path.resolve(__dirname, './src/index.js'),
+        main: path.resolve(__dirname, './src/pages/index/index.js'),
     },
     output: {
         path: path.resolve(__dirname, './dist'),
@@ -26,28 +26,22 @@ module.exports = {
         
         new HtmlWebpackPlugin({
             title: 'webpack Boilerplate',
-            template: './src/index.pug',
+            template: './src/pages/index/index.pug',
             filename: 'index.html',
             minify: false
           }),
         new HtmlWebpackPlugin({
             title: 'webpack Boilerplate',
-            template: './src/color&type.pug',
+            template: './src/pages/color&type/color&type.pug',
             filename: 'color&type.html',
             minify: false
           }),
           new HtmlWebpackPlugin({
             title: 'webpack Boilerplate',
-            template: './src/form-elements.pug',
+            template: './src/pages/form-elements/form-elements.pug',
             filename: 'form-elements.html',
             minify: false
-          }),  
-        //   new MiniCssExtractPlugin({
-        //     // Options similar to the same options in webpackOptions.output
-        //     // both options are optional
-        //     filename: 'style.css',
-        //     chunkFilename: '[id].css'
-        //   }),
+          }), 
         new CleanWebpackPlugin(),
         // применять изменения только при горячей перезагрузке
         new webpack.HotModuleReplacementPlugin(),
