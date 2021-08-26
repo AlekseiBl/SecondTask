@@ -9,46 +9,46 @@ html(lang="ru")
   body                
     - 
       var color_array = [
-        {style: "square square--dark-shade-100", color_name:"Dark Shade 100%", color_hex:"#1F2041"}, 
-        {style: "square square--dark-shade-75", color_name:"Dark Shade 75%", color_hex:"#1F2041"},
-        {style: "square square--dark-shade-50", color_name:"Dark Shade 50%", color_hex:"#1F2041"},
-        {style: "square square--dark-shade-25", color_name:"Dark Shade 25%", color_hex:"#1F2041"},
-        {style: "square square--dark-shade-5", color_name:"Dark Shade 5%", color_hex:"#1F2041"},
-        {style: "square square--purple", color_name:"Purple", color_hex:"#BC9CFF"},
-        {style: "square square--green", color_name:"Green", color_hex:"#6FCF97"}]
+        {style: "color-type__square square--dark-shade-100", color_name:"Dark Shade 100%", color_hex:"#1F2041"}, 
+        {style: "color-type__square square--dark-shade-75", color_name:"Dark Shade 75%", color_hex:"#1F2041"},
+        {style: "color-type__square square--dark-shade-50", color_name:"Dark Shade 50%", color_hex:"#1F2041"},
+        {style: "color-type__square square--dark-shade-25", color_name:"Dark Shade 25%", color_hex:"#1F2041"},
+        {style: "color-type__square square--dark-shade-5", color_name:"Dark Shade 5%", color_hex:"#1F2041"},
+        {style: "color-type__square square--purple", color_name:"Purple", color_hex:"#BC9CFF"},
+        {style: "color-type__square square--green", color_name:"Green", color_hex:"#6FCF97"}]
          
     mixin div-square()
       each item in color_array
-        div(class="row-1-1")
-          div(class="column-1-1")
+        .color-type__row-1-1
+          .color-type__column-1-1
             div(class=item.style)
-          div(class="column-1-2")
-            p(class="square_desription square_desription--bold")=item.color_name
-            p(class="square_desription")=item.color_hex
-    div(class="logo")
+          .color-type__column-1-2
+            p(class="color-type__square__desription color-type__square__desription--bold")=item.color_name
+            p(class="color-type__square__desription")=item.color_hex
+    .logo
       +logo()
-    div(class="container")
-      div(class="column-1")      
-          +div-square()
-      div(class="column-2")
-        row(class="row-2-1")
-          div(class="column-2-1")
-            div(class="heading heading--h1") H1
-          div(class="column-2-2")
-            h1(class="heading__desription--h1") This one is the sub-section or widget title
-        row(class="row-2-1") 
-          div(class="column-2-1")
-            div(class="heading heading--h2") H2
-          div(class="column-2-2")
-            h2(class="heading__desription--h2") Next one is the item title inside widgets
-        row(class="row-2-1 row-2-1--height") 
-          div(class="column-2-1")
-            div(class="heading heading--h3") H3
-          div(class="column-2-2")
-            h3(class="heading__desription--h3") THIS IS A LABEL OR CTA TEXT
-        row(class="row-2-1") 
-          div(class="column-2-1")
-            div(class="heading heading--p") Body
-          div(class="column-2-2 column-2-2--width")
-            p(class="heading__desription--p") This is the body text which is used for most of the design, like paragraphs, lists, etc.
+    .color-type
+      .color-type__column-1      
+        +div-square()
+      .color-type__column-2
+        .color-type__row-2-1
+          .color-type__column-2-1
+            .color-type__heading.color-type__heading--h1 H1
+          .color-type__column-2-2
+            h1(class="color-type__heading__desription--h1") This one is the sub-section or widget title
+        .color-type__row-2-1 
+          .color-type__column-2-1
+            .color-type__heading.color-type__heading--h2 H2
+          .color-type__column-2-2
+            h2(class="color-type__heading__desription--h2") Next one is the item title inside widgets
+        .color-type__row-2-1.color-type__row-2-1--height 
+          .color-type__column-2-1
+            .color-type__heading.color-type__heading--h3 H3
+          .color-type__column-2-2
+            h3(class="color-type__heading__desription--h3") THIS IS A LABEL OR CTA TEXT
+        .color-type__row-2-1 
+          .color-type__column-2-1
+            .color-type__heading.color-type__heading--p Body
+          .color-type__column-2-2.color-type__column-2-2--width
+            p(class="color-type__heading__desription--p") This is the body text which is used for most of the design, like paragraphs, lists, etc.
         
