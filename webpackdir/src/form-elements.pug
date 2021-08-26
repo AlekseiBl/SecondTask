@@ -10,9 +10,9 @@ html(lang="ru")
     include /block/input_date/input_date.pug      
     title
   body
-      div(class="logo")
+      .logo
         +logo()
-      div(class="container-1")
+      .container
         form(action="error.js")
           +input-default("TEXT FIELD","DEFAULT", "    Email")   
         form(action="error.js")
@@ -21,9 +21,10 @@ html(lang="ru")
           div(class="input-desription__left") DROPDOWN      
           +adddropdown() 
         div
-          div(class="input-desription__left") MASKED TEXT FIELD
-          +addinputdate()
-        div(class="row-1")
+          div(class="input-desription__left") MASKED TEXT FIELD          
+        div
+          input(class="input masked-input" placeholder="ДД.ММ.ГГГГ")
+        .row
           div(class="datapicker")
             div(class="input-desription__left") DATE DROPDOWN
             input(type="text" class="datepicker-here datapicker__small" value="ДД.ММ.ГГГГ")
