@@ -1,8 +1,7 @@
 doctype html
 html(lang="ru")
   head
-    style
-      //include /block/dropdown/item-quantity-dropdown.min.css
+    style      
       include ../../block/datapicker/datepicker.css
     include ../../block/input/input.pug
     include ../../block/logo/logo.pug
@@ -12,28 +11,26 @@ html(lang="ru")
   body
       .logo
         +logo()
-      .container
-        form(action="error.js")
-          +input-default("TEXT FIELD","DEFAULT", "    Email")   
-        form(action="error.js")
-          +input-default("TEXT FIELD","HOVER/FOCUS", "    This is pretty awesome") 
-        div(class="drop") 
-          div(class="input-desription__left") DROPDOWN      
+      .form-elements-container
+        .form-input        
+          +input-default("TEXT FIELD","DEFAULT", "    Email")        
+        .form-input  
+          +input-default("TEXT FIELD","HOVER / FOCUS", "    This is pretty awesome") 
+        .form-input              
           +adddropdown() 
-        div
-          div(class="input-desription__left") MASKED TEXT FIELD          
-        div
+        .form-input 
+          .input-desription--left MASKED TEXT FIELD       
           input(class="input masked-input" placeholder="ДД.ММ.ГГГГ")
         .row
           div(class="datapicker")
-            div(class="input-desription__left") DATE DROPDOWN
-            input(type="text" class="datepicker-here datapicker__small" value="ДД.ММ.ГГГГ")
+            div(class="input-desription--left") DATE DROPDOWN
+            input(type="text" class="datepicker-here datapicker--small" value="ДД.ММ.ГГГГ")
           div(class="datapicker")
-            div(class="input-desription__left") DATE DROPDOWN
-            input(type="text" class="datepicker-here datapicker__small" value="ДД.ММ.ГГГГ")
+            div(class="input-desription--left") DATE DROPDOWN
+            input(type="text" class="datepicker-here datapicker--small" value="ДД.ММ.ГГГГ")
         div() 
-          div(class="input-desription__left") FILTER DATE DROPDOWN
-          input(type="text" class="datepicker-here datapicker-filter" data-range="true" data-multiple-dates-separator=" - " value="ДД.ММ.ГГГГ")
+          div(class="input-desription--left") FILTER DATE DROPDOWN
+          input(type="text" class="datepicker-here datapicker--filter" data-range="true" data-multiple-dates-separator=" - " value="ДД.ММ.ГГГГ")
         div
-          div(class="input-desription__left") SUBSCRIPTION TEXT FILED 
+          div(class="input-desription--left") SUBSCRIPTION TEXT FILED 
           input(type="email")

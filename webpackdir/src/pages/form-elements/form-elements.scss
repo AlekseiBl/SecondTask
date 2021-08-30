@@ -1,7 +1,7 @@
 
-.container {
+.form-elements-container {
   position:absolute;
-  width: 320px;
+  width: 30%;
   display: flex;
   flex-direction: column;
   margin: 143px 0px 10px 141px;
@@ -14,10 +14,6 @@
   justify-content: space-between;
 }
 
-.drop {
-  margin: 10px 0 10px 0;
-  width: 320px;
-}
 
 .datepicker-here {
   display: flex;
@@ -26,16 +22,20 @@
   font-size: 14px;
 }
 
-.datapicker__small{
-  width: 150px;
-}
-
 .datepicker {
   margin: 10px 10px 10px 10px;
   width: 160px;  
 }
 
-.datepicker-filter {
+.datapicker--small{
+  width: 150px;
+}
+
+.datepicker--filter {
   margin: 10px 10px 10px 10px;
   width: 266px;  
+}
+
+.form-input {
+  margin-bottom: 15px;
 }

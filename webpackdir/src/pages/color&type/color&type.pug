@@ -2,9 +2,8 @@ doctype html
 html(lang="ru")
   head
     include ../../block/logo/logo.pug
+    include ../../block/description/description.pug
     //meta charset="utf-8" - косяк синтаксиса, разобраться    
-    //style
-      include ~../../dist/style.css 
     title
   body                
     - 
@@ -23,8 +22,8 @@ html(lang="ru")
           .color-type__column-1-1
             div(class=item.style)
           .color-type__column-1-2
-            p.color-type__desription.color-type__desription--bold=item.color_name
-            p.color-type__desription=item.color_hex
+            p.color-type__description.color-type__description--bold=item.color_name
+            p.color-type__description=item.color_hex
     .logo
       +logo()
     .color-type
@@ -35,20 +34,25 @@ html(lang="ru")
           .color-type__column-2-1
             .color-type__heading.color-type__heading--h1 H1
           .color-type__column-2-2
-            h1.color-type__desription--h1 This one is the sub-section or widget title
+            //h1.color-type__desription--h1 This one is the sub-section or widget title
+            .color-type__description--h1
+              +description({text: "This one is the sub-section or widget title", type: "h1"})
         .color-type__row-2-1 
           .color-type__column-2-1
             .color-type__heading.color-type__heading--h2 H2
           .color-type__column-2-2
-            h2.color-type__desription--h2 Next one is the item title inside widgets
+            .color-type__description--h2
+              +description({text: "Next one is the item title inside widgets", type: "h2"})
         .color-type__row-2-1.color-type__row-2-1--height 
           .color-type__column-2-1
             .color-type__heading.color-type__heading--h3 H3
           .color-type__column-2-2
-            h3.color-type__desription--h3 THIS IS A LABEL OR CTA TEXT
+            .color-type__description--h3
+              +description({text: "THIS IS A LABEL OR CTA TEXT", type: "h3"}) 
         .color-type__row-2-1 
           .color-type__column-2-1
             .color-type__heading.color-type__heading--p Body
           .color-type__column-2-2.color-type__column-2-2--width
-            p.color-type__desription--p This is the body text which is used for most of the design, like paragraphs, lists, etc.
+            .color-type__description--p
+              +description({text: "This is the body text which is used for most of the design, like paragraphs, lists, etc.", type: "body"}) 
         

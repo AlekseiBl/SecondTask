@@ -1,5 +1,6 @@
 mixin input-default(text, status, value)
-  div(class="input-description")
-    div(class="input-desription__left") #{text}
-    div(class="input-desription__right") #{status}
-  input(type="text" class="input-default" value=value onfocus="this.value=''")
+  form(class="input-form" action="error.js")
+    div(class="input-description")
+      div(class="input-desription--left") #{text}
+      div(class="input-desription--right") #{status}
+    input(type="text" class="input-default" value=value onfocus="this.value=''")
