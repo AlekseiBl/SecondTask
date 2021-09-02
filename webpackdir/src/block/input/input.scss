@@ -29,6 +29,10 @@ $font-stack-bold: Montserrat-Bold, Arial, sans-serif;
     border: 1px solid rgba(31, 32, 65, 1);   
   }
   
+  &__focus {
+    color: rgba(31, 32, 65, 1);
+    border: 1px solid rgba(31, 32, 65, 1);   
+  }
 }
 
 textarea:hover{

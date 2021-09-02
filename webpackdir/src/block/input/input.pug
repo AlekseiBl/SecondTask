@@ -1,6 +1,13 @@
-mixin input-default(text, status, value)
+mixin input-default(text, status, value, focus)
+  - let isFocus = "";
   form(class="input-form" action="error.js")
     div(class="input-description")
       div(class="input-desription--left") #{text}
       div(class="input-desription--right") #{status}
-    input(type="text" class="input-default" value=value onfocus="this.value=''")
+    - 
+      if (focus==="focus") {
+        isFocus = "input-default__focus"
+      } else {
+        isFocus = ""
+      }
+    input(type="text" class="input-default"+" "+isFocus value=value onfocus="this.value=''")

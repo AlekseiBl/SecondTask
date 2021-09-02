@@ -15,9 +15,9 @@ html(lang="ru")
         .form-input        
           +input-default("TEXT FIELD","DEFAULT", "    Email")        
         .form-input  
-          +input-default("TEXT FIELD","HOVER / FOCUS", "    This is pretty awesome") 
+          +input-default("TEXT FIELD","HOVER / FOCUS", "    This is pretty awesome", "focus") 
         .form-input              
-          +adddropdown() 
+          +adddropdown("1") 
         .form-input 
           .input-desription--left MASKED TEXT FIELD       
           input(class="input masked-input" placeholder="ДД.ММ.ГГГГ")

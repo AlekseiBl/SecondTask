@@ -10,9 +10,9 @@
     minItems: 0,
     selectionText: 'item',
     textPlural: 'items',
-    Guest: ['Гость', 'Гостя', 'Гостей'],
-    Bedroom: ['Спальня', 'Спальни', 'Спален'],
-    Bed: ['Кровать', 'Кровати', 'Кроватей'],    
+    Guest: ['гость', 'гостя', 'гостей'],
+    Bedroom: ['спальня', 'спальни', 'спален'],
+    Bed: ['кровать', 'кровати', 'кроватей'],    
     textPlural: 'items',
     controls: {
       position: 'right',
@@ -39,16 +39,33 @@
         // const usePlural = totalItems !== 1 && this.textPlural.length > 0;
         // const text = usePlural ? this.textPlural : this.selectionText;
         //return `${totalItems} ${text}`;
-        const textGuest = declOfNum(totalItems, defaults.Guest);                
-        return `${totalItems} ${textGuest}`;  
+        const textGuest = declOfNum(totalItems, defaults.Guest);  
+        if(totalItems===0){
+          return "Сколько гостей";
+        } else {
+          return `${totalItems} ${textGuest}`; 
+        }  
       }
-      
     },
   };
 
   function declOfNum(number, titles) {  
     cases = [2, 0, 1, 1, 1, 2];  
     return titles[ (number%100>4 && number%100<20)? 2 : cases[(number%10<5)?number%10:5] ];  
+  };
+
+  $.fn.visible = function() {
+    return this.css('visibility', 'visible');
+  };
+
+  $.fn.invisible = function() {
+    return this.css('visibility', 'hidden');
+  };
+
+  $.fn.visibilityToggle = function() {
+    return this.css('visibility', function(i, visibility) {
+        return (visibility == 'visible') ? 'hidden' : 'visible';
+    });
   };
 
   $.fn.iqDropdown = function (options) {
@@ -65,6 +82,7 @@
       const type = $selection.data('type');
       const settings = $.extend(true, {}, defaults, dataAttrOptions, options);
       const itemCount = {};
+      let itemClass ="button-decrement__dimly"; 
       let totalItems = 0;
 
       function updateDisplay () {
@@ -81,13 +99,13 @@
         };
       }
 
-      function addControls (id, $item, lastItem) {        
+      function addControls (id, $item, lastItem) {  
         const $controls = $('<div />').addClass(settings.controls.controlsCls);
         const $decrementButton = $(`
-          <button class="button-decrement">
+          <button class="button-decrement button-decrement__dimly">
             
           </button>
-        `);
+        `);        
         const $incrementButton = $(`
           <button class="button-increment">
             
@@ -102,11 +120,12 @@
           `);
         const $clearButton = $(`
         <div class="button">
-          <button>
+          <button class="clearButton">
             ОЧИСТИТЬ
           </button>
         </div>
         `);
+        $clearButton.invisible();
 
         const $counter = $(`<span>${itemCount[id]}</span>`).addClass(settings.controls.counterCls);
 
@@ -130,11 +149,18 @@
           if (allowClick && totalItems > minItems && itemCount[id] > items[id].minCount) {
             itemCount[id] -= 1;
             totalItems -= 1;
+            if (totalItems==0) {
+              $control.find('button.clearButton').invisible();
+            } 
             $counter.html(itemCount[id]);
             updateDisplay();
-            //onChange(id, itemCount[id], totalItems);
+            onChange(id, itemCount[id], totalItems);
           }
-          
+          if (itemCount[id]==0) {
+            $decrementButton.addClass(itemClass);
+          } else {
+            $decrementButton.removeClass(itemClass);
+          }
           event.preventDefault();
         });
 
@@ -146,23 +172,33 @@
             itemCount[id] += 1;
             totalItems += 1;
             $counter.html(itemCount[id]);
+            $control.find('button.clearButton').visible();
             updateDisplay();
-            //onChange(id, itemCount[id], totalItems);
+            onChange(id, itemCount[id], totalItems);
           }
-          
+          if (itemCount[id]==0) {
+            $decrementButton.addClass(itemClass);
+          } else {
+            $decrementButton.removeClass(itemClass);
+          }
           event.preventDefault();
         });               
 
-        $clearButton.click((event) => {
+        $clearButton.click((event) => {          
           totalItems = 0;
           $items.each(function () {
             const $item = $(this);
             const id = $item.data('id');            
             const $span = $items.find('span.counter');                  
             itemCount[id] = 0;
-            $span.html(itemCount[id]);
+            $span.html(itemCount[id]); 
+            const $decr = $item.find('button.button-decrement'); 
+            $decr.addClass(itemClass);
+            $control.find('button.clearButton').invisible();              
             updateDisplay();
           });
+                       
+          
           updateDisplay();
           event.preventDefault();
         });

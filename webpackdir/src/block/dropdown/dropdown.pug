@@ -1,19 +1,22 @@
-mixin adddropdown()
+mixin adddropdown(type)
+  -  
+    var rooms = ["спальни","кровати","ванные комнаты"];
+    var peoples = ["взрослые","дети","младенцы"];
+    if (type==2) {
+      data = rooms
+    } else {
+      data = peoples
+    };
+    let dataId = 1;
   .dropdown-description DROPDOWN
   .iqdropdown
-    p(class="iqdropdown-selection" data-type="1" data-selection-text="Гость" data-text-plural="Гостей")
+    p(class="iqdropdown-selection" data-type=type data-selection-text="Гость" data-text-plural="Гостей")
     div(class="iqdropdown-menu")
-      div(class="iqdropdown-menu-option" data-id="item1")
-        div
-          p(class="iqdropdown-item") Item 1
-          //p(class="iqdropdown-description") A short description
-      div(class="iqdropdown-menu-option" data-id="item2")
-        div
-          p(class="iqdropdown-item") Item 2
-          //p(class="iqdropdown-description") A short description
-      div(class="iqdropdown-menu-option" data-id="item3")
-        div
-          p(class="iqdropdown-item") Item 3
-          //p(class="iqdropdown-description") A short description
+      each item in data        
+        div(class="iqdropdown-menu-option" data-id="item"+dataId)
+          - dataId +=1;
+          div
+            p(class="iqdropdown-item") #{item}
       div(class="iqdropdown-menu-control")
+      
         

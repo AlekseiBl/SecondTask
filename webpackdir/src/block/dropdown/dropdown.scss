@@ -23,6 +23,7 @@ body{
   display: flex;  
   font: 100% $font-stack;
   font-size: 12px;
+  font-weight: bold;
   color: $dark-shade-100;
   margin-bottom: 5px; 
 }
@@ -133,41 +134,49 @@ body{
 .iqdropdown 
 .iqdropdown-menu{
   background-color:#FFFFFF;
-  box-shadow:0 0 10px rgba(0,0,0,0.2);
+  box-shadow: 1px 1px 1px rgba(31, 32, 65, 0.5);
   cursor:default;
   display:none;
-  left:0;margin:-2px -1px -1px;
+  left:0;
+  margin:-2px -1px -1px;
   position:absolute;
-  right:0;top:50px;
+  right:0;
+  top:44px;
   transition:all 0.2s ease-in-out;
-  z-index:99999
+  z-index:99999;
+  border-radius: 0 0 4px 4px;
+  border: 1px solid rgba(31, 32, 65, 0.5); 
 }
 
 .iqdropdown 
 .iqdropdown-menu-option{
   align-items:center;
   display:flex;
-  height:75px;
-  padding:0 15px
+  height:35px;
+  padding:0 6px 0 14px;
+  margin-top: 2px;
 }
 
 .iqdropdown 
 .iqdropdown-menu-control{
   align-items:center;
   display:flex;
-  height:75px;
-  padding:0 15px;
+  height:45px;
+  padding:8px 6px 0 13px;
   justify-content: space-between;
 }
 
  
-.iqdropdown-menu-control .button {
+.iqdropdown-menu-control button {
   align-items:center;
-  //border:0px solid #E2E2E2;
   display:flex;
   height:45px;
-  padding:0 20px;
   transition:all 0.2s ease-in-out;  
+  font-family:$font-stack;
+  color: $button-primary-color; 
+  font-weight: bold;
+  font-style: normal;
+  font-size: 12px; 
 }
 
 .iqdropdown 
@@ -177,8 +186,8 @@ body{
 
 .iqdropdown 
 .iqdropdown-menu-close{
-  color:#002674;
-  font-family:"OpenSans",sans-serif;
+  color:$dark-shade-100;
+  font-family:$font-stack;
   font-size:14px;
   font-weight:600;
   height:20px;
@@ -199,23 +208,24 @@ body{
 }
 
 .iqdropdown-content{
-  flex:1;padding-right:10px
+  flex:1;
+  padding-right:10px;
 }
 
 .iqdropdown-item{
-  color:#000;
-  font-family:"OpenSans",sans-serif;
-  font-size:17px;
-  font-weight:400
+  color:$dark-shade-100;
+  font-family:$font-stack;
+  font-size:12px;
+  font-weight:bold;
+  text-transform: uppercase;
 }
 
 .iqdropdown p.iqdropdown-description{
-  color:#4A4A4A;
-  font-family:"OpenSans",
-  sans-serif;
+  color:$dark-shade-100;
+  font-family: $font-stack;
   font-size:14px;
   font-weight:400;
-  margin-top:5px  
+  margin-top:5px;  
 }
 
 .iqdropdown 
@@ -224,12 +234,13 @@ body{
   height:30px;
   text-align: center;
   vertical-align: middle;
+  padding-top: 2px;
 }
 
 .iqdropdown 
 .iqdropdown-item-controls 
 .counter{
-  color:#4A4A4A;
+  color:$dark-shade-100;
   font-family: $font-stack;
   font-style: normal;
   font-weight: bold;
@@ -237,37 +248,51 @@ body{
   line-height: 15px;
   text-align: center;
   text-transform: uppercase;
-  padding: 9px 20px
+  width: 25px;
+  height: 15px;
+  margin: 6px 4px;
 }
 
 .iqdropdown 
 .iqdropdown-item-controls button{
   align-items:center;
-  border:1px solid rgba(31, 32, 65, 0.25);
+  border:1px solid rgba(31, 32, 65, 0.5);
   border-radius: 22px;
   display:flex;
   width: 30px;
   height:30px;
   padding:0;
+  font-size: 18px;
+  color: $dark-shade-50;
+  font-style: normal;
+  font-weight: 400;
   //transition:all 0.2s ease-in-out
   
+}
+.iqdropdown 
+.iqdropdown-item-controls
+.button-decrement__dimly {
+  border:1px solid rgba(31, 32, 65, 0.25);
 }
 
 .iqdropdown 
 .iqdropdown-item-controls button:hover{
   background-color:#eee
 }
-.iqdropdown .iqdropdown-item-controls button.button-decrement::after{
+
+.iqdropdown 
+.iqdropdown-item-controls button.button-decrement::after{
     position: relative;
-    margin: 0 12px;
+    margin: 0 11px;
     content: '-';
 }
 
 .iqdropdown 
 .iqdropdown-item-controls button.button-increment::after{
     position: relative;
-    margin: 0 10px;
+    margin: 0 9px;
     content: '+';
+    
 }
 
 .iqdropdown{
@@ -276,7 +301,7 @@ body{
   border-radius:4px;
   cursor:pointer;
   display:flex;
-  height:50px;
+  height:44px;
   justify-content:space-between;
   padding:0 15px;
   position:relative;
@@ -285,10 +310,11 @@ body{
 
 .iqdropdown 
 .iqdropdown-selection{
-  color:#4A4A4A;
-  font-family:"OpenSans",sans-serif;
-  font-size:17px;
+  color:$dark-shade-75;
+  font-family:$font-stack;;
+  font-size:14px;
   font-weight:400;
+  font-style: normal;
   flex:1;
   position:relative
 }
@@ -309,7 +335,9 @@ body{
 }
 
 .iqdropdown.menu-open{
-  border-color:#002674
+  border: 1px solid rgba(31, 32, 65, 0.5); 
+  border-radius: 4px 4px 0 0;   
+  box-shadow: 1px 1px 1px rgba(31, 32, 65, 0.5);
 }
 
 .iqdropdown.menu-open 
