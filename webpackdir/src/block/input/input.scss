@@ -1,8 +1,11 @@
-@import "../../style/fonts/Montserrat/fonts.css";
-@import "../../style/fonts/Montserrat-Bold/fonts.css";
+// @import "../../style/fonts/Montserrat/fonts.css";
+// @import "../../style/fonts/Montserrat-Bold/fonts.css";
+// @import "../../style/color.scss";
+// $font-stack: Montserrat, Arial, sans-serif;
+// $font-stack-bold: Montserrat-Bold, Arial, sans-serif;
+
 @import "../../style/color.scss";
 $font-stack: Montserrat, Arial, sans-serif;
-$font-stack-bold: Montserrat-Bold, Arial, sans-serif;
 
 .input-description {
   position: relative;
@@ -17,13 +20,14 @@ $font-stack-bold: Montserrat-Bold, Arial, sans-serif;
   display: flex;
   width: 320px;
   height: 44px;
-  font-size: 12px;
+  font-family: $font-stack;
+  font-size: 14px;
   color: $dark-shade-50;
   background: #FFFFFF;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
   margin: 5px 0;
-  padding-left: 15px;
+  padding-left: 14px;  
 
   &:focus {
     color: rgba(31, 32, 65, 1);
@@ -42,7 +46,8 @@ textarea:hover{
 
 .input-desription--left {
   display: flex;  
-  font: 100% $font-stack-bold;
+  font: $font-stack;
+  font-weight:bold;
   font-size: 12px;
   color: $dark-shade-100; 
 }

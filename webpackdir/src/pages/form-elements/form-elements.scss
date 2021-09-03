@@ -7,11 +7,13 @@
   margin: 143px 0px 10px 141px;
 }
 
-.row {
+.input__date-inputs {
+  width: 56%;
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 
@@ -37,5 +39,17 @@
 }
 
 .form-input {
+  margin-bottom: 15px;
+}
+
+.form-input--last{
+  margin-top: 8px;
+  margin-bottom: 35px;
+}
+
+.form-input--small {
+  display: flex;
+  width: 70%;
+  position: relative;
   margin-bottom: 15px;
 }

@@ -1,0 +1,9 @@
+mixin datepicker() 
+  div(class="datapicker")
+    div(class="input-desription--left") DATE DROPDOWN
+    input(type="text" class="datepicker-here datapicker--small" value="ДД.ММ.ГГГГ")
+
+mixin datepicker-filter()
+  div(class="datapicker")
+    div(class="input-desription--left") FILTER DATE DROPDOWN
+    input(type="text" class="datepicker-here datapicker--filter" data-range="true" data-multiple-dates-separator=" - " value="ДД.ММ.ГГГГ")
