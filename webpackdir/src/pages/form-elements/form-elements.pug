@@ -13,14 +13,13 @@ html(lang="ru")
         +logo()
       .form-elements-container
         .form-input        
-          +input-default("TEXT FIELD","DEFAULT", "    Email")        
+          +input-default("TEXT FIELD","DEFAULT", "Email")        
         .form-input  
-          +input-default("TEXT FIELD","HOVER / FOCUS", "    This is pretty awesome", "focus") 
+          +input-default("TEXT FIELD","HOVER / FOCUS", "This is pretty awesome", "focus") 
         .form-input              
           +adddropdown("1") 
         .form-input 
-          .input-desription--left MASKED TEXT FIELD       
-          input(class="input masked-input" placeholder="ДД.ММ.ГГГГ")
+          +input-placeholder("MASKED TEXT FIELD") 
         .row
           div(class="datapicker")
             div(class="input-desription--left") DATE DROPDOWN

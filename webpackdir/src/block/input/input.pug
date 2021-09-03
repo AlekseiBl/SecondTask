@@ -10,4 +10,10 @@ mixin input-default(text, status, value, focus)
       } else {
         isFocus = ""
       }
-    input(type="text" class="input-default"+" "+isFocus value=value onfocus="this.value=''")
+    
+    input(type="text" class="input-default"+" "+isFocus value=value onfocus="this.value=''" )
+mixin input-placeholder(text)
+  form(class="input-form" action="error.js")
+    div(class="input-description")
+      div(class="input-desription--left") #{text}
+  input(class="input-default masked-input" placeholder="ДД.ММ.ГГГГ")
