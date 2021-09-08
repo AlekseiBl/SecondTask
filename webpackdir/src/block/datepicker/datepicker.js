@@ -54,10 +54,10 @@ window.$ = window.jQuery = require( "jquery" );
 
             // navigation
             monthsField: 'monthsShort',
-            prevHtml: '<svg><path d="M 17,12 l -5,5 l 5,5"></path></svg>',
-            nextHtml: '<svg><path d="M 14,12 l 5,5 l -5,5"></path></svg>',
+            prevHtml: '<svg xmlns="http://www.w3.org/2000/svg" width="17" height="18"><path d="M16.18 8.02v1.96H3.98l5.59 5.63L8.16 17 .14 9 8.16.98l1.4 1.41L4 8.02h12.19z"></path></svg>',            
+            nextHtml: '<svg xmlns="http://www.w3.org/2000/svg" width="17" height="18"><path d="M8.36301 0.984375L16.3786 9L8.36301 17.0156L6.95676 15.6094L12.5349 9.98438H0.347383V8.01562H12.5349L6.95676 2.39062L8.36301 0.984375Z"></path></svg>',
             navTitles: {
-                days: 'MM, <i>yyyy</i>',
+                days: 'MM  <i>yyyy</i>',
                 months: 'yyyy',
                 years: 'yyyy1 - yyyy2'
             },
@@ -1499,6 +1499,9 @@ window.$ = window.jQuery = require( "jquery" );
         '<div class="datepicker--days datepicker--body">' +
         '<div class="datepicker--days-names"></div>' +
         '<div class="datepicker--cells datepicker--cells-days"></div>' +
+        '<div class="datepicker--controls">' +
+        '<button class="datepicker--controls-clear">ОЧИСТИТЬ</button>'+ 
+        '<button class="datepicker--controls-apply">ПРИМЕНИТЬ</button> </div>' +
         '</div>',
         months: '' +
         '<div class="datepicker--months datepicker--body">' +

@@ -17,26 +17,21 @@
 }
 
 
-.datepicker-here {
+.datepicker-here1 {
   display: flex;
+  position: relative;
   margin: 10px 0 0 0;  
   height: 44px;
   font-size: 14px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
 }
 
-.datepicker {
-  margin: 10px 10px 10px 10px;
-  width: 160px;  
-}
 
-.datapicker--small{
+.datepicker--small{
   width: 150px;
 }
 
-.datepicker--filter {
-  margin: 10px 10px 10px 10px;
-  width: 266px;  
-}
 
 .form-input {
   margin-bottom: 15px;

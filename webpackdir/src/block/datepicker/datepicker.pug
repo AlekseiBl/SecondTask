@@ -1,9 +1,14 @@
-mixin datepicker() 
-  div(class="datapicker")
+mixin datepicker(value) 
+  div(class="datepicker-cont")
     div(class="input-desription--left") DATE DROPDOWN
-    input(type="text" class="datepicker-here datapicker--small" value="ДД.ММ.ГГГГ")
+    input(type="text" class="datepicker-here datepicker--small"  value=value)
 
-mixin datepicker-filter()
-  div(class="datapicker")
+//- mixin datepicker-filter(value)
+//-   div(class="datepicker-cont")
+//-     div(class="input-desription--left") FILTER DATE DROPDOWN
+//-     input(type="text" class="datepicker-here datepicker--filter" data-range="true" data-multiple-dates-separator=" - " value=value)
+
+mixin datepicker-filter(value)
+  div(class="datepicker-cont")
     div(class="input-desription--left") FILTER DATE DROPDOWN
-    input(type="text" class="datepicker-here datapicker--filter" data-range="true" data-multiple-dates-separator=" - " value="ДД.ММ.ГГГГ")
+    div(type="text" class="datepicker-here datepicker--filter" data-range="true" data-multiple-dates-separator=" - " value=value)
