@@ -48,6 +48,7 @@ window.$ = window.jQuery = require( "jquery" );
 
             todayButton: false,
             clearButton: false,
+            applyButton: false,
 
             showEvent: 'focus',
             autoClose: false,
@@ -598,6 +599,10 @@ window.$ = window.jQuery = require( "jquery" );
             if (this.opts.onSelect) {
                 this._triggerOnChange()
             }
+        },
+
+        apply: function () {
+            //action when apply
         },
 
         /**
@@ -1481,6 +1486,7 @@ window.$ = window.jQuery = require( "jquery" );
             monthsShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн', 'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
             today: 'Сегодня',
             clear: 'Очистить',
+            apply: 'Применить',
             dateFormat: 'dd.mm.yyyy',
             timeFormat: 'hh:ii',
             firstDay: 1
@@ -1498,10 +1504,7 @@ window.$ = window.jQuery = require( "jquery" );
         days:'' +
         '<div class="datepicker--days datepicker--body">' +
         '<div class="datepicker--days-names"></div>' +
-        '<div class="datepicker--cells datepicker--cells-days"></div>' +
-        '<div class="datepicker--controls">' +
-        '<button class="datepicker--controls-clear">ОЧИСТИТЬ</button>'+ 
-        '<button class="datepicker--controls-apply">ПРИМЕНИТЬ</button> </div>' +
+        '<div class="datepicker--cells datepicker--cells-days"></div>' +        
         '</div>',
         months: '' +
         '<div class="datepicker--months datepicker--body">' +
@@ -1852,6 +1855,9 @@ window.$ = window.jQuery = require( "jquery" );
             }
             if (this.opts.clearButton) {
                 this._addButton('clear')
+            }
+            if (this.opts.applyButton) {
+                this._addButton('apply')
             }
         },
 
