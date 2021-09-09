@@ -13,23 +13,47 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin-bottom: 41px;
 }
 
-
-.datepicker-here1 {
-  display: flex;
-  position: relative;
-  margin: 10px 0 0 0;  
+.datepicker--filter {
+  width: 266px;
   height: 44px;
   font-size: 14px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
+  background-position: 94% 54%;
 }
+
+.datepicker-here {
+  margin: 5px 0 0 0;
+  background-image: url("../../img/expand_more.png");
+  background-repeat:no-repeat;  
+
+  // &::after {
+  //   background-image: url("../../img/expand_more.png");
+  //   background-position:center;
+  //   background-repeat:no-repeat;
+  //   background-size:contain;
+  //   content:'';
+  //   display:inline-block;
+  //   height:8px;
+  //   width:17px;
+  //   position:absolute;
+  //   right:-2px;
+  //   top:30%
+  // }
+}
+
 
 
 .datepicker--small{
   width: 150px;
+  height: 44px;
+  font-size: 14px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  background-position:89% 54%;
 }
 
 

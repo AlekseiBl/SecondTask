@@ -7,7 +7,7 @@ window.$ = window.jQuery = require( "jquery" );
         containerBuilt = false,
         baseTemplate = '' +
             '<div class="datepicker">' +
-            '<i class="datepicker--pointer"></i>' +
+            //'<i class="datepicker--pointer"></i>' +
             '<nav class="datepicker--nav"></nav>' +
             '<div class="datepicker--content"></div>' +
             '</div>',
@@ -603,6 +603,9 @@ window.$ = window.jQuery = require( "jquery" );
 
         apply: function () {
             //action when apply
+            if (this.visible && !this.inFocus) {
+                this.hide();
+            }
         },
 
         /**
