@@ -20,14 +20,28 @@ body{
 }
 
 .dropdown-description {
+  width: 265px; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  padding-right: 0;
+}
+
+.dropdown-description--left {
   display: flex;  
   font: $font-stack;
   font-size: 12px;
   font-weight: bold;
   color: $dark-shade-100;
-  margin-bottom: 5px; 
+  margin-bottom: 5px;   
 }
 
+.dropdown-description--right {
+  display: flex;
+  font-size: 12px;
+  color: $dark-shade-50;
+}
 
 .iqdropdown{
   -webkit-tap-highlight-color:transparent;
@@ -164,6 +178,10 @@ body{
   height:45px;
   padding:8px 6px 0 13px;
   justify-content: space-between;
+
+  &--close {
+    height: 0px;
+  }
 }
 
  
@@ -305,7 +323,6 @@ body{
   justify-content:space-between;
   padding:0 15px;
   position:relative;
-  width:320px;
 }
 
 .iqdropdown 

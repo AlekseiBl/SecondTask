@@ -753,3 +753,38 @@ $font-stack: Montserrat, Arial, sans-serif;
   .datepicker--cell-day.-other-month-:empty, .datepicker--cell-year.-other-decade-:empty {
     background: none;
     border: none; }
+
+.datepicker--filter {
+  font-family: $font-stack;
+  width: 266px;
+  height: 44px;
+  font-size: 14px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  background-position: 94% 54%;
+  padding-left: 15px;
+  color: RGB(31, 32, 65, 0.75);
+}
+
+.datepicker-here {
+  margin: 5px 0 0 0;
+  background-image: url("../../img/expand_more.png");
+  background-repeat:no-repeat;  
+  outline: none;
+  
+  &:hover {
+    border: 1px solid rgba(31, 32, 65, 0.5);    
+  }
+}
+
+.datepicker--small{
+  font-family: $font-stack;
+  width: 150px;
+  height: 44px;
+  font-size: 14px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  background-position:89% 54%;
+  padding-left: 15px;
+  color: RGB(31, 32, 65, 0.75);
+}

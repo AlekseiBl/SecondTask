@@ -16,49 +16,18 @@
   margin-bottom: 41px;
 }
 
-.datepicker--filter {
-  width: 266px;
-  height: 44px;
-  font-size: 14px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px;
-  background-position: 94% 54%;
+.form-dropdown {  
+  margin-top: 66px;
+  width: 46.5%;
+
+  &--margin {
+    margin-top: 20px;
+  }
 }
-
-.datepicker-here {
-  margin: 5px 0 0 0;
-  background-image: url("../../img/expand_more.png");
-  background-repeat:no-repeat;  
-
-  // &::after {
-  //   background-image: url("../../img/expand_more.png");
-  //   background-position:center;
-  //   background-repeat:no-repeat;
-  //   background-size:contain;
-  //   content:'';
-  //   display:inline-block;
-  //   height:8px;
-  //   width:17px;
-  //   position:absolute;
-  //   right:-2px;
-  //   top:30%
-  // }
-}
-
-
-
-.datepicker--small{
-  width: 150px;
-  height: 44px;
-  font-size: 14px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px;
-  background-position:89% 54%;
-}
-
 
 .form-input {
   margin-bottom: 15px;
+  width: 56%;
 }
 
 .form-input--last{
@@ -71,4 +40,8 @@
   width: 70%;
   position: relative;
   margin-bottom: 15px;
+
+  &_subscription {
+    margin-top: 25px;
+  }
 }

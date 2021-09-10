@@ -12,8 +12,17 @@ mixin input-default(text, status, value, focus)
       }
     
     input(type="text" class="input-default"+isFocus value=value onfocus="this.value=''" )
+
 mixin input-placeholder(text)
     form(class="input-form" action="error.js")
       .input-description
         .input-desription--left #{text}
     input(class="input-default input--masked" placeholder="ДД.ММ.ГГГГ")
+
+mixin input-subscription (text, status, value)
+  form(class="input-form" action="error.js")
+    .input-description
+      .input-desription--left #{text}
+    .input-subscription
+      input(type="text" class="input-subscription_input" value=value)
+      button(type="button" class="input-subscription_button")

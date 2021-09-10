@@ -22,22 +22,79 @@ $font-stack: Montserrat, Arial, sans-serif;
   height: 44px;
   font-family: $font-stack;
   font-size: 14px;
-  color: $dark-shade-50;
+  color: $dark-shade-25;
   background: #FFFFFF;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
   margin: 5px 0;
-  padding-left: 14px;  
+  padding-left: 14px;
+  outline: none;
+
+  &::-moz-placeholder {
+    color: $dark-shade-25;
+  } 
+
+  &::-webkit-input-placeholder {
+    color: $dark-shade-25;
+  }  
 
   &:focus {
     color: rgba(31, 32, 65, 1);
-    border: 1px solid rgba(31, 32, 65, 1);   
+    border: 1px solid rgba(31, 32, 65, 0.5);   
   }
   
   &__focus {
     color: rgba(31, 32, 65, 1);
-    border: 1px solid rgba(31, 32, 65, 1);   
+    border: 1px solid rgba(31, 32, 65, 0.5);   
   }
+}
+
+.input-subscription {
+  position: relative;
+  display: flex;
+  width: 83%; 
+  height: 44px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  border: 1px solid rgba(31, 32, 65, 0.25);   
+  margin-top: 5px;
+  padding-left: 14px;
+  justify-content: space-between;
+
+  &:hover {
+    border: 1px solid rgba(31, 32, 65, 0.5);    
+  }
+}
+
+.input-subscription_input {
+  margin-top: 0px;
+  border: none;
+  height: 42px;  
+  outline: none;
+  font-family: $font-stack;
+  font-size: 14px;
+  color: $dark-shade-25;
+  &::-moz-placeholder {
+    color: $dark-shade-25;
+  } 
+
+  &::-webkit-input-placeholder {
+    color: $dark-shade-25;
+  }  
+ 
+}
+
+.input-subscription_button {
+  position: relative;
+  display: flex;
+  background-color: transparent;
+  background-image: url("../../img/arrow_forward.png");
+  background-repeat: no-repeat;
+  background-position:  55% 50%;
+  height: 44px;
+  width: 44px;
+  cursor: pointer;
+  border: none;
 }
 
 textarea:hover{

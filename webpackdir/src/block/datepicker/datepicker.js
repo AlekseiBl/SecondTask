@@ -602,7 +602,8 @@ window.$ = window.jQuery = require( "jquery" );
         },
 
         apply: function () {
-            //action when apply
+            //action when apply            
+            
             if (this.visible && !this.inFocus) {
                 this.hide();
             }

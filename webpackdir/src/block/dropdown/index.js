@@ -14,6 +14,9 @@
     Bedroom: ['спальня', 'спальни', 'спален'],
     Bed: ['кровать', 'кровати', 'кроватей'],    
     textPlural: 'items',
+    type: 1,
+    buttons: true,
+    isExpanded: false,
     controls: {
       position: 'right',
       displayCls: 'iqdropdown-content',
@@ -80,13 +83,18 @@
         textPlural: $selection.data('text-plural'),
       };            
       const type = $selection.data('type');
+      defaults.isExpanded = $selection.data('expanded');
+      if ($selection.data('buttons') != undefined) {
+        defaults.buttons = false;
+      }      
+      
       const settings = $.extend(true, {}, defaults, dataAttrOptions, options);
       const itemCount = {};
       let itemClass ="button-decrement__dimly"; 
       let totalItems = 0;
 
       function updateDisplay () {
-        $selection.html(settings.setSelectionText(itemCount, totalItems, type));
+        $selection.html(settings.setSelectionText(itemCount, totalItems,type));
       }
 
       function setItemSettings (id, $item) {
@@ -131,10 +139,11 @@
 
         $item.children('div').addClass(settings.controls.displayCls);
         $controls.append($decrementButton, $counter, $incrementButton);
-
-        if(lastItem.value===true){          
-          $control.append($clearButton, $applyButton);
-        } 
+        if(lastItem.value===true&&defaults.buttons===true){          
+          $control.append($clearButton, $applyButton);          
+        } else {
+          $control.toggleClass('iqdropdown-menu-control--close');
+        }
         
         if (settings.controls.position === 'right') {
           $item.append($controls);
@@ -215,10 +224,14 @@
 
         return $item;
       }
-
-      $this.click(() => {
+      
+      if (defaults.isExpanded) {
         $this.toggleClass('menu-open');
-      });
+      } else {
+        $this.click(() => {
+          $this.toggleClass('menu-open');
+        }); 
+      }
 
       $items.each(function () {
         const $item = $(this);
