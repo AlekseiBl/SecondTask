@@ -6,7 +6,8 @@ html(lang="ru")
     include ../../block/input/input.pug
     include ../../block/logo/logo.pug
     include ../../block/dropdown/dropdown.pug
-    include ../../block/datepicker/datepicker.pug      
+    include ../../block/datepicker/datepicker.pug
+    include ../../block/checkbox/checkbox.pug      
     title
   body
       .logo
@@ -32,3 +33,21 @@ html(lang="ru")
             +adddropdown("2", "DEFAULT")
           .form-dropdown--margin        
             +adddropdown("2", "EXPANDED", "true", "", "false")
+        .form-expandable
+          details.expandable-checkbox
+            summary.expandable-checkbox__summary expandable checkbox list
+            +checkbox("Завтрак")
+            +checkbox("Письменный стол", "checked")
+            +checkbox("Стул для кормления", "checked")
+            +checkbox("Кроватка", "checked")
+            +checkbox("Телевизор")
+            +checkbox("Шампунь")
+        
+          details.expandable-checkbox
+            summary.expandable-checkbox__summary expandable checkbox list
+            +checkbox("Завтрак")
+            +checkbox("Письменный стол", "checked")
+            +checkbox("Стул для кормления", "checked")
+            +checkbox("Кроватка", "checked")
+            +checkbox("Телевизор")
+            +checkbox("Шампунь")
