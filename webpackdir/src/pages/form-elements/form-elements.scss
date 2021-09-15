@@ -1,15 +1,102 @@
 
+.comment {
+  &__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 
-.form-elements-container {
-  position:absolute;
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  margin: 143px 0px 10px 141px;
+  &__column:first-child {
+    margin-right: 10px;
+  }
+
+  &__avatar {
+    margin-bottom: 12px;
+    overflow: hidden;
+    width: 48px;
+    height: 48px;
+    background-color: #bc9cff;
+    border: 2px solid #fff;
+    border-radius: 50%;    
+    background: url("../../img/murad.jpg") 50% no-repeat;    
+    filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));   
+  }
+
+  &__title, &__date {
+    font-size: 14px;
+    color: rgba(31,32,65,.75);
+  }
+
+  &__title {
+    margin: 0 0 8px;
+    font-weight: 700;
+  }
+
+  &__date {
+    margin: 0 0 14px;
+  }
+
+  &__text {
+    margin: 0;
+    max-width: 77%;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31,32,65,.75);
+  }
+}
+
+.form-elements {
+
+  &__container {
+    position: relative;
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 80.5556%;
+    min-width: 320px;
+    max-width: 1920px;
+  }
+
+  &__wrap {
+    padding-top: 62px;
+    padding-bottom: 100px;
+  }
+
+  &__row {
+    margin-bottom: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  &__inputs {
+    width: 27.6%;
+  }
+
+  &__controls {
+    width: 27.6%;
+  }
+
+  &__buttons {
+    width: 27.6%;
+  }
+  
+  &__row-wrap {
+    width: 23%;
+
+    &--large {
+      width: 60%;
+    }
+  }
+
 }
 
 .form-expandable {
-  width: 44%;
+  max-width: 266px;
   margin-top: 150px;
 }
 
@@ -41,7 +128,7 @@
       height:8px;
       width:17px;
       position:absolute;
-      right:-2px;
+      right:13px;
       top:30%    
     }
   }
@@ -63,10 +150,66 @@
   margin-bottom: 41px;
 }
 
-.form-dropdown {  
-  margin-top: 66px;
-  width: 46.5%;
+.features {
+  margin: 0;
+  padding: 1px 0 0;
+  list-style: none;
 
+  &__item {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: 1px solid rgba(31,32,65,.1);
+
+    &:last-child{
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+
+  &__img {
+    margin-right: 9px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 48px;
+    height: 48px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    &-emoticon {
+      background: url("../../img/insert_emoticon.svg") 50% no-repeat;
+    }
+
+    &-city {
+      background: url("../../img/location_city.svg") 50% no-repeat;
+    }
+  }
+
+  &__content {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+  }
+
+  &__description {
+    margin: 0;
+  }
+}
+
+.form-dropdown {    
+  max-width: 266px;
   &--margin {
     margin-top: 20px;
   }
@@ -74,21 +217,41 @@
 
 .form-input {
   margin-bottom: 15px;
-  width: 56%;
+  max-width: 320px;
+
+  &--last{
+    margin-top: 8px;
+    margin-bottom: 35px;
+  }
+
+  &--small {
+    display: flex;
+    max-width: 266px;
+    position: relative;
+    margin-bottom: 15px;
+  
+    &_subscription {
+      margin-top: 25px;
+    }
+  } 
+
 }
 
-.form-input--last{
-  margin-top: 8px;
-  margin-bottom: 35px;
-}
+.controls {
+  margin-bottom: 40px;
 
-.form-input--small {
-  display: flex;
-  width: 70%;
-  position: relative;
-  margin-bottom: 15px;
+  &__title-wrap {
+    margin-bottom: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    flex-direction: column;
+  }
 
-  &_subscription {
-    margin-top: 25px;
+  &__checkbox {
+    box-sizing: content-box;
   }
 }

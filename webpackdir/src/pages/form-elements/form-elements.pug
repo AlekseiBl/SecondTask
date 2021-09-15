@@ -7,47 +7,99 @@ html(lang="ru")
     include ../../block/logo/logo.pug
     include ../../block/dropdown/dropdown.pug
     include ../../block/datepicker/datepicker.pug
-    include ../../block/checkbox/checkbox.pug      
+    include ../../block/checkbox/checkbox.pug
+    include ../../block/description/description.pug
+
     title
   body
-      .logo
-        +logo()
-      .form-elements-container
-        .form-input        
-          +input-default("TEXT FIELD","DEFAULT", "Email")        
-        .form-input  
-          +input-default("TEXT FIELD","HOVER / FOCUS", "This is pretty awesome", "focus") 
-        .form-input              
-          +adddropdown("1") 
-        .form-input.form-input--last 
-          +input-placeholder("MASKED TEXT FIELD")
-        .input__date-inputs
-          +datepicker("ДД.ММ.ГГГГ")
-          +datepicker("19.08.2019")
-        .form-input--small 
-          +datepicker-filter("19 авг - 23 авг")
-        .form-input--small.form-input--small_subscription
-          +input-subscription("SUBSCRIPTION TEXT FIELD","", "Email")   
-        .form-dropdown
-          .form-dropdown--margin
-            +adddropdown("2", "DEFAULT")
-          .form-dropdown--margin        
-            +adddropdown("2", "EXPANDED", "true", "", "false")
-        .form-expandable
-          details.expandable-checkbox
-            summary.expandable-checkbox__summary expandable checkbox list
-            +checkbox("Завтрак")
-            +checkbox("Письменный стол", "checked")
-            +checkbox("Стул для кормления", "checked")
-            +checkbox("Кроватка", "checked")
-            +checkbox("Телевизор")
-            +checkbox("Шампунь")
-        
-          details.expandable-checkbox
-            summary.expandable-checkbox__summary expandable checkbox list
-            +checkbox("Завтрак")
-            +checkbox("Письменный стол", "checked")
-            +checkbox("Стул для кормления", "checked")
-            +checkbox("Кроватка", "checked")
-            +checkbox("Телевизор")
-            +checkbox("Шампунь")
+    .logo
+      +logo()
+    .form-elements__container
+      .form-elements__wrap
+        .form-elements__row
+          .form-elements__inputs
+            .form-input        
+              +input-default("TEXT FIELD","DEFAULT", "Email")        
+            .form-input  
+              +input-default("TEXT FIELD","HOVER / FOCUS", "This is pretty awesome", "focus") 
+            .form-input              
+              +adddropdown("1") 
+            .form-input.form-input--last 
+              +input-placeholder("MASKED TEXT FIELD")
+            .input__date-inputs
+              +datepicker("ДД.ММ.ГГГГ")
+              +datepicker("19.08.2019")
+            .form-input--small 
+              +datepicker-filter("19 авг - 23 авг")
+            .form-input--small.form-input--small_subscription
+              +input-subscription("SUBSCRIPTION TEXT FIELD","", "Email")  
+          .form-elements__controls
+            .controls 
+              .controls__title-wrap                
+                +description({text: "checkbox buttons", type: "h3", upperCase: "true"})
+              .controls__checkbox 
+                +checkbox("Можно курить")
+                +checkbox("Можно с питомцами", "checked")
+                +checkbox("Можно пригласить гостей (до 10 человек)", "checked") 
+            .controls
+              .controls__title-wrap  
+                +description({text: "radio buttons", type: "h3", upperCase: "true"})
+              .controls__title-wrap  
+                +description({text: "toggle", type: "h3", upperCase: "true"})
+              .controls__title-wrap  
+                +description({text: "like button", type: "h3", upperCase: "true"})
+              .controls__title-wrap  
+                +description({text: "rate button", type: "h3", upperCase: "true"})
+          .form-elements__buttons
+        .form-elements__row
+          .form-elements__row-wrap      
+            .form-dropdown
+              .form-dropdown--margin
+                +adddropdown("2", "DEFAULT")
+              .form-dropdown--margin        
+                +adddropdown("2", "EXPANDED", "true", "", "false")
+            .form-expandable
+              details.expandable-checkbox
+                summary.expandable-checkbox__summary expandable checkbox list
+                +checkbox("Завтрак")
+                +checkbox("Письменный стол", "checked")
+                +checkbox("Стул для кормления", "checked")
+                +checkbox("Кроватка", "checked")
+                +checkbox("Телевизор")
+                +checkbox("Шампунь")
+            
+              details.expandable-checkbox
+                summary.expandable-checkbox__summary expandable checkbox list
+                +checkbox("Завтрак")
+                +checkbox("Письменный стол", "checked")
+                +checkbox("Стул для кормления", "checked")
+                +checkbox("Кроватка", "checked")
+                +checkbox("Телевизор")
+                +checkbox("Шампунь")
+        .form-elements__row
+          .form-elements__row-wrap
+            ul.features
+              li.features__item
+                div.features__img.features__img-emoticon
+                section.features__content
+                  h2.features__title Комфорт
+                  p.features__description Шумопоглощающие стены
+              li.features__item            
+                div.features__img.features__img-city
+                section.features__content
+                  h2.features__title Удобство
+                  p.features__description Окно в каждой из спален
+          .form-elements__row-wrap--large
+            .form-elements__comment
+              article.comment
+                .comment__wrap
+                  .comment__column 
+                    .comment__avatar
+                    .btn-like
+                  .comment__column
+                    p.comment__title Мурад Сарафанов
+                    p.comment__date 5 дней назад
+                    p.comment__text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+              
+
+

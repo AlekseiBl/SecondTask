@@ -229,9 +229,7 @@ $font-stack: Montserrat, Arial, sans-serif;
     Datepicker
    ------------------------------------------------- */
 .datepickers-container {
-  position: relative;
-  left: 0;
-  top: 0; 
+  //position: relative;
 }
 
   @media print {
@@ -756,7 +754,7 @@ $font-stack: Montserrat, Arial, sans-serif;
 
 .datepicker--filter {
   font-family: $font-stack;
-  width: 266px;
+  //width: 255px;
   height: 44px;
   font-size: 14px;
   border: 1px solid rgba(31, 32, 65, 0.25);
@@ -766,12 +764,21 @@ $font-stack: Montserrat, Arial, sans-serif;
   color: RGB(31, 32, 65, 0.75);
 }
 
+.datepicker-cont {
+  width: 100%;
+  &--small {
+    &:first-child {
+      margin-right: 20px;
+    }
+  }
+}
+
 .datepicker-here {
   margin: 5px 0 0 0;
   background-image: url("../../img/expand_more.png");
   background-repeat:no-repeat;  
   outline: none;
-  
+  width: 100%;
   &:hover {
     border: 1px solid rgba(31, 32, 65, 0.5);    
   }

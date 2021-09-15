@@ -21,6 +21,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: '[name].bundle.js',
+        assetModuleFilename: 'assets/images/[name][ext]',
     },
     plugins: [
         
@@ -76,21 +77,7 @@ module.exports = {
                   // Translates CSS into CommonJS
                   "css-loader",
                   // Compiles Sass to CSS
-                  "sass-loader",
-                //   {
-                //     loader: 'sass-resources-loader',
-                //     options: {
-                //       // Provide path to the file with resources
-                //       resources: './index.scss',
-          
-                //       // Or array of paths
-                //     //   resources: [
-                //     //     './path/to/vars.scss',
-                //     //     './path/to/mixins.scss',
-                //     //     './path/to/functions.scss'
-                //     //   ]
-                //     },
-                //   },
+                  "sass-loader",               
                 ],
               },
         ],
