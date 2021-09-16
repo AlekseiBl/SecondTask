@@ -1,0 +1,87 @@
+@import "../../style/fonts/Montserrat/fonts.css";
+@import "../../style/color.scss";
+$font-stack: Montserrat, Arial, sans-serif;
+
+.radio-btn {
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+
+  &__item {
+    margin-right: 20px;
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  &__input[type=radio] {
+    display: none;
+    box-sizing: border-box;
+    padding: 0;
+
+    &:checked {
+      & + .radio-btn__span::after {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      & + .radio-btn__span::before {
+        border-color: $button-primary-color;
+      }
+    }
+  }
+
+  &__span {
+    position: relative;
+    padding-left: 30px;
+    display: block;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: rgba(31,32,65,.45);
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      top: -1px;
+      left: 0;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 20px;
+      height: 20px;
+      content: "";
+      background-color: transparent;
+      border: 1px solid rgba(31,32,65,.25);
+      border-radius: 50%;
+      -webkit-transition: border .3s ease 0s;
+      transition: border .3s ease 0s;
+    }
+
+    &::after {
+      position: absolute;
+      top: 3px;
+      left: 4px;
+      visibility: hidden;
+      width: 12px;
+      height: 12px;
+      opacity: 0;
+      content: "";
+      background: -webkit-gradient(linear,left top,left bottom,from(#bc9cff),to(#8ba4f9));
+      background: linear-gradient( 180deg,#bc9cff,#8ba4f9);
+      border-radius: 50%;
+      -webkit-transition: opacity .3s ease 0s,visibility .3s ease 0s;
+      transition: opacity .3s ease 0s,visibility .3s ease 0s;
+    }
+  }
+}

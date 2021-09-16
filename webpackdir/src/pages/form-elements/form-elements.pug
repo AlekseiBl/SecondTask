@@ -9,6 +9,9 @@ html(lang="ru")
     include ../../block/datepicker/datepicker.pug
     include ../../block/checkbox/checkbox.pug
     include ../../block/description/description.pug
+    include ../../block/radio-button/radio-button.pug
+    include ../../block/toggle/toggle.pug
+    include ../../block/like-button/like-button.pug
 
     title
   body
@@ -44,10 +47,20 @@ html(lang="ru")
             .controls
               .controls__title-wrap  
                 +description({text: "radio buttons", type: "h3", upperCase: "true"})
+              +radio-button
+            .controls
               .controls__title-wrap  
                 +description({text: "toggle", type: "h3", upperCase: "true"})
+              +toggle-button
+            .controls
               .controls__title-wrap  
                 +description({text: "like button", type: "h3", upperCase: "true"})
+              .controls__like-wrap
+                .controls__like-button
+                  +like-button({count:2})
+                .controls__like-button 
+                  +like-button({count:12, isActive: true})
+            .controls
               .controls__title-wrap  
                 +description({text: "rate button", type: "h3", upperCase: "true"})
           .form-elements__buttons
@@ -66,8 +79,7 @@ html(lang="ru")
                 +checkbox("Стул для кормления", "checked")
                 +checkbox("Кроватка", "checked")
                 +checkbox("Телевизор")
-                +checkbox("Шампунь")
-            
+                +checkbox("Шампунь")            
               details.expandable-checkbox
                 summary.expandable-checkbox__summary expandable checkbox list
                 +checkbox("Завтрак")
@@ -95,6 +107,8 @@ html(lang="ru")
                 .comment__wrap
                   .comment__column 
                     .comment__avatar
+                    //alt method with img --- work fine
+                    //img(src=require("../../img/murad.jpg"))
                     .btn-like
                   .comment__column
                     p.comment__title Мурад Сарафанов
