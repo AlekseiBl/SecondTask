@@ -1,0 +1,27 @@
+@import "../../style/fonts/Montserrat/fonts.css";
+@import "../../style/color.scss";
+$font-stack: Montserrat, Arial, sans-serif;
+
+.rate-btn {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__star {
+    margin-right: 4px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url('../../block/rate-button/img/star.svg') no-repeat;
+    cursor: pointer;
+
+    &--active {
+      background: url('../../block/rate-button/img/star-active.svg') no-repeat;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    
+  }
+}

@@ -12,6 +12,7 @@ html(lang="ru")
     include ../../block/radio-button/radio-button.pug
     include ../../block/toggle/toggle.pug
     include ../../block/like-button/like-button.pug
+    include ../../block/rate-button/rate-button.pug
 
     title
   body
@@ -63,6 +64,11 @@ html(lang="ru")
             .controls
               .controls__title-wrap  
                 +description({text: "rate button", type: "h3", upperCase: "true"})
+              .controls__rate-wrap
+                .controls__rate-button
+                  +rate-button({rate: 4, lenght: 5}) 
+                .controls__rate-button
+                  +rate-button({rate: 5, lenght: 5}) 
           .form-elements__buttons
         .form-elements__row
           .form-elements__row-wrap      

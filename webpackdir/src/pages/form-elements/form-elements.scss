@@ -267,4 +267,16 @@
   &__like-button:first-child {
     margin-right: 10px;
   }
+
+  &__rate-wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  &__rate-button:first-child {
+    margin-right: 20px;
+  }
 }

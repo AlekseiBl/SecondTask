@@ -1,0 +1,14 @@
+mixin rate-button({rate, lenght})
+  .rate-btn
+    - for (let i=0; i < lenght; i++) {
+      -
+        const isActive = i < rate;
+
+        let rateClass ="rate-btn__star";
+        
+        if(isActive){
+          rateClass +=" rate-btn__star--active";
+        }
+
+      div(class=rateClass)
+    - }  
