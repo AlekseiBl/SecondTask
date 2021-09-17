@@ -1,6 +1,3 @@
-/* Rectangle 2 */
-@import "./src/style/color.scss";
-
 .btn {          
     position: relative;
     width: 99px;
@@ -8,7 +5,7 @@
     padding: 2px;
     box-sizing: border-box;
     $border: 2px;
-    color: $button-primary-color;
+    color: $purpleColor;
     background: #FFF;
     background-clip: padding-box; /* !importanté */
     border: solid transparent; /* !importanté */
@@ -25,7 +22,7 @@
         z-index: -1;
         margin: -2px; /* !importanté */
         border-radius: inherit; /* !importanté */
-        background: linear-gradient(180deg, $button-primary-color 0%, $button-second-color 100%);
+        background: linear-gradient(180deg, $purpleColor 0%, $greenColor 100%);
     }
 }
 
@@ -37,7 +34,7 @@
 
 .btn-color {    
     border: transparent; /* !important */
-    background: linear-gradient(180deg, $button-primary-color 0%, $button-second-color 100%);
+    background: linear-gradient(180deg, $purpleColor 0%, $greenColor 100%);
     color:#FFF;    
 }
 
@@ -49,6 +46,6 @@
     border: transparent;
     width: 44px;
     height: 44px; 
-    background: linear-gradient(180deg, $button-primary-color 0%, $button-second-color 100%);
+    background: linear-gradient(180deg, $purpleColor 0%, $greenColor 100%);
     color:#FFF;
 }

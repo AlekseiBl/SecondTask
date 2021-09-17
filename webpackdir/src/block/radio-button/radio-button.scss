@@ -1,7 +1,3 @@
-@import "../../style/fonts/Montserrat/fonts.css";
-@import "../../style/color.scss";
-$font-stack: Montserrat, Arial, sans-serif;
-
 .radio-btn {
 
   &__list {
@@ -38,7 +34,7 @@ $font-stack: Montserrat, Arial, sans-serif;
       }
 
       & + .#{$item}__span::before {
-        border-color: $button-primary-color;
+        border-color: $purpleColor;
       }
     }
   }

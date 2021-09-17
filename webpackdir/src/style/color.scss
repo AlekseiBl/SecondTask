@@ -1,8 +1,12 @@
-$dark-shade-100: RGBA(31, 32, 65, 1);
-$dark-shade-75: RGB(31, 32, 65, 0.75);
-$dark-shade-50: RGB(31, 32, 65, 0.50);
-$dark-shade-25: RGB(31, 32, 65, 0.25);
-$dark-shade-5: RGB(31, 32, 65, 0.05);
-$button-primary-color: #BC9CFF;
-$button-second-color:#8BA4F9;
-$button-green-color: #6FCF97;
+$mainColor: #1F2041;
+$purpleColor: #BC9CFF;
+$greenColor: #6FCF97;
+$gradientColor: #8BA4F9;
+$gradientSecondColor: #66D2EA;
+$mainColor--opacity-75: RGB(31, 32, 65, 0.75);
+$mainColor--opacity-50: RGB(31, 32, 65, 0.50);
+$mainColor--opacity-25: RGB(31, 32, 65, 0.25);
+$mainColor--opacity-5: RGB(31, 32, 65, 0.05);
+
+$purpleGradient: linear-gradient(180deg, $purpleColor 0%, $gradientColor 100%);
+$greenGradient: linear-gradient(180deg, $greenColor 0%, $gradientSecondColor 100%);

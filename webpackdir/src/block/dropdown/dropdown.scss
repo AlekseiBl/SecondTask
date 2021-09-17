@@ -1,6 +1,3 @@
-@import "../../style/color.scss";
-$font-stack: Montserrat, Arial, sans-serif;
-
 html{
   box-sizing:border-box
 }
@@ -33,14 +30,14 @@ body{
   font: $font-stack;
   font-size: 12px;
   font-weight: bold;
-  color: $dark-shade-100;
+  color: $mainColor;
   margin-bottom: 5px;   
 }
 
 .dropdown-description--right {
   display: flex;
   font-size: 12px;
-  color: $dark-shade-50;
+  color: $mainColor--opacity-50;
 }
 
 .iqdropdown{
@@ -191,7 +188,7 @@ body{
   height:45px;
   transition:all 0.2s ease-in-out;  
   font-family:$font-stack;
-  color: $button-primary-color; 
+  color: $purpleColor; 
   font-weight: bold;
   font-style: normal;
   font-size: 12px; 
@@ -204,7 +201,7 @@ body{
 
 .iqdropdown 
 .iqdropdown-menu-close{
-  color:$dark-shade-100;
+  color:$mainColor;
   font-family:$font-stack;
   font-size:14px;
   font-weight:600;
@@ -231,7 +228,7 @@ body{
 }
 
 .iqdropdown-item{
-  color:$dark-shade-100;
+  color:$mainColor;
   font-family:$font-stack;
   font-size:12px;
   font-weight:bold;
@@ -239,7 +236,7 @@ body{
 }
 
 .iqdropdown p.iqdropdown-description{
-  color:$dark-shade-100;
+  color:$mainColor;
   font-family: $font-stack;
   font-size:14px;
   font-weight:400;
@@ -258,7 +255,7 @@ body{
 .iqdropdown 
 .iqdropdown-item-controls 
 .counter{
-  color:$dark-shade-100;
+  color:$mainColor;
   font-family: $font-stack;
   font-style: normal;
   font-weight: bold;
@@ -281,7 +278,7 @@ body{
   height:30px;
   padding:0;
   font-size: 18px;
-  color: $dark-shade-50;
+  color: $mainColor--opacity-50;
   font-style: normal;
   font-weight: 400;
   //transition:all 0.2s ease-in-out
@@ -327,7 +324,7 @@ body{
 
 .iqdropdown 
 .iqdropdown-selection{
-  color:$dark-shade-75;
+  color:$mainColor--opacity-75;
   font-family:$font-stack;;
   font-size:14px;
   font-weight:400;
