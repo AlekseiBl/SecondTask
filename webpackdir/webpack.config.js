@@ -69,7 +69,7 @@ module.exports = {
                 type: 'asset/inline',
             },
             {
-                test: /\.scss$/i,
+                test: /\.(scss|css)$/i,
                 use: [
                   // Creates `style` nodes from JS strings
                   "style-loader",

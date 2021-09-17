@@ -13,6 +13,7 @@ html(lang="ru")
     include ../../block/toggle/toggle.pug
     include ../../block/like-button/like-button.pug
     include ../../block/rate-button/rate-button.pug
+    include ../../block/slider/slider.pug
 
     title
   body
@@ -70,6 +71,8 @@ html(lang="ru")
                 .controls__rate-button
                   +rate-button({rate: 5, lenght: 5}) 
           .form-elements__buttons
+            +rangeSlider()
+
         .form-elements__row
           .form-elements__row-wrap      
             .form-dropdown

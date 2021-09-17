@@ -1,3 +1,17 @@
 @import "fonts/Montserrat/fonts.css";
 @import "color.scss";
 $font-stack: Montserrat, Arial, sans-serif;
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-family: $font-stack;
+  font-size: 14px;
+  color: $mainColor;
+  background-color: $whiteColor;
+  margin: 0;
+  padding: 0;
+}

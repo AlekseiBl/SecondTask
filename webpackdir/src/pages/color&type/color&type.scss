@@ -1,15 +1,14 @@
 .color-type {
-  position:absolute;
   width: 100%;
   display: flex;
   flex-direction: row;
+  padding: 53px 0 0 150px;
 
   &__column-1 {
     position:relative;
-    width: 30%;
+    width: 39%;
     display: flex;
     flex-direction: column;
-    margin: 134px 0px 10px 150px;
   }
 
   &__column-2 {
@@ -17,7 +16,6 @@
     width: 33%;
     display: flex;
     flex-direction: column;
-    margin: 129px 0px 10px 164px;
   }
 
   &__row-1-1 { 
