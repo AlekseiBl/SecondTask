@@ -1,4 +1,5 @@
 $mainColor: #1F2041;
+$whiteColor: white;
 $purpleColor: #BC9CFF;
 $greenColor: #6FCF97;
 $gradientColor: #8BA4F9;
@@ -6,6 +7,7 @@ $gradientSecondColor: #66D2EA;
 $mainColor--opacity-75: RGB(31, 32, 65, 0.75);
 $mainColor--opacity-50: RGB(31, 32, 65, 0.50);
 $mainColor--opacity-25: RGB(31, 32, 65, 0.25);
+$mainColor--opacity-10: RGB(31, 32, 65, 0.1);
 $mainColor--opacity-5: RGB(31, 32, 65, 0.05);
 
 $purpleGradient: linear-gradient(180deg, $purpleColor 0%, $gradientColor 100%);

@@ -46,7 +46,7 @@
     font-size: 14px;
     line-height: 18px;
     font-weight: 400;
-    color: rgba(31,32,65,.45);
+    color: $mainColor--opacity-50;
     cursor: pointer;
 
     &::before {
@@ -59,7 +59,7 @@
       height: 20px;
       content: "";
       background-color: transparent;
-      border: 1px solid rgba(31,32,65,.25);
+      border: 1px solid $mainColor--opacity-25;
       border-radius: 50%;
       -webkit-transition: border .3s ease 0s;
       transition: border .3s ease 0s;
@@ -75,7 +75,7 @@
       opacity: 0;
       content: "";
       background: -webkit-gradient(linear,left top,left bottom,from(#bc9cff),to(#8ba4f9));
-      background: linear-gradient( 180deg,#bc9cff,#8ba4f9);
+      background: $purpleGradient;
       border-radius: 50%;
       -webkit-transition: opacity .3s ease 0s,visibility .3s ease 0s;
       transition: opacity .3s ease 0s,visibility .3s ease 0s;

@@ -6,7 +6,7 @@
     box-sizing: border-box;
     $border: 2px;
     color: $purpleColor;
-    background: #FFF;
+    background: $whiteColor;
     background-clip: padding-box; /* !importanté */
     border: solid transparent; /* !importanté */
     border-radius: 22px;
@@ -22,7 +22,7 @@
         z-index: -1;
         margin: -2px; /* !importanté */
         border-radius: inherit; /* !importanté */
-        background: linear-gradient(180deg, $purpleColor 0%, $greenColor 100%);
+        background: $purpleGradient;
     }
 }
 
@@ -34,8 +34,8 @@
 
 .btn-color {    
     border: transparent; /* !important */
-    background: linear-gradient(180deg, $purpleColor 0%, $greenColor 100%);
-    color:#FFF;    
+    background: $purpleGradient;
+    color: $whiteColor;    
 }
 
 .btn-color-opacity {
@@ -46,6 +46,6 @@
     border: transparent;
     width: 44px;
     height: 44px; 
-    background: linear-gradient(180deg, $purpleColor 0%, $greenColor 100%);
-    color:#FFF;
+    background: $purpleGradient;
+    color: $whiteColor;
 }

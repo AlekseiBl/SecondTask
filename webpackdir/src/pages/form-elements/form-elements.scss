@@ -15,16 +15,16 @@
     overflow: hidden;
     width: 48px;
     height: 48px;
-    background-color: #bc9cff;
-    border: 2px solid #fff;
+    background-color: $purpleColor;
+    border: 2px solid $whiteColor;
     border-radius: 50%;    
     background: url("../../img/murad.jpg") 50% no-repeat;    
-    filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));   
+    filter: drop-shadow(0px 10px 20px $mainColor--opacity-10);   
   }
 
   &__title, &__date {
     font-size: 14px;
-    color: rgba(31,32,65,.75);
+    color: $mainColor--opacity-75;
   }
 
   &__title {
@@ -41,7 +41,7 @@
     max-width: 77%;
     font-size: 14px;
     line-height: 24px;
-    color: rgba(31,32,65,.75);
+    color: $mainColor--opacity-75;
   }
 }
 
@@ -51,7 +51,7 @@
     position: relative;
     margin: 0 auto;
     padding: 0 10px;
-    width: 80.5556%;
+    width: 80%;
     min-width: 320px;
     max-width: 1920px;
   }
@@ -161,7 +161,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    border-bottom: 1px solid rgba(31,32,65,.1);
+    border-bottom: 1px solid $mainColor--opacity-10;
 
     &:last-child{
       margin-bottom: 0;

@@ -48,7 +48,7 @@
         height: 20px;
         content: '';
         background-color: transparent;
-        border: 1px solid rgba(31, 32, 65, .25);
+        border: 1px solid $mainColor--opacity-25;
         border-radius: 4px;
         transition: border .3s ease 0s;
       }
