@@ -29,14 +29,15 @@ $font-stack: Montserrat, Arial, sans-serif;
     display: none;
     box-sizing: border-box;
     padding: 0;
+    $item: "radio-btn";
 
     &:checked {
-      & + .radio-btn__span::after {
+      & + .#{$item}__span::after {
         visibility: visible;
         opacity: 1;
       }
 
-      & + .radio-btn__span::before {
+      & + .#{$item}__span::before {
         border-color: $button-primary-color;
       }
     }

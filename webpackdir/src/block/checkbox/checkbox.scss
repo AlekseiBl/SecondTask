@@ -12,13 +12,14 @@ $font-stack: Montserrat, Arial, sans-serif;
 
   & .checkbox {
     display: none;
+    $item: "checkbox";
 
     &:checked {
-      & + .checkbox__span::after {
+      & + .#{$item}__span::after {
         visibility: visible;
         opacity: 1;
       }    
-      & + .checkbox__span::before {
+      & + .#{$item}__span::before {
         border-color: $button-primary-color;
       }  
     }
