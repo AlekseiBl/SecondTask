@@ -6,7 +6,7 @@ $(document).ready(() => {
   if (slider) {
     noUiSlider.create(slider, {
       start: [5000, 10000],
-      step:100,
+      step: 100,
       connect: true,
       range: {
         'min': 500,
@@ -15,7 +15,46 @@ $(document).ready(() => {
       format: wNumb({
         decimals: 0,
         thousand: ' ',
-      })
+      }),
+      cssPrefix: 'slider-',
+      cssClasses: {
+        target: 'target',
+        base: 'base',
+        origin: 'origin',
+        handle: `handle`,
+        handleLower: 'handle-lower',
+        handleUpper: 'handle-upper',
+        touchArea: 'touch-area',
+        horizontal: 'horizontal',
+        vertical: 'vertical',
+        background: 'background',
+        connect: `connect`,
+        connects: 'connects',
+        ltr: 'ltr',
+        rtl: 'rtl',
+        textDirectionLtr: 'txt-dir-ltr',
+        textDirectionRtl: 'txt-dir-rtl',
+        draggable: 'draggable',
+        drag: 'state-drag',
+        tap: 'state-tap',
+        active: 'active',
+        tooltip: 'tooltip',
+        pips: 'pips',
+        pipsHorizontal: 'pips-horizontal',
+        pipsVertical: 'pips-vertical',
+        marker: 'marker',
+        markerHorizontal: 'marker-horizontal',
+        markerVertical: 'marker-vertical',
+        markerNormal: 'marker-normal',
+        markerLarge: 'marker-large',
+        markerSub: 'marker-sub',
+        value: 'value',
+        valueHorizontal: 'value-horizontal',
+        valueVertical: 'value-vertical',
+        valueNormal: 'value-normal',
+        valueLarge: 'value-large',
+        valueSub: 'value-sub',
+      },
     });
     
     var nodes = [
