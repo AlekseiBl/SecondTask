@@ -1,8 +1,8 @@
-mixin button({text, type, isVisited, isLarge, isGreen, withArrow})
+mixin button({text, type, isVisited, isLarge, withArrow})
   -
     let buttonClass = 'btn';
 
-    const types = ['classic', 'transparent', 'url', 'circle'];
+    const types = ['classic', 'transparent', 'url'];
 
 
     if(types.includes(type)) {
@@ -15,10 +15,6 @@ mixin button({text, type, isVisited, isLarge, isGreen, withArrow})
 
     if(isLarge) {
       buttonClass += ` btn--large`;
-    }
-
-    if (isGreen) {
-      buttonClass += ` btn--circle-green`;
     }
 
     if(withArrow) {
