@@ -1,8 +1,8 @@
 mixin button({text, type, isVisited, isLarge, isGreen, withArrow})
   -
-    let buttonClass = "btn";
+    let buttonClass = 'btn';
 
-    const types = ["classic", "transparent", "url", "circle"];
+    const types = ['classic', 'transparent', 'url', 'circle'];
 
 
     if(types.includes(type)) {
@@ -25,7 +25,7 @@ mixin button({text, type, isVisited, isLarge, isGreen, withArrow})
       buttonClass += ` btn--with-arrow`;
     }
 
-  button(type="button" class=buttonClass)=text
+  button(type='button' class=buttonClass)=text
 
 
     
