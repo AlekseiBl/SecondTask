@@ -1,9 +1,9 @@
-/* global jQuery */
+window.$ = window.jQuery = require( "jquery" );
 
-// plugin styles
-//import 'styles/main.scss';
+$(document).ready(() => {
+  $('.iqdropdown').iqDropdown({});
+});
 
-/* eslint-disable func-names */
 (function ($) {
   const defaults = {
     maxItems: Infinity,
@@ -83,11 +83,8 @@
         textPlural: $selection.data('text-plural'),
       };            
       const type = $selection.data('type');
-      defaults.isExpanded = $selection.data('expanded');
-      if ($selection.data('buttons') != undefined) {
-        defaults.buttons = false;
-      }      
-      
+      defaults.isExpanded = $selection.data('expanded'); 
+      defaults.buttons = $selection.data('buttons');        
       const settings = $.extend(true, {}, defaults, dataAttrOptions, options);
       const itemCount = {};
       let itemClass ="button-decrement__dimly"; 
@@ -139,7 +136,7 @@
 
         $item.children('div').addClass(settings.controls.displayCls);
         $controls.append($decrementButton, $counter, $incrementButton);
-        if(lastItem.value===true&&defaults.buttons===true){          
+        if(lastItem.value===true&&defaults.buttons){          
           $control.append($clearButton, $applyButton);          
         } else {
           $control.toggleClass('iqdropdown-menu-control--close');

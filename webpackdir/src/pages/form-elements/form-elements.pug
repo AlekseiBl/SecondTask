@@ -38,7 +38,7 @@ html(lang="ru")
             .form-input  
               +input-default("TEXT FIELD","HOVER / FOCUS", "This is pretty awesome", "focus") 
             .form-input              
-              +adddropdown("1") 
+              +dropdown({type: '1', isButtons: 'true'})
             .form-input.form-input--last 
               +input-placeholder("MASKED TEXT FIELD")
             .input__date-inputs
@@ -111,9 +111,9 @@ html(lang="ru")
           .form-elements__row-wrap      
             .form-dropdown
               .form-dropdown--margin
-                +adddropdown("2", "DEFAULT")
+                +dropdown({type: '2', isButtons: 'true'})
               .form-dropdown--margin        
-                +adddropdown("2", "EXPANDED", "true", "", "false")
+                +dropdown({type: '2', status:'EXPANDED', isExpanded: 'true', isButtons: 'false'})
             .form-expandable
               details.expandable-checkbox
                 summary.expandable-checkbox__summary expandable checkbox list
@@ -123,7 +123,7 @@ html(lang="ru")
                 +checkbox("Кроватка", "checked")
                 +checkbox("Телевизор")
                 +checkbox("Шампунь")            
-              details.expandable-checkbox
+              details(open).expandable-checkbox
                 summary.expandable-checkbox__summary expandable checkbox list
                 +checkbox("Завтрак")
                 +checkbox("Письменный стол", "checked")
@@ -131,6 +131,14 @@ html(lang="ru")
                 +checkbox("Кроватка", "checked")
                 +checkbox("Телевизор")
                 +checkbox("Шампунь")
+          .form-elements__row-wrap      
+            .form-dropdown
+              .form-dropdown--margin
+                +dropdown({type: '1',  isExpanded: 'true', isButtons: 'true'})
+          .form-elements__row-wrap      
+            .form-dropdown
+              .form-dropdown--margin
+                +dropdown({type: '1',  isExpanded: 'true', isButtons: 'true'})
         .form-elements__row
           .form-elements__row-wrap
             ul.features
@@ -153,6 +161,7 @@ html(lang="ru")
                     //alt method with img --- work fine
                     //img(src=require("../../img/murad.jpg"))
                     .btn-like
+                      +like-button({count:12, isActive: true})
                   .comment__column
                     p.comment__title Мурад Сарафанов
                     p.comment__date 5 дней назад
