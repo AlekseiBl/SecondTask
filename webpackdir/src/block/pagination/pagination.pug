@@ -1,0 +1,20 @@
+mixin pagination(pages)
+  .pagination
+    .pagination__wrap
+      each page in pages
+        -
+          const {title, path, isActive, isNext} = page;
+          let pageClass = 'pagination__page';
+
+          if (isActive) {
+            pageClass += ` pagination__page--active`;
+          }
+
+          if (isNext) {
+            pageClass += ` pagination__page--next`;
+          }
+          
+        div(class=pageClass)
+          a.pagination__link(href=path)= title
+    .pagination__description
+      p.pagination__description-text 1 – 12 из 100+ вариантов аренды

@@ -1,0 +1,74 @@
+.pagination {
+
+  &__page {      
+    margin-top: 16px;
+
+    &--active a {
+      width: 40px;
+      height: 40px;
+      font-size: 12px;
+      line-height: 15px;
+      font-weight: bold;
+      color: $whiteColor;
+      background: $purpleGradient;
+      border-radius: 50%;
+    }
+
+    &--next a {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      font-size: 12px;
+      line-height: 15px;
+      font-weight: bold;
+      color: $whiteColor;
+      background: $greenGradient;
+      border-radius: 50%;
+
+      &::after {
+        position: absolute;
+        top: -2px;
+        right: -2px;
+        width: 44px;
+        height: 44px;
+        content: '';
+        background: url("./img/arrow.svg") no-repeat;
+        background-position: center center;
+        transition: background .2s ease;
+      }
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__link {
+    padding: 12px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 36px;
+    font-family: $font-stack;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    color: $mainColor--opacity-50;
+  }
+
+  &__description {
+    padding-left: 6px;
+
+    &-text {
+      margin: 0;
+      margin-top: 7px;
+      font-family: $font-stack;
+      font-size: 14px;
+      line-height: 24px;
+      color: $mainColor--opacity-75;
+    }
+  }
+}
