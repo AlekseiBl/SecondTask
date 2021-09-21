@@ -15,6 +15,7 @@ $(document).ready(() => {
       format: wNumb({
         decimals: 0,
         thousand: ' ',
+        suffix: '₽',
       }),
       cssPrefix: 'slider-',
       cssClasses: {

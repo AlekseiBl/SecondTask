@@ -132,9 +132,9 @@
    -webkit-transition: transform 0.3s;
    transition: transform 0.3s;
  }
- .slider-state-drag * {
-   cursor: inherit !important;
- }
+//  .slider-state-drag * {
+//    cursor: inherit !important;
+//  }
  /* Slider size and handle placement;
   */
  .slider-horizontal {
@@ -155,10 +155,10 @@
    right: -6px;
    top: -17px;
  }
- .slider-txt-dir-rtl.slider-horizontal .slider-handle {
-   left: -17px;
-   right: auto;
- }
+//  .slider-txt-dir-rtl.slider-horizontal .slider-handle {
+//    left: -17px;
+//    right: auto;
+//  }
  /* Styling;
   * Giving the connect element a border radius causes issues with using transform: scale
   */
