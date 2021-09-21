@@ -1,51 +1,110 @@
 .btn {          
-    position: relative;
-    width: 99px;
-    height: 44px; 
-    padding: 2px;
-    box-sizing: border-box;
-    $border: 2px;
-    color: $purpleColor;
-    background: $whiteColor;
-    background-clip: padding-box; /* !importanté */
-    border: solid transparent; /* !importanté */
-    border-radius: 22px;
-    font-family: inherit;
-    
-}
+  position: relative;
+  width: 99px;
+  height: 44px; 
+  padding: 2px;
+  box-sizing: border-box;
+  $border: 2px;
+  color: $purpleColor;
+  background: $whiteColor;
+  background-clip: padding-box; 
+  border: solid transparent; 
+  border-radius: 22px;
+  font-family: inherit;
+  font-weight: bold;
+  text-transform: uppercase;  
 
-.btn-border {
-    &:before {
-        content: '';
-        position: absolute;
-        top: 0; right: 0; bottom: 0; left: 0;
-        z-index: -1;
-        margin: -2px; /* !importanté */
-        border-radius: inherit; /* !importanté */
-        background: $purpleGradient;
+  &--large {
+    width: 320px;
+    background-image: url("./img/arrow.svg");
+    background-repeat: no-repeat;
+    background-position:  55% 50%; 
+
+    &::after {
+      position: absolute;
+      top: 0%;
+      right: 0;
+      width: 44px;
+      height: 44px;
+      content: '';
+      background: url("./img/arrow.svg") no-repeat;
+      background-position: center center;
+      transition: background .2s ease;
     }
-}
+  }
 
-.btn--border-opacity {
-    &:before{
+  &--with-arrow {
+    &::after {
+      position: absolute;
+      top: 0%;
+      right: 0;
+      width: 44px;
+      height: 44px;
+      content: '';
+      background: url("./img/arrow.svg") no-repeat;
+      background-position: center center;
+      transition: background .2s ease;
+    }
+  }
+
+  &--url {
+
+    &:hover{
+      color: $mainColor--opacity-50;
+    }
+
+    &-visited {
+      color: $mainColor--opacity-50;
+    }
+  }
+  
+
+  &--transparent {      
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      z-index: -1;
+      margin: -2px;
+      border-radius: inherit;
+      background: $purpleGradient;           
+    }
+
+    &:hover::before {
+      opacity: 0.5;
+    }
+ 
+    &-visited {
+      &::before {
         opacity: 0.5;
-    }
-}
+      }
+    }    
+  }
 
-.btn-color {    
-    border: transparent; /* !important */
-    background: $purpleGradient;
-    color: $whiteColor;    
-}
-
-.btn-color-opacity {
-    opacity: 0.5;    
-}
-
-.btn-circle {
+  &--circle {
     border: transparent;
     width: 44px;
     height: 44px; 
     background: $purpleGradient;
-    color: $whiteColor;
+    color: $whiteColor;    
+    
+    &-green {
+      background:$greenGradient;
+    }
+  }
+
+  &--classic {
+    border: transparent;
+    background: $purpleGradient;
+    color: $whiteColor;  
+
+    &:hover {
+      opacity: 0.5;
+    }  
+  
+    &-visited {
+      opacity: 0.5;
+    }
+  }    
 }

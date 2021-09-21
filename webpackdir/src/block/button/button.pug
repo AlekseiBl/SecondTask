@@ -1,5 +1,32 @@
-button(type="button" class="btn btn-border") CLICK ME
-button(type="button" class="btn btn-border btn--border-opacity") CLICK ME
-button(type="button" class="btn btn-color") CLICK ME
-button(type="button" class="btn btn-color btn-color-opacity") CLICK ME
-button(type="button" class="btn btn-circle") 1
+mixin button({text, type, isVisited, isLarge, isGreen, withArrow})
+  -
+    let buttonClass = "btn";
+
+    const types = ["classic", "transparent", "url", "circle"];
+
+
+    if(types.includes(type)) {
+      buttonClass += ` btn--${type}`;
+    }
+
+    if(isVisited) {
+      buttonClass += ` btn--${type}-visited`;
+    }
+
+    if(isLarge) {
+      buttonClass += ` btn--large`;
+    }
+
+    if (isGreen) {
+      buttonClass += ` btn--circle-green`;
+    }
+
+    if(withArrow) {
+      buttonClass += ` btn--with-arrow`;
+    }
+
+  button(type="button" class=buttonClass)=text
+
+
+    
+

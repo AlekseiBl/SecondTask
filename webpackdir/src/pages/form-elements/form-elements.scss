@@ -295,4 +295,15 @@
     justify-content: space-between;
     flex-direction: column;
   }
+
+  &__wrap {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+  }
+
+  &__btn:first-child {
+    margin-right: 19px;
+  }
 }

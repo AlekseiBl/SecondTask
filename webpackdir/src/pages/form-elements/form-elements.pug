@@ -11,6 +11,7 @@ html(lang="ru")
     include ../../block/description/description.pug
     include ../../block/radio-button/radio-button.pug
     include ../../block/toggle/toggle.pug
+    include ../../block/button/button.pug
     include ../../block/like-button/like-button.pug
     include ../../block/rate-button/rate-button.pug
     include ../../block/slider/slider.pug
@@ -71,7 +72,34 @@ html(lang="ru")
                 .controls__rate-button
                   +rate-button({rate: 5, lenght: 5}) 
           .form-elements__buttons
-            +rangeSlider()
+            .buttons
+              +rangeSlider()
+            .buttons
+              .buttons__title-wrap  
+                +description({text: "buttons", type: "h3", upperCase: "true"})
+              .buttons__wrap
+                .buttons__btn
+                  +button({text:'click me', type: 'classic'})
+                .buttons__btn
+                  +button({text:'click me', type: 'classic', isVisited: 'true'})
+              .buttons__wrap
+                .buttons__btn
+                  +button({text:'click me', type: 'transparent'})
+                .buttons__btn  
+                  +button({text:'click me', type: 'transparent', isVisited: 'true'})
+              .buttons__wrap
+                .buttons__btn
+                  +button({text:'click me', type: 'url'})
+                .buttons__btn  
+                  +button({text:'click me', type: 'url', isVisited: 'true'})
+              .buttons__wrap
+                .buttons__btn
+                  +button({text:'click me', type: 'classic', isLarge: 'true', withArrow: 'true'})
+              .buttons__wrap
+                .buttons__btn
+                  +button({text:'1', type: 'circle'})
+                .buttons__btn  
+                  +button({text:'', type: 'circle', isGreen:'true', withArrow: 'arrow'})
 
         .form-elements__row
           .form-elements__row-wrap      
