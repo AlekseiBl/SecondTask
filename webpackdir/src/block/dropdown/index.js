@@ -155,14 +155,14 @@ $(document).ready(() => {
           if (allowClick && totalItems > minItems && itemCount[id] > items[id].minCount) {
             itemCount[id] -= 1;
             totalItems -= 1;
-            if (totalItems==0) {
+            if (totalItems===0) {
               $control.find('button.clearButton').invisible();
             } 
             $counter.html(itemCount[id]);
             updateDisplay();
             onChange(id, itemCount[id], totalItems);
           }
-          if (itemCount[id]==0) {
+          if (itemCount[id]===0) {
             $decrementButton.addClass(itemClass);
           } else {
             $decrementButton.removeClass(itemClass);
@@ -209,8 +209,7 @@ $(document).ready(() => {
           event.preventDefault();
         });
 
-        $applyButton.click((event) => {
-          //updateDisplay();
+        $applyButton.click((event) => {          
           event.preventDefault();          
           $this.toggleClass('menu-open');
           //action Input
