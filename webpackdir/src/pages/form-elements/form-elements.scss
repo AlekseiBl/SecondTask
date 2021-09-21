@@ -61,6 +61,10 @@
     padding-bottom: 100px;
   }
 
+  &__check-wrap {
+    margin-top: 200px;
+  }
+
   &__row {
     margin-bottom: 100px;
     display: -webkit-box;
@@ -87,18 +91,19 @@
   }
   
   &__row-wrap {
-    width: 23%;
+    width: 27.6%;
 
     &--large {
-      width: 60%;
+      width: 62.4%;
     }
+    
   }
 
 }
 
 .form-expandable {
   max-width: 266px;
-  margin-top: 150px;
+  margin-top: 54px;
 }
 
 .expandable-checkbox {
@@ -210,9 +215,14 @@
 }
 
 .form-dropdown {    
-  max-width: 266px;
+  max-width: 320px;
+
   &--margin {
     margin-top: 20px;
+  }
+  
+  &--small {
+    max-width: 266px;
   }
 }
 

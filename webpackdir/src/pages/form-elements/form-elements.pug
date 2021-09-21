@@ -109,11 +109,21 @@ html(lang="ru")
                 +pagination(pages)             
         .form-elements__row
           .form-elements__row-wrap      
-            .form-dropdown
+            .form-dropdown--small
               .form-dropdown--margin
                 +dropdown({type: '2', isButtons: 'true'})
               .form-dropdown--margin        
-                +dropdown({type: '2', status:'EXPANDED', isExpanded: 'true', isButtons: 'false'})
+                +dropdown({type: '2', status:'EXPANDED', isExpanded: 'true', isButtons: 'false'})            
+          .form-elements__row-wrap      
+            .form-dropdown
+              .form-dropdown--margin
+                +dropdown({type: '1',  isExpanded: 'true', isButtons: 'true'})
+          .form-elements__row-wrap      
+            .form-dropdown
+              .form-dropdown--margin
+                +dropdown({type: '1',  isExpanded: 'true', isButtons: 'true'}) 
+        .form-elements__row
+          .form-elements__row-wrap
             .form-expandable
               details.expandable-checkbox
                 summary.expandable-checkbox__summary expandable checkbox list
@@ -131,14 +141,18 @@ html(lang="ru")
                 +checkbox("Кроватка", "checked")
                 +checkbox("Телевизор")
                 +checkbox("Шампунь")
-          .form-elements__row-wrap      
-            .form-dropdown
-              .form-dropdown--margin
-                +dropdown({type: '1',  isExpanded: 'true', isButtons: 'true'})
-          .form-elements__row-wrap      
-            .form-dropdown
-              .form-dropdown--margin
-                +dropdown({type: '1',  isExpanded: 'true', isButtons: 'true'})
+          .form-elements__row-wrap
+            .form-expandable
+              .buttons__title-wrap  
+                +description({text: "rich checkbox buttons", type: "h3", upperCase: "true"}) 
+              +rich-checkbox('Широкий коридор','Ширина коридоров в номере не менее 91 см')              
+              +rich-checkbox('Помощник для инвалидов','На 1 этаже вас встретит специалист  и проводит до номера.')
+          .form-elements__row-wrap
+            .form-expandable
+              .buttons__title-wrap  
+                +description({text: "bullet list", type: "h3", upperCase: "true"}) 
+              
+                       
         .form-elements__row
           .form-elements__row-wrap
             ul.features
