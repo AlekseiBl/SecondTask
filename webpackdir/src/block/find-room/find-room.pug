@@ -1,0 +1,12 @@
+mixin find-room
+  form.find-room
+    .find-room__wrap
+      .find-room__title Найдём номера под ваши пожелания
+      .find-room__date-wrap
+        +datepicker("ДД.ММ.ГГГГ", "ПРИБЫТИЕ")
+        +datepicker("ДД.ММ.ГГГГ", "ВЫЕЗД")
+      .find-room__guest-wrap
+        +dropdown({type: '1', text: 'ГОСТИ', isButtons: 'true'})
+      .find-room__button-wrap
+        +button({text:'подобрать номер', type: 'classic', isLarge: 'true', withArrow: 'true'}) 
+
