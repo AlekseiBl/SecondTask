@@ -21,7 +21,8 @@ mixin button({text, type, isVisited, isLarge, withArrow})
       buttonClass += ` btn--with-arrow`;
     }
 
-  button(type='button' class=buttonClass)=text
+  button(type='submit' class=buttonClass)
+    span.btn__text= text
 
 
     

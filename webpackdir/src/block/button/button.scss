@@ -10,9 +10,15 @@
   background-clip: padding-box; 
   border: solid transparent; 
   border-radius: 22px;
-  font-family: inherit;
-  font-weight: bold;
+  font-family: $font-stack;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
   text-transform: uppercase;  
+
+  &__text {
+    margin-right: 2px;
+  }
 
   &--large {
     width: 320px;
