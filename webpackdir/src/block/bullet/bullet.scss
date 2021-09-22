@@ -1,0 +1,25 @@
+.bullet {
+
+  &__text {
+    position: relative;
+    padding-left: 18px;
+    display: block;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: normal;
+    color: $mainColor--opacity-75;
+    margin: 6px 0;
+
+    &::before {
+      position: absolute;
+      top: 7px;
+      left: 0;
+      //box-sizing: border-box;
+      width: 10px;
+      height: 10px;
+      content: '';
+      background-color: $mainColor--opacity-25;
+      border-radius: 50%;
+    }
+  }
+}
