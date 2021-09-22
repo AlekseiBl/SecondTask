@@ -39,14 +39,14 @@ html(lang="ru")
             .form-input  
               +input-default("TEXT FIELD","HOVER / FOCUS", "This is pretty awesome", "focus") 
             .form-input              
-              +dropdown({type: '1', isButtons: 'true'})
+              +dropdown({type: '1', text: 'DROPDOWN', isButtons: 'true'})
             .form-input.form-input--last 
               +input-placeholder("MASKED TEXT FIELD")
             .input__date-inputs
-              +datepicker("ДД.ММ.ГГГГ")
-              +datepicker("19.08.2019")
+              +datepicker("ДД.ММ.ГГГГ", "DATE DROPDOWN")
+              +datepicker("19.08.2019", "DATE DROPDOWN")
             .form-input--small 
-              +datepicker-filter("19 авг - 23 авг")
+              +datepicker-filter("19 авг - 23 авг", "FILTERED DATE DROPDOWN")
             .form-input--small.form-input--small_subscription
               +input-subscription("SUBSCRIPTION TEXT FIELD","", "Email")  
           .form-elements__controls
@@ -112,17 +112,17 @@ html(lang="ru")
           .form-elements__row-wrap      
             .form-dropdown--small
               .form-dropdown--margin
-                +dropdown({type: '2', isButtons: 'true'})
+                +dropdown({type: '2', text: 'DROPDOWN', isButtons: 'true'})
               .form-dropdown--margin        
-                +dropdown({type: '2', status:'EXPANDED', isExpanded: 'true', isButtons: 'false'})            
+                +dropdown({type: '2', text: 'DROPDOWN', status:'EXPANDED', isExpanded: 'true', isButtons: 'false'})            
           .form-elements__row-wrap      
             .form-dropdown
               .form-dropdown--margin
-                +dropdown({type: '1',  isExpanded: 'true', isButtons: 'true'})
+                +dropdown({type: '1', text: 'DROPDOWN',  isExpanded: 'true', isButtons: 'true'})
           .form-elements__row-wrap      
             .form-dropdown
               .form-dropdown--margin
-                +dropdown({type: '1',  isExpanded: 'true', isButtons: 'true'}) 
+                +dropdown({type: '1', text: 'DROPDOWN',  isExpanded: 'true', isButtons: 'true'}) 
         .form-elements__row
           .form-elements__row-wrap
             .form-expandable
