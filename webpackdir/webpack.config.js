@@ -42,7 +42,13 @@ module.exports = {
             template: './src/pages/form-elements/form-elements.pug',
             filename: 'form-elements.html',
             minify: false
-          }), 
+          }),
+          new HtmlWebpackPlugin({
+            title: 'webpack Boilerplate',
+            template: './src/pages/cards/cards.pug',
+            filename: 'cards.html',
+            minify: false
+          }),  
         new CleanWebpackPlugin(),
         // применять изменения только при горячей перезагрузке
         new webpack.HotModuleReplacementPlugin(),
