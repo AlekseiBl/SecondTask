@@ -1,0 +1,11 @@
+mixin registration
+  form.registration(action="404.html")
+    .registration__wrap
+      .registration__title Регистрация аккаунта
+      .registration__name-wrap
+        +input-default("","", "Имя")
+        +input-default("","", "Фамилия")
+      .registration__radio-buttons
+        +radio-button
+      .registration__input-date
+        +input-placeholder("Дата рождения")
