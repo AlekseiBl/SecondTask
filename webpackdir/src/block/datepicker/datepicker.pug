@@ -1,9 +1,9 @@
-mixin datepicker(value) 
+mixin datepicker(value, text) 
   div(class="datepicker-cont--small")
-    div(class="input-desription--left") DATE DROPDOWN
+    div(class="input-desription--left")= text
     input(type="text" class="datepicker-here datepicker--small"  value=value)
 
-mixin datepicker-filter(value)
+mixin datepicker-filter(value, text)
   div(class="datepicker-cont")
-    div(class="input-desription--left") FILTER DATE DROPDOWN
+    div(class="input-desription--left")= text
     input(type="text" class="datepicker-here datepicker--filter" data-range="true" data-clear-button="true" data-apply-button="true" data-multiple-dates-separator=" - " value=value)
