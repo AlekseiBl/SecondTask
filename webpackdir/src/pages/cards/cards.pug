@@ -1,0 +1,21 @@
+doctype html
+html(lang="ru")
+  head  
+    include ../../block/logo/logo.pug
+    include ../../block/find-room/find-room.pug
+    include ../../block/registration/registration.pug     
+    include ../../block/datepicker/datepicker.pug    
+    include ../../block/dropdown/dropdown.pug
+    include ../../block/button/button.pug
+    include ../../block/input/input.pug    
+    include ../../block/radio-button/radio-button.pug
+    
+
+    title
+  body
+    .logo
+      +logo()
+    .cards__container
+      .cards__column
+        +find-room 
+        +registration
