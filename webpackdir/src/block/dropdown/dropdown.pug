@@ -1,4 +1,4 @@
-mixin dropdown({type, status, isExpanded, isButtons})
+mixin dropdown({type, text, status, isExpanded, isButtons})
   -  
     var rooms = ["спальни","кровати","ванные комнаты"];
     var peoples = ["взрослые","дети","младенцы"];
@@ -9,7 +9,7 @@ mixin dropdown({type, status, isExpanded, isButtons})
     };
     let dataId = 1;    
   .dropdown-description 
-    .dropdown-description--left DROPDOWN
+    .dropdown-description--left= text
     .dropdown-description--right  #{status}
   .iqdropdown
     p(class="iqdropdown-selection" data-buttons = isButtons  data-type=type data-expanded = isExpanded data-selection-text="Гость" data-text-plural="Гостей")

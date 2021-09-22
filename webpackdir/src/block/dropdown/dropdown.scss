@@ -311,30 +311,30 @@ body{
 
 .iqdropdown{
   align-items:center;
-  border:1px solid #E2E2E2;
+  border:1px solid $mainColor--opacity-25;
   border-radius:4px;
   cursor:pointer;
   display:flex;
   height:44px;
   justify-content:space-between;
-  padding:0 15px;
+  padding:0 15px 0 14px;
   position:relative;
 }
 
 .iqdropdown 
 .iqdropdown-selection{
   color:$mainColor--opacity-75;
-  font-family:$font-stack;;
-  font-size:14px;
-  font-weight:400;
+  font-family:$font-stack;  
+  font-weight:normal;
   font-style: normal;
+  font-size:14px;  
+  line-height: 18px;
   flex:1;
-  position:relative
+  position:relative;
 }
 
 .iqdropdown 
-.iqdropdown-selection::after{
-  //background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAMCAMAAABGBS09AAAAeFBMVEVMaXGVlZWRkZGRkZH///+UlJSRkZGQkJCRkZGZmZmRkZGRkZGSkpKRkZGVlZWQkJCdnZ2QkJCVlZWUlJSQkJCXl5eRkZGSkpKRkZGSkpKRkZGRkZGRkZGRkZGQkJCQkJCRkZGSkpKQkJCRkZGTk5OSkpKRkZGQkJAWlBl2AAAAJ3RSTlMAHcnXATdy+f4FzLJg5ySKDYgMJuYbSm61XtmUmcc1qkiq9fVHWVidqGmEAAAAhUlEQVR42o2O5w7CYAhF6e7XvfdwtN73f0OhatLUxnj+wMklAP2mHGpFX6h6KLn0QFcds6oDeq6rC6DJ91HeAHAf0k4jACdOPlESOwDG6WVmW7CFgblJELIULcubLJVh3SKydFmTZrQn8uXMdZYH/IiOXAxsGAudoOwbcLcVnaN5nkb/8gRapQtVGGewNQAAAABJRU5ErkJggg==);
+.iqdropdown-selection::after{  
   background-image: url("../../img/expand_more.png");
   background-position:center;
   background-repeat:no-repeat;
@@ -345,7 +345,7 @@ body{
   width:17px;
   position:absolute;
   right:-2px;
-  top:30%
+  top:6px;
 }
 
 .iqdropdown.menu-open{
