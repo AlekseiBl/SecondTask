@@ -1,11 +1,22 @@
 mixin registration
-  form.registration(action="404.html")
-    .registration__wrap
-      .registration__title Регистрация аккаунта
-      .registration__name-wrap
-        +input-default("","", "Имя")
-        +input-default("","", "Фамилия")
-      .registration__radio-buttons
-        +radio-button
-      .registration__input-date
-        +input-placeholder("Дата рождения")
+  .registration
+    form(action="404.html")
+      .registration__wrap
+        .registration__title Регистрация аккаунта
+        .registration__name-wrap
+          +input-default("","", "Имя")
+          +input-default("","", "Фамилия")
+        .registration__radio-buttons
+          +radio-button
+        .registration__input-date
+          +input-placeholder("Дата рождения")
+        .registration__auth-wrap
+          +input-default("ДАННЫЕ ДЛЯ ВХОДА В СЕРВИС","", "Email")
+          +input-default("","", "Пароль")
+        .registration__toggle 
+          +toggle-button({})
+        .registration__registration
+          +button({text:'перейти к оплате', type: 'classic', isLarge: 'true', withArrow: 'true'}) 
+        .registration__login
+          span.registration__login-text Уже есть аккаунт на Toxin
+          +button({text:'войти', type: 'transparent'})
