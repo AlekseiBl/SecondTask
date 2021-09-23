@@ -3,7 +3,8 @@ html(lang="ru")
   head  
     include ../../block/logo/logo.pug
     include ../../block/find-room/find-room.pug
-    include ../../block/registration/registration.pug     
+    include ../../block/registration/registration.pug   
+    include ../../block/total-price/total-price.pug 
     include ../../block/datepicker/datepicker.pug    
     include ../../block/dropdown/dropdown.pug
     include ../../block/button/button.pug
@@ -20,3 +21,5 @@ html(lang="ru")
       .cards__column
         +find-room 
         +registration
+      .cards__column
+        +total-price
