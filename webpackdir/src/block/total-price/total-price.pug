@@ -1,0 +1,30 @@
+mixin total-price 
+  .total-price
+    form(action='404.html')
+      .total-price__wrap
+        .total-price__head
+          .total-price__title №         
+            span.total-price__title-text 888
+              span.total-price__title-text--special люкс
+          span.total-price__day-cost 9 990₽
+            span.total-price__day-cost-text в сутки 
+        .total-price__date-wrap
+          +datepicker("19.08.2019", "ПРИБЫТИЕ")
+          +datepicker("23.08.2019", "ВЫЕЗД")
+        .total-price__guest-wrap
+          +dropdown({type: '1', text: 'ГОСТИ', isButtons: 'true'})   
+        .total-price__calc
+          .total-price__calc-column
+            p.total-price__calc-text
+              span.total-price__day-sum 9 990₽ х 4 суток
+            p.total-price__calc-text--extend
+              span.total-price__discount Сбор за услуги: скидка 2 179₽
+            p.total-price__calc-text--extend
+              span.total-price__extend-service Сбор за дополнительные услуги
+          .total-price__calc-column
+            P.total-price__count
+              span.total-price__count-sum 39 960₽
+            P.total-price__count
+              span.total-price__count-sum 0₽
+            P.total-price__count
+              span.total-price__count-sum 300₽   

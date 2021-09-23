@@ -1,0 +1,128 @@
+.total-price {
+  max-width: 380px;  
+  background-color: $whiteColor;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;  
+  margin-bottom: 40px;
+
+  &__wrap {
+    margin: 40px 29px 30px 29px;
+  }
+
+  &__head {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;    
+    padding-top: 1px;
+
+  }
+
+  &__title-text {
+    font-size: 24px;
+    font-weight: 700;
+
+    &--special {
+      padding-left: 8px;
+      padding-top: 2px;
+      font-size: 12px;      
+      line-height: 15px;
+      font-weight: bold;
+      color: $purpleColor;
+      text-transform: uppercase;
+      
+    }
+  }  
+
+  &__day-cost {
+    font-size: 14px;
+    font-weight: bold;
+    color: $mainColor--opacity-50;     
+    margin-bottom: 2px;  
+
+    &-text {
+      font-size: 12px;
+      font-weight: 400;
+      padding-left: 4px;    
+    }
+  }
+
+  &__date-wrap {
+    width: 56%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20.56px;
+  }
+
+  &__guest-wrap {
+    margin-bottom: 18px;
+  }
+
+  &__calc {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &-column {
+      max-width: 214px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+      color: $mainColor--opacity-75;
+    }
+
+    &-text {
+      margin: 0 0 13px;
+
+
+      &--extend {
+        position: relative;
+        margin: 0 0 16px;        
+        line-height: 18px;
+
+        &::after {
+          position: absolute;
+          box-sizing: border-box;
+          top: 3px;
+          right: -25px;
+          width: 18px;
+          height: 18px;
+          font-size: 12px;
+          line-height: 19px;
+          font-weight: bold;
+          padding-left: 5.5px;
+          content: 'i';
+          color: $mainColor--opacity-25;
+          border: 1px solid $mainColor--opacity-25;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+      }
+    }
+
+   
+  }
+
+  &__count {
+    margin: 0 0 10px;
+    text-align: right;
+    
+    &-sum {
+    }
+  }
+
+  
+}
