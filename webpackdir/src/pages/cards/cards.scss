@@ -3,10 +3,12 @@
   background-color: #E5E5E5;
 
   &__container {
-    margin: 68px 0 140px 140px;
+    padding: 68px 0 140px 140px;
+    display: flex;
+    flex-wrap: wrap;
   }
 
-  &__find-room {
-
+  &__column {
+    margin-right: 40px;
   }
 }
