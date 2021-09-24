@@ -1,4 +1,5 @@
 window.$ = window.jQuery = require( "jquery" );
+
 (function (window, $, undefined) { ;(function () {
     var VERSION = '2.2.3',
         pluginName = 'datepicker',
@@ -1392,7 +1393,7 @@ window.$ = window.jQuery = require( "jquery" );
 
     //  Utils
     // -------------------------------------------------
-
+    
     datepicker.getDaysCount = function (date) {
         return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
     };
@@ -2246,5 +2247,32 @@ window.$ = window.jQuery = require( "jquery" );
             this.d.timepickerIsActive = false;
         }
     };
-})();
- })(window, jQuery);
+  })();
+})(window, jQuery);
+
+var $start = $('#date__start'),
+    $end = $('#date__end');
+
+$start.datepicker({
+    onSelect: function (fd, date) {
+        $end.data('datepicker')
+                .update('minDate', date);
+
+        $end.focus();
+    }
+});
+
+$end.datepicker({
+    onSelect: function (fd, date) {
+        $start.data('datepicker')
+                .update('maxDate', date)
+    }
+});
+
+//Script for datepicker-range multiple-dates
+// $start.datepicker({ 
+//   onSelect: function (fd, d, picker) { 
+//     $start.val(fd.split("-")[0]);
+//     $end.val(fd.split("-")[1]);
+//   }
+// });
