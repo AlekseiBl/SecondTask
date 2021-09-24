@@ -1,0 +1,13 @@
+mixin login
+  .login 
+    form(action="404.html")
+      .login__wrap
+        .login__title Войти
+        .login__auth-wrap
+          +input-default("","", "Email")
+          +input-default("","", "Пароль")
+        .login__apply
+          +button({text:'войти', type: 'classic', isLarge: 'true', withArrow: 'true'}) 
+        .login__registration
+          span.registration__login-text Нет аккаунта на Toxin?
+          +button({text:'создать', type: 'transparent'}) 
