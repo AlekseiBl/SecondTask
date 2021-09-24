@@ -28,3 +28,9 @@ mixin total-price
               span.total-price__count-sum 0₽
             P.total-price__count
               span.total-price__count-sum 300₽   
+        .total-price__total
+          span.total-price__total-text  Итого
+          .total-price__total-delimiter
+          span.total-price__total-summ 38 081₽
+        .total-price__apply
+          +button({text:'забронировать', type: 'classic', isLarge: 'true', withArrow: 'true'}) 
