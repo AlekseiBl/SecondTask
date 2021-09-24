@@ -782,6 +782,10 @@
   color: $mainColor--opacity-75;
 }
 
+.datepicker--border {  
+  border: 1px solid $mainColor--opacity-25;
+}
+
 .datepicker-cont {
   width: 100%;
   &--small {

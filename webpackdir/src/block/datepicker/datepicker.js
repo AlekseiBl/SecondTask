@@ -2255,24 +2255,24 @@ var $start = $('#date__start'),
 
 $start.datepicker({
     onSelect: function (fd, date) {
-        $end.data('datepicker')
-                .update('minDate', date);
-
+        $end.data('datepicker').update('minDate', date);
         $end.focus();
     }
 });
 
 $end.datepicker({
     onSelect: function (fd, date) {
-        $start.data('datepicker')
-                .update('maxDate', date)
+        $start.data('datepicker').update('maxDate', date)
     }
 });
 
 //Script for datepicker-range multiple-dates
-// $start.datepicker({ 
+// var $startDate = $('#dateRange__start'),
+//     $endDate = $('#dateRange__end');
+
+// $startDate.datepicker({ 
 //   onSelect: function (fd, d, picker) { 
-//     $start.val(fd.split("-")[0]);
-//     $end.val(fd.split("-")[1]);
+//     $startDate.val(fd.split("-")[0]);
+//     $endDate.val(fd.split("-")[1]);
 //   }
 // });
