@@ -24,7 +24,6 @@
     font-size: 14px;
     font-weight: bold;    
     padding-top: 1px;
-
   }
 
   &__title-text {
@@ -38,8 +37,7 @@
       line-height: 15px;
       font-weight: bold;
       color: $purpleColor;
-      text-transform: uppercase;
-      
+      text-transform: uppercase;      
     }
   }  
 
@@ -74,6 +72,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 15px;
 
     &-column {
       max-width: 214px;
@@ -86,7 +85,6 @@
 
     &-text {
       margin: 0 0 13px;
-
 
       &--extend {
         position: relative;
@@ -111,18 +109,44 @@
           cursor: pointer;
         }
       }
-    }
-
-   
+    }   
   }
 
   &__count {
     margin: 0 0 10px;
-    text-align: right;
-    
-    &-sum {
+    text-align: right;       
+  }
+
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+
+    &-text, &-summ {
+      margin: 0;
+      font-size: 19px;
+      line-height: 24px;
+      font-weight: 700;
+    }
+
+    &-delimiter {
+      position: relative;
+      flex-grow: 0.95;
+
+      &::after {
+        position: absolute;
+        top: -6px;
+        width: 100%;
+        content: "";
+        border: 1px dashed $mainColor--opacity-25;
+      }
     }
   }
+
+
+
+
 
   
 }
