@@ -12,3 +12,11 @@ mixin datepicker-filter-inline(value, text)
   div(class="datepicker-cont")
     div(class="input-desription--left")= text
     div(type="text" class="datepicker-here datepicker--filter" data-range="true" data-clear-button="true" data-apply-button="true" data-multiple-dates-separator=" - " value=value)
+
+mixin datepickerRange({textStart, textEnd})  
+  div(class="datepicker-cont--small")
+    div(class="input-desription--left")= textStart
+    input(id="date__start" type="text" class="datepicker-here datepicker--small" placeholder="ДД.ММ.ГГГГ")
+  div(class="datepicker-cont--small")
+    div(class="input-desription--left")= textEnd
+    input(id="date__end" type="text" class="datepicker-here datepicker--small" placeholder="ДД.ММ.ГГГГ")
