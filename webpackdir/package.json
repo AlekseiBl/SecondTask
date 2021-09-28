@@ -26,6 +26,7 @@
     "wnumb": "^1.2.0"
   },
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
     "air-datepicker": "^2.2.3",
     "css-loader": "^6.2.0",
     "inputmask": "^5.0.6",
