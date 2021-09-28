@@ -9,6 +9,13 @@
   }
 
   &__column {
+    position: relative;
     margin-right: 40px;
   }
+
+
+  &__datepicker {
+    margin-bottom: 350px;
+  }
+
 }
