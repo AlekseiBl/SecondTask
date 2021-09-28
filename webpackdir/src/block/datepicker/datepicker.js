@@ -2250,21 +2250,45 @@ window.$ = window.jQuery = require( "jquery" );
   })();
 })(window, jQuery);
 
-var $start = $('#date__start'),
-    $end = $('#date__end');
+var datepickers = $('div.datepicker-cont--small');
+var startInputs = {};
+var endInputs = {};
+console.log(startInputs);
+$.each(datepickers, function(index, item){
+    if ($(item).children('.datepicker-start').length!=0) {
+    startInputs[index] = $($(item).children('.datepicker-start'));
+    startInputs[index].datepicker({
+      onSelect: function (fd, date) {
+          endInputs[index].data('datepicker').update('minDate', date);        
+          endInputs[index].focus();
+      }
+    });
+  };
+  if ($(item).children('.datepicker-end').length!=0) {
+    endInputs[index-1] = $($(item).children('.datepicker-end'));
+    endInputs[index-1].datepicker({
+      onSelect: function (fd, date) {
+        startInputs[index-1].data('datepicker').update('maxDate', date)
+      }
+    });
+  };   
+})
 
-$start.datepicker({
-    onSelect: function (fd, date) {
-        $end.data('datepicker').update('minDate', date);
-        $end.focus();
-    }
-});
+// var $start = $('#date__start'),
+//     $end = $('#date__end');
 
-$end.datepicker({
-    onSelect: function (fd, date) {
-        $start.data('datepicker').update('maxDate', date)
-    }
-});
+// $start.datepicker({
+//     onSelect: function (fd, date) {
+//         $end.data('datepicker').update('minDate', date);
+//         $end.focus();
+//     }
+// });
+
+// $end.datepicker({
+//     onSelect: function (fd, date) {
+//         $start.data('datepicker').update('maxDate', date)
+//     }
+// });
 
 //Script for datepicker-range multiple-dates
 // var $startDate = $('#dateRange__start'),
