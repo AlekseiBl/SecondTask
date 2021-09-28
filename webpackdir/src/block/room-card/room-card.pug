@@ -1,0 +1,23 @@
+mixin room-card  
+  .slider.glide(id='glide')
+    .glide__track(data-glide-el="track")
+      ul.glide__slides
+        li.glide__slide
+          img.slider__image(src=require("../../block/room-card/img/image.png"))
+        li.glide__slide
+          img.slider__image(src=require("../../block/room-card/img/image1.png"))
+        li.glide__slide
+          img.slider__image(src=require("../../block/room-card/img/image2.png"))  
+        li.glide__slide
+          img.slider__image(src=require("../../block/room-card/img/image.png")) 
+    .slider__arrows.glide__arrows(data-glide-el="controls")
+      button.slider__button.glide__arrow.glide__arrow--left(data-glide-dir="<" type="button") prev
+      button.slider__button.slider__button--right.glide__arrow.glide__arrow--right(data-glide-dir=">" type="button") next
+    .slider__bullets.glide__bullets(data-glide-el="controls[nav]")
+      button.slider__bullet.slider__bullet--active.glide__bullet(data-glide-dir="=0")
+      button.slider__bullet.glide__bullet(data-glide-dir="=1")
+      button.slider__bullet.glide__bullet(data-glide-dir="=2")
+      button.slider__bullet.glide__bullet(data-glide-dir="=3")
+    .slider__info
+      .slider__info-item
+      .slider__info-item

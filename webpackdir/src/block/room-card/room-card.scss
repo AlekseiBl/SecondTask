@@ -1,0 +1,87 @@
+@import '../../../node_modules/@glidejs/glide/src/assets/sass/glide.core';
+
+.slider {
+  max-width: 270px;
+
+  &:hover .slider__arrows {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &__arrows {
+    visibility: hidden;
+  }
+
+  &__button {
+    position: absolute;
+    top: 14px;
+    left: 0;
+    width: 42px;
+    height: 152px;
+    font-size: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 99.99%, rgba(255, 255, 255, 0) 100%);
+    border: none;
+    border-radius: 4px 0 0;
+
+    &::after {
+      position: absolute;
+      top: 69px;
+      left: 18px;
+      width: 8px;
+      height: 13px;
+      content: '';
+      background: url('./img/arrow.svg') no-repeat;
+      border: none;
+    }
+
+    &--right {
+      right: 0px;
+      left: auto;
+      border-radius: 0 0 0 5px;
+      transform: rotate(180deg);
+    }
+  }
+
+  &__bullets {
+    position: absolute;
+    right: 15px;
+    bottom: 34px;
+    font-size: 0;
+  }
+
+  &__bullet {
+    margin-right: 3.75px;
+    padding: 0;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    font-size: 0;
+    background: transparent;
+    border: 1px solid $whiteColor;
+    border-radius: 50%;
+    box-sizing: border-box;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--active {
+      background-color: $whiteColor;
+    }
+  }
+
+  &__image {
+    border-radius: 4px 4px 0 0;
+  }
+
+  &__info {
+    background-color: $whiteColor;
+
+    &__item {
+
+      &:first-child {
+        margin-bottom: 1px solid $mainColor--opacity-10;
+      }
+    }
+  }
+}
