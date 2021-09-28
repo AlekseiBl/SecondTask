@@ -5,6 +5,7 @@ html(lang="ru")
     include ../../block/find-room/find-room.pug
     include ../../block/registration/registration.pug   
     include ../../block/total-price/total-price.pug
+    include ../../block/room-card/room-card.pug
     include ../../block/login/login.pug
     include ../../block/datepicker/datepicker.pug    
     include ../../block/dropdown/dropdown.pug
@@ -14,7 +15,7 @@ html(lang="ru")
     include ../../block/toggle/toggle.pug
     
 
-    title
+    title      
   body
     .logo
       +logo()
@@ -26,4 +27,9 @@ html(lang="ru")
         +total-price
         +login
       .cards__column
-        +datepicker-inline("")
+        .cards__datepicker
+          +datepicker-inline("")
+        .cards__slider
+          +room-card
+        //.cards__slider
+          +room-card
