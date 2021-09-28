@@ -2253,7 +2253,6 @@ window.$ = window.jQuery = require( "jquery" );
 var datepickers = $('div.datepicker-cont--small');
 var startInputs = {};
 var endInputs = {};
-console.log(startInputs);
 $.each(datepickers, function(index, item){
     if ($(item).children('.datepicker-start').length!=0) {
     startInputs[index] = $($(item).children('.datepicker-start'));
