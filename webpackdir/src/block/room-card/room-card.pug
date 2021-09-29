@@ -12,10 +12,8 @@ mixin room-card({number, isLux, price, rating, review, images})
         button.slider__button.glide__arrow.glide__arrow--left(data-glide-dir='<' type='button') prev
         button.slider__button.slider__button--right.glide__arrow.glide__arrow--right(data-glide-dir='>' type='button') next
       .slider__bullets.glide__bullets(data-glide-el='controls[nav]')
-        button.slider__bullet.slider__bullet--active.glide__bullet(data-glide-dir='=0')
-        button.slider__bullet.glide__bullet(data-glide-dir='=1')
-        button.slider__bullet.glide__bullet(data-glide-dir='=2')
-        button.slider__bullet.glide__bullet(data-glide-dir='=3')
+        each image, index in images
+          button.slider__bullet.glide__bullet(data-glide-dir=`${index}`)
     .slider__info
       .slider__info-item        
         .slider__title №         
