@@ -1,23 +1,30 @@
-mixin room-card  
+include ../../block/rate-button/rate-button.pug
+
+mixin room-card({number, isLux, price, rating, review, images})  
   .slider.glide(id='glide')
-    .glide__track(data-glide-el="track")
-      ul.glide__slides
-        li.glide__slide
-          img.slider__image(src=require("../../block/room-card/img/image.png"))
-        li.glide__slide
-          img.slider__image(src=require("../../block/room-card/img/image1.png"))
-        li.glide__slide
-          img.slider__image(src=require("../../block/room-card/img/image2.png"))  
-        li.glide__slide
-          img.slider__image(src=require("../../block/room-card/img/image.png")) 
-    .slider__arrows.glide__arrows(data-glide-el="controls")
-      button.slider__button.glide__arrow.glide__arrow--left(data-glide-dir="<" type="button") prev
-      button.slider__button.slider__button--right.glide__arrow.glide__arrow--right(data-glide-dir=">" type="button") next
-    .slider__bullets.glide__bullets(data-glide-el="controls[nav]")
-      button.slider__bullet.slider__bullet--active.glide__bullet(data-glide-dir="=0")
-      button.slider__bullet.glide__bullet(data-glide-dir="=1")
-      button.slider__bullet.glide__bullet(data-glide-dir="=2")
-      button.slider__bullet.glide__bullet(data-glide-dir="=3")
+    .slider__wrap
+      .slider__slider.glide__track(data-glide-el='track')
+        ul.glide__slides
+          each image in images
+            li.slider__slide.glide__slide 
+              img.slider__image(src=image.src, alt=image.alt)          
+      .slider__arrows.glide__arrows(data-glide-el='controls')
+        button.slider__button.glide__arrow.glide__arrow--left(data-glide-dir='<' type='button') prev
+        button.slider__button.slider__button--right.glide__arrow.glide__arrow--right(data-glide-dir='>' type='button') next
+      .slider__bullets.glide__bullets(data-glide-el='controls[nav]')
+        button.slider__bullet.slider__bullet--active.glide__bullet(data-glide-dir='=0')
+        button.slider__bullet.glide__bullet(data-glide-dir='=1')
+        button.slider__bullet.glide__bullet(data-glide-dir='=2')
+        button.slider__bullet.glide__bullet(data-glide-dir='=3')
     .slider__info
+      .slider__info-item        
+        .slider__title №         
+          span.slider__title-text= number
+            if (isLux) 
+              span.slider__title-text--special люкс 
+        span.slider__day-cost= price
+          span.slider__day-cost-text в сутки 
       .slider__info-item
-      .slider__info-item
+        +rate-button({rate: rating, lenght: '5'})
+        span.slider__review= review
+          span.slider__review-text Отзывов 
