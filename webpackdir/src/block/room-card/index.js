@@ -4,7 +4,8 @@ var sliders = document.querySelectorAll('div.glide');
 
 function createSlider(item) {
   new Glide(item, {
-  type: 'slider'
+  type: 'carousel',
+  classes: {activeNav: 'slider__bullet--active'},
   }).mount({ Controls, Breakpoints }
 )};
 
