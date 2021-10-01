@@ -49,6 +49,12 @@ module.exports = {
             filename: 'cards.html',
             minify: false
           }),  
+          new HtmlWebpackPlugin({
+            title: 'webpack Boilerplate',
+            template: './src/pages/headers&footers/headers&footers.pug',
+            filename: 'headers&footers.html',
+            minify: false
+          }),
         new CleanWebpackPlugin(),
         // применять изменения только при горячей перезагрузке
         new webpack.HotModuleReplacementPlugin(),
