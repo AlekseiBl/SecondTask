@@ -1,0 +1,28 @@
+include ../../block/logo/logo.pug
+include ../../block/button/button.pug
+
+mixin header 
+  header.header
+    .header__container
+      .header__wrap
+        +logo-large
+        .header__menu
+          nav.header__nav
+            ul.header__list
+              li.header__item
+                a.header__item-link.header__item-link--active О нас
+              li.header__item
+                a.header__item-link.header__item-link-arrow Услуги                
+              li.header__item
+                a.header__item-link Вакансии
+              li.header__item
+                a.header__item-link Новости
+              li.header__item
+                a.header__item-link.header__item-link-arrow Соглашения
+          .header__auth
+            .header__auth-login
+              +button({text:'войти', type: 'transparent', isSmall: 'true', isTight: 'true'}) 
+            .header__auth-reg
+              +button({text:'зарегистрироваться', type: 'classic', isMedium: 'true', isTight: 'true'})
+                
+                
