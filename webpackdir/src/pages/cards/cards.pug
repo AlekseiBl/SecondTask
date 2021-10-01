@@ -30,6 +30,22 @@ html(lang="ru")
         .cards__datepicker
           +datepicker-inline("")
         .cards__slider
-          +room-card
-        //.cards__slider
-          +room-card
+          +room-card({
+            number: '888', isLux: 'true', price:'9900', rating: '5', review:'145',
+            images: [
+              {src: require('../../block/room-card/img/image.png'), alt: 'room'},
+              {src: require('../../block/room-card/img/image1.png'), alt: 'room'},
+              {src: require('../../block/room-card/img/image2.png'), alt: 'room'},
+              {src: require('../../block/room-card/img/image.png'), alt: 'room'}
+            ]
+          })
+        .cards__slider
+          +room-card({
+            number: '840', price:'9900', rating: '4', review:'65',
+            images: [
+              {src: require('../../block/room-card/img/image.png'), alt: 'room'},
+              {src: require('../../block/room-card/img/image1.png'), alt: 'room'},
+              {src: require('../../block/room-card/img/image2.png'), alt: 'room'},
+              {src: require('../../block/room-card/img/image.png'), alt: 'room'}
+            ]
+          })
