@@ -1,4 +1,4 @@
-mixin button({text, type, isVisited, isLarge, withArrow})
+mixin button({text, type, isVisited, isLarge, isMedium, isSmall, isTight, withArrow})
   -
     let buttonClass = 'btn';
 
@@ -17,8 +17,20 @@ mixin button({text, type, isVisited, isLarge, withArrow})
       buttonClass += ` btn--large`;
     }
 
+    if(isMedium) {
+      buttonClass += ` btn--medium`;
+    }
+
+    if(isSmall) {
+      buttonClass += ` btn--small`;
+    }
+
     if(withArrow) {
       buttonClass += ` btn--with-arrow`;
+    }
+
+    if(isTight) {
+      buttonClass += ` btn--tight`;
     }
 
   button(type='submit' class=buttonClass)

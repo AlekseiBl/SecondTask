@@ -21,22 +21,19 @@
   }
 
   &--large {
-    width: 320px;
-    background-image: url("./img/arrow.svg");
-    background-repeat: no-repeat;
-    background-position:  55% 50%; 
+    width: 320px;    
+  }
 
-    &::after {
-      position: absolute;
-      top: 0%;
-      right: 0;
-      width: 44px;
-      height: 44px;
-      content: '';
-      background: url("./img/arrow.svg") no-repeat;
-      background-position: center center;
-      transition: background .2s ease;
-    }
+  &--medium {
+    width: 196px;
+  }
+
+  &--small {
+    width: 87px;
+  }
+
+  &--tight {
+    height: 34px;    
   }
 
   &--with-arrow {
