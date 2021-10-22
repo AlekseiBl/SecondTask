@@ -55,6 +55,18 @@ module.exports = {
             filename: 'headers&footers.html',
             minify: false
           }),
+          new HtmlWebpackPlugin({
+            title: 'webpack Boilerplate',
+            template: './src/pages/landing/landing.pug',
+            filename: 'landing.html',
+            minify: false
+          }),
+          new HtmlWebpackPlugin({
+            title: 'webpack Boilerplate',
+            template: './src/pages/search-room/search-room.pug',
+            filename: 'search-room.html',
+            minify: false
+          }),
         new CleanWebpackPlugin(),
         // применять изменения только при горячей перезагрузке
         new webpack.HotModuleReplacementPlugin(),
