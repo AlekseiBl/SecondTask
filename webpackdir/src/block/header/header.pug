@@ -10,15 +10,15 @@ mixin header({isAuth})
           nav.header__nav
             ul.header__list
               li.header__item
-                a.header__item-link.header__item-link--active О нас
+                a.header__item-link.header__item-link--active(href='404.html') О нас
               li.header__item
                 a.header__item-link.header__item-link-arrow(href='404.html') Услуги                
               li.header__item
-                a.header__item-link Вакансии
+                a.header__item-link(href='404.html') Вакансии
               li.header__item
-                a.header__item-link Новости
+                a.header__item-link(href='404.html') Новости
               li.header__item
-                a.header__item-link.header__item-link-arrow Соглашения
+                a.header__item-link.header__item-link-arrow(href='404.html') Соглашения
           .header__auth            
             if(isAuth)
               section.header__authenticated
