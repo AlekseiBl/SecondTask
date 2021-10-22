@@ -11,7 +11,7 @@ mixin datepicker-inline(text)
     div(class="input-desription--left")= text
     div(type="text" class="datepicker-here datepicker--filter" data-range="true" data-clear-button="true" data-apply-button="true" data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ")
 
-mixin datepickerRange()
+mixin datepickerRange(text)
   div(class="datepicker-cont")
-    div(class="input-desription--left")
+    div(class="input-desription--left")= text
     input(id="dateRange__start" type="text" class="datepicker-here datepicker--filter datepicker--border" data-range="true" data-clear-button="true" data-multiple-dates-separator=" - "  data-apply-button="true" placeholder="ДД.ММ.ГГГГ")
