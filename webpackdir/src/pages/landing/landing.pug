@@ -1,0 +1,11 @@
+extends ../layout/layout.pug 
+include ../../block/find-room/find-room.pug
+
+
+block content
+  .landing-block
+    .landing-block__container 
+      .landing-block__wrap
+        +find-room
+      .landing-block__info
+        p.landing-block__info-text Лучшие номера для вашей работы, отдыха и просто вдохновения
