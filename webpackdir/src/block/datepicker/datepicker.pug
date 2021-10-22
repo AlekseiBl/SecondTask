@@ -1,10 +1,10 @@
 mixin datepicker({textStart, textEnd})  
   div(class="datepicker-cont--small")
     div(class="input-desription--left")= textStart
-    input(id="date__start" type="text" class="datepicker-here datepicker--small datepicker-start" placeholder="ДД.ММ.ГГГГ")
+    input(id="date__start" type="text" class="datepicker-here datepicker--small datepicker-start" data-range="true" data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ")
   div(class="datepicker-cont--small")
     div(class="input-desription--left")= textEnd
-    input(id="date__end" type="text" class="datepicker-here datepicker--small datepicker-end" placeholder="ДД.ММ.ГГГГ")
+    input(id="date__end" type="text" class="datepicker-here datepicker--small datepicker-end" data-range="true" data-multiple-dates-separator=" - "  placeholder="ДД.ММ.ГГГГ")
 
 mixin datepicker-inline(text)
   div(class="datepicker-cont")
