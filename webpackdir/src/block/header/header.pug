@@ -1,7 +1,7 @@
 include ../../block/logo/logo.pug
 include ../../block/button/button.pug
 
-mixin header 
+mixin header({isAuth}) 
   header.header
     .header__container
       .header__wrap
@@ -12,17 +12,21 @@ mixin header
               li.header__item
                 a.header__item-link.header__item-link--active О нас
               li.header__item
-                a.header__item-link.header__item-link-arrow Услуги                
+                a.header__item-link.header__item-link-arrow(href='404.html') Услуги                
               li.header__item
                 a.header__item-link Вакансии
               li.header__item
                 a.header__item-link Новости
               li.header__item
                 a.header__item-link.header__item-link-arrow Соглашения
-          .header__auth
-            .header__auth-login
-              +button({text:'войти', type: 'transparent', isSmall: 'true', isTight: 'true'}) 
-            .header__auth-reg
-              +button({text:'зарегистрироваться', type: 'classic', isMedium: 'true', isTight: 'true'})
+          .header__auth            
+            if(isAuth)
+              section.header__authenticated
+                p.header__authenticated-login Юлий Цезарь
+            else 
+              .header__auth-login
+                +button({text:'войти', type: 'transparent', isSmall: 'true', isTight: 'true'}) 
+              .header__auth-reg
+                +button({text:'зарегистрироваться', type: 'classic', isMedium: 'true', isTight: 'true'})
                 
                 
