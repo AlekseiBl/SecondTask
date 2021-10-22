@@ -2,6 +2,7 @@ doctype html
 html(lang="ru")
   head  
     include ../../block/header/header.pug 
+    include ../../block/footer/footer.pug 
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title      
   body
@@ -9,5 +10,12 @@ html(lang="ru")
       .logo
         +logo()
       .headers-footers__wrap
-        +header
+        .headers-footers__element
+          +header({})
+        .headers-footers__element
+          +header({isAuth: true})
+        .headers-footers__element
+          +footer
+        .headers-footers__element.headers-footers__element--small          
+          +footer-small
         
