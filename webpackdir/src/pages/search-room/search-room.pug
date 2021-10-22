@@ -1,0 +1,9 @@
+extends ../layout/layout.pug 
+include ./blocks/filter/filter.pug
+
+block content
+  .search-room
+    .search-room__container
+      .search-room__filter-wrap
+        +filter
+      .search-room__content-wrap
