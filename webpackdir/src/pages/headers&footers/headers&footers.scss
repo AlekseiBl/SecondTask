@@ -3,8 +3,16 @@
 
 
   &__wrap {
-    margin-top: 63px;
+    margin-top: 58px;
   }
   
+  &__element {
+    margin-bottom: 37px;    
+
+    &--small {
+      width: 60%;
+      margin: 0 auto;
+    }
+  }
 
 }
