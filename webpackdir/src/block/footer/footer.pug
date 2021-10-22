@@ -1,0 +1,82 @@
+include ../../block/logo/logo.pug
+include ../../block/menu/menu.pug
+include ../../block/input/input.pug
+include ../../block/copyright/copyright.pug
+include ../../block/description/description.pug
+include ../../block/social-buttons/social-buttons.pug
+
+- 
+  const menuItems = [
+    { 
+      title: 'Навигация',
+      list: [
+        {text: 'О нас', path: '404.html'},
+        {text: 'Новости', path: '404.html'},
+        {text: 'Служба поддержки', path: '404.html'},
+        {text: 'Услуги', path: '404.html'}
+      ]
+    },
+    {
+      title: 'О нас',
+      list: [
+        {text: 'О сервисе', path: '404.html'},
+        {text: 'Наша команда', path: '404.html'},
+        {text: 'Вакансии', path: '404.html'},
+        {text: 'Инвесторы', path: '404.html'}
+      ]
+    },
+    {
+      title: 'Служба поддержки',
+      list: [
+        {text: 'Соглашения', path: '404.html'},
+        {text: 'Сообщества', path: '404.html'},
+        {text: 'Связь с нами', path: '404.html'}
+      ]
+    },
+  ]
+
+mixin footer
+  footer.footer
+    .footer__container
+      .footer__wrap
+        .footer__content 
+          .footer__column.footer__column--large
+            .footer__logo-wrap
+              +logo-large
+            .footer__description
+              p.footer__description-text Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
+          .footer__column-group
+            .footer__column
+              .footer__column-title
+                +description({text: 'навигация', type: 'h3', upperCase: 'true'})
+              +menu(menuItems[0])
+            .footer__column
+              .footer__column-title
+                +description({text: 'о нас', type: 'h3', upperCase: 'true'})
+              +menu(menuItems[1])
+            .footer__column
+              .footer__column-title
+                +description({text: 'служба поддержки', type: 'h3', upperCase: 'true'})
+              +menu(menuItems[2])
+            .footer__column
+              .footer__column-title--up
+                +description({text: 'подписка', type: 'h3', upperCase: 'true'})
+              .footer__description
+                +description({text: 'Получайте специальные предложения и новости сервиса', type: 'body'})
+              form(action='404.html')
+                +input-subscription('', '', 'Email' ) 
+        .footer__info
+          +copyright('2018')
+          .footer__social-buttons
+            +social-buttons
+
+mixin footer-small 
+  footer.footer.footer--small
+    .footer__container
+      .footer__wrap.footer__wrap--small
+        .footer__logo-wrap
+          +logo-large
+        .footer__info
+          +copyright('2018')
+        .footer__social-buttons
+          +social-buttons
