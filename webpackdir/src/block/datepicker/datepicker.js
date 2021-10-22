@@ -2258,8 +2258,8 @@ $.each(datepickers, function(index, item){
     startInputs[index] = $($(item).children('.datepicker-start'));
     startInputs[index].datepicker({
       onSelect: function (fd, date) {
-          endInputs[index].data('datepicker').update('minDate', date);        
-          endInputs[index].focus();
+          startInputs[index].val(fd.split("-")[0]);
+          endInputs[index].val(fd.split("-")[1]);
       }
     });
   };
@@ -2267,35 +2267,34 @@ $.each(datepickers, function(index, item){
     endInputs[index-1] = $($(item).children('.datepicker-end'));
     endInputs[index-1].datepicker({
       onSelect: function (fd, date) {
-        startInputs[index-1].data('datepicker').update('maxDate', date)
+        startInputs[index-1].val(fd.split("-")[0]);
+        endInputs[index-1].val(fd.split("-")[1]);
       }
     });
   };   
 })
 
-// var $start = $('#date__start'),
-//     $end = $('#date__end');
+// -----------Variant with select first date, change focus to second input and select second date ----
 
-// $start.datepicker({
-//     onSelect: function (fd, date) {
-//         $end.data('datepicker').update('minDate', date);
-//         $end.focus();
-//     }
-// });
-
-// $end.datepicker({
-//     onSelect: function (fd, date) {
-//         $start.data('datepicker').update('maxDate', date)
-//     }
-// });
-
-//Script for datepicker-range multiple-dates
-// var $startDate = $('#dateRange__start'),
-//     $endDate = $('#dateRange__end');
-
-// $startDate.datepicker({ 
-//   onSelect: function (fd, d, picker) { 
-//     $startDate.val(fd.split("-")[0]);
-//     $endDate.val(fd.split("-")[1]);
-//   }
-// });
+// var datepickers = $('div.datepicker-cont--small');
+// var startInputs = {};
+// var endInputs = {};
+// $.each(datepickers, function(index, item){
+//     if ($(item).children('.datepicker-start').length!=0) {
+//     startInputs[index] = $($(item).children('.datepicker-start'));
+//     startInputs[index].datepicker({
+//       onSelect: function (fd, date) {
+//           endInputs[index].val(fd.split("-")[0]);        
+//           endInputs[index].focus();
+//       }
+//     });
+//   };
+//   if ($(item).children('.datepicker-end').length!=0) {
+//     endInputs[index-1] = $($(item).children('.datepicker-end'));
+//     endInputs[index-1].datepicker({
+//       onSelect: function (fd, date) {
+//         startInputs[index-1].data('datepicker').update('maxDate', date)
+//       }
+//     });
+//   };   
+// })
