@@ -1,6 +1,6 @@
-mixin rangeSlider()
+mixin rangeSlider({text})
   .slider__title-wrap  
-    +description({text: "range slider", type: "h3", upperCase: "true"})
+    +description({text: text, type: "h3", upperCase: "true"})
     .slider__count-wrap
       p.slider__count(id="lower-value") 
       p.slider__count(id="upper-value") 
