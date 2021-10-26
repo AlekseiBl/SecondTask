@@ -12,9 +12,9 @@ $(document).ready(() => {
     textPlural: 'items',
     Guest: ['гость', 'гостя', 'гостей'],
     Bedroom: ['спальня', 'спальни', 'спален'],
-    Bed: ['кровать', 'кровати', 'кроватей'],    
-    textPlural: 'items',
-    type: 1,
+    Bed: ['кровать', 'кровати', 'кроватей'],
+    Baby: ['младенец', 'младенца', 'младенцев'],
+    type: 'peoples',
     buttons: true,
     isExpanded: false,
     controls: {
@@ -28,7 +28,7 @@ $(document).ready(() => {
     beforeDecrement: () => true,
     beforeIncrement: () => true,
     setSelectionText (itemCount, totalItems, type) {          
-      if(type===2){
+      if(type==='rooms'){
         let numberBedroom = itemCount.item1;
         let textBedroom = declOfNum(numberBedroom, defaults.Bedroom); 
         let numberBed = itemCount.item2;
@@ -38,15 +38,15 @@ $(document).ready(() => {
           numberBed = 0;
         };        
         return `${numberBedroom} ${textBedroom}, ${numberBed} ${textBed}...`;
-      } else {
-        // const usePlural = totalItems !== 1 && this.textPlural.length > 0;
-        // const text = usePlural ? this.textPlural : this.selectionText;
-        //return `${totalItems} ${text}`;
-        const textGuest = declOfNum(totalItems, defaults.Guest);  
+      } else {        
+        const textGuest = declOfNum(totalItems, defaults.Guest); 
+        let countBaby = itemCount.item3; 
+        let textBaby = declOfNum(countBaby, defaults.Baby);
+        let countPeoples= totalItems - countBaby;
         if(totalItems===0){
           return "Сколько гостей";
-        } else {
-          return `${totalItems} ${textGuest}`; 
+        } else {          
+          return `${countPeoples} ${textGuest}, ${countBaby} ${textBaby}`; 
         }  
       }
     },
