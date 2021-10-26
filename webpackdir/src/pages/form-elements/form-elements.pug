@@ -1,5 +1,5 @@
 doctype html
-html(lang="ru")
+html(lang='ru')
   head
     include ../../block/input/input.pug
     include ../../block/logo/logo.pug
@@ -35,39 +35,39 @@ html(lang="ru")
         .form-elements__row
           .form-elements__inputs
             .form-input        
-              +input-default("TEXT FIELD","DEFAULT", "Email")        
+              +input-default('TEXT FIELD','DEFAULT', 'Email')        
             .form-input  
-              +input-default("TEXT FIELD","HOVER / FOCUS", "This is pretty awesome", "focus") 
+              +input-default('TEXT FIELD','HOVER / FOCUS', 'This is pretty awesome', 'focus') 
             .form-input              
-              +dropdown({type: '1', text: 'DROPDOWN', isButtons: 'true'})
+              +dropdown({type: 'peoples', text: 'DROPDOWN', isButtons: 'true'})
             .form-input.form-input--last 
-              +input-placeholder("MASKED TEXT FIELD")
+              +input-placeholder('MASKED TEXT FIELD')
             .input__date-inputs
-              +datepicker({id: '1', textStart: "DATE DROPDOWN", textEnd: "DATE DROPDOWN"})
+              +datepicker({id: '1', textStart: 'DATE DROPDOWN', textEnd: 'DATE DROPDOWN'})
             .form-input--small
               +datepickerRange
             .form-input--small.form-input--small_subscription
-              +input-subscription("SUBSCRIPTION TEXT FIELD","", "Email")  
+              +input-subscription('SUBSCRIPTION TEXT FIELD','', 'Email')  
           .form-elements__controls
             .controls 
               .controls__title-wrap                
-                +description({text: "checkbox buttons", type: "h3", upperCase: "true"})
+                +description({text: 'checkbox buttons', type: 'h3', upperCase: 'true'})
               .controls__checkbox 
-                +checkbox("Можно курить")
-                +checkbox("Можно с питомцами", "checked")
-                +checkbox("Можно пригласить гостей (до 10 человек)", "checked") 
+                +checkbox('Можно курить')
+                +checkbox('Можно с питомцами', 'checked')
+                +checkbox('Можно пригласить гостей (до 10 человек)', 'checked') 
             .controls
               .controls__title-wrap  
-                +description({text: "radio buttons", type: "h3", upperCase: "true"})
+                +description({text: 'radio buttons', type: 'h3', upperCase: 'true'})
               +radio-button
             .controls
               .controls__title-wrap  
-                +description({text: "toggle", type: "h3", upperCase: "true"})
+                +description({text: 'toggle', type: 'h3', upperCase: 'true'})
               +toggle-button({isChecked: 'true'})
               +toggle-button({})
             .controls
               .controls__title-wrap  
-                +description({text: "like button", type: "h3", upperCase: "true"})
+                +description({text: 'like button', type: 'h3', upperCase: 'true'})
               .controls__like-wrap
                 .controls__like-button
                   +like-button({count:2})
@@ -75,7 +75,7 @@ html(lang="ru")
                   +like-button({count:12, isActive: true})
             .controls
               .controls__title-wrap  
-                +description({text: "rate button", type: "h3", upperCase: "true"})
+                +description({text: 'rate button', type: 'h3', upperCase: 'true'})
               .controls__rate-wrap
                 .controls__rate-button
                   +rate-button({rate: 4, lenght: 5}) 
@@ -86,7 +86,7 @@ html(lang="ru")
               +rangeSlider({text:'range slider'})
             .buttons
               .buttons__title-wrap  
-                +description({text: "buttons", type: "h3", upperCase: "true"})
+                +description({text: 'buttons', type: 'h3', upperCase: 'true'})
               .buttons__wrap
                 .buttons__btn
                   +button({text:'click me', type: 'classic'})
@@ -106,55 +106,55 @@ html(lang="ru")
                 .buttons__btn
                   +button({text:'click me', type: 'classic', isLarge: 'true', withArrow: 'true'})
               .buttons__title-wrap  
-                +description({text: "pagination", type: "h3", upperCase: "true"})   
+                +description({text: 'pagination', type: 'h3', upperCase: 'true'})   
                 +pagination(pages)             
         .form-elements__row
           .form-elements__row-wrap      
             .form-dropdown--small
               .form-dropdown--margin
-                +dropdown({type: '2', text: 'DROPDOWN', isButtons: 'true'})
+                +dropdown({type: 'rooms', text: 'DROPDOWN', isButtons: 'true'})
               .form-dropdown--margin        
-                +dropdown({type: '2', text: 'DROPDOWN', status:'EXPANDED', isExpanded: 'true', isButtons: 'false'})            
+                +dropdown({type: 'rooms', text: 'DROPDOWN', status:'EXPANDED', isExpanded: 'true', isButtons: 'false'})            
           .form-elements__row-wrap      
             .form-dropdown
               .form-dropdown--margin
-                +dropdown({type: '1', text: 'DROPDOWN',  isExpanded: 'true', isButtons: 'true'})
+                +dropdown({type: 'peoples', text: 'DROPDOWN',  isExpanded: 'true', isButtons: 'true'})
           .form-elements__row-wrap      
             .form-dropdown
               .form-dropdown--margin
-                +dropdown({type: '1', text: 'DROPDOWN',  isExpanded: 'true', isButtons: 'true'}) 
+                +dropdown({type: 'peoples', text: 'DROPDOWN',  isExpanded: 'true', isButtons: 'true'}) 
         .form-elements__row
           .form-elements__row-wrap
             .form-expandable
               details.expandable-checkbox
                 summary.expandable-checkbox__summary expandable checkbox list
-                +checkbox("Завтрак")
-                +checkbox("Письменный стол", "checked")
-                +checkbox("Стул для кормления", "checked")
-                +checkbox("Кроватка", "checked")
-                +checkbox("Телевизор")
-                +checkbox("Шампунь")            
+                +checkbox('Завтрак')
+                +checkbox('Письменный стол', 'checked')
+                +checkbox('Стул для кормления', 'checked')
+                +checkbox('Кроватка', 'checked')
+                +checkbox('Телевизор')
+                +checkbox('Шампунь')            
               details(open).expandable-checkbox
                 summary.expandable-checkbox__summary expandable checkbox list
-                +checkbox("Завтрак")
-                +checkbox("Письменный стол", "checked")
-                +checkbox("Стул для кормления", "checked")
-                +checkbox("Кроватка", "checked")
-                +checkbox("Телевизор")
-                +checkbox("Шампунь")
+                +checkbox('Завтрак')
+                +checkbox('Письменный стол', 'checked')
+                +checkbox('Стул для кормления', 'checked')
+                +checkbox('Кроватка', 'checked')
+                +checkbox('Телевизор')
+                +checkbox('Шампунь')
           .form-elements__row-wrap
             .form-expandable
               .buttons__title-wrap  
-                +description({text: "rich checkbox buttons", type: "h3", upperCase: "true"}) 
+                +description({text: 'rich checkbox buttons', type: 'h3', upperCase: 'true'}) 
               +rich-checkbox('Широкий коридор','Ширина коридоров в номере не менее 91 см')              
               +rich-checkbox('Помощник для инвалидов','На 1 этаже вас встретит специалист  и проводит до номера.')
           .form-elements__row-wrap
             .form-bullet
               .buttons__title-wrap  
-                +description({text: "bullet list", type: "h3", upperCase: "true"})
-                +bullet("Нельзя с питомцами") 
-                +bullet("Без вечеринок и мероприятий") 
-                +bullet("Время прибытия — после 13:00, а выезд до 12:00") 
+                +description({text: 'bullet list', type: 'h3', upperCase: 'true'})
+                +bullet('Нельзя с питомцами') 
+                +bullet('Без вечеринок и мероприятий') 
+                +bullet('Время прибытия — после 13:00, а выезд до 12:00') 
               
               
                        
