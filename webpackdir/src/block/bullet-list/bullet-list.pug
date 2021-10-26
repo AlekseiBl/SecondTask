@@ -1,0 +1,11 @@
+include ../../block/bullet/bullet.pug
+include ../../block/description/description.pug
+
+mixin bullet-list({description})
+  .bullet-list
+    .bullet-list__title
+      +description({text: 'bullet list', type: 'h3', upperCase: 'true'}) 
+    .bullet-list__bullet
+      +bullet('Нельзя с питомцами') 
+      +bullet('Без вечеринок и мероприятий') 
+      +bullet('Время прибытия — после 13:00, а выезд до 12:00') 

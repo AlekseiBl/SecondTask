@@ -1,0 +1,10 @@
+.bullet-list {
+  margin-bottom: 40px;
+
+  &__title {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+}
