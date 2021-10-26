@@ -1,0 +1,14 @@
+.checkbox-rich-group {
+  margin-bottom: 40px;
+
+  &__title {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  &__checkbox {
+    box-sizing: content-box;
+  }
+}
