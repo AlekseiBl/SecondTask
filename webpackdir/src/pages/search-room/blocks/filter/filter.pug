@@ -14,30 +14,30 @@ mixin filter
       .filter__item
         +datepickerRange('ДАТА ПРЕБЫВАНИЯ В ОТЕЛЕ')
       .filter__item
-        +dropdown({type: '1', text: 'ГОСТИ', isButtons: 'true'})
+        +dropdown({type: 'peoples', text: 'ГОСТИ', isButtons: 'true'})
       .filter__item
         +rangeSlider({text:'диапазон цены'})
         p.filter__info Стоимость за сутки пребывания в номере
       .filter__item
         .filter__checkbox-title              
-          +description({text: "правила дома", type: "h3", upperCase: "true"})
+          +description({text: 'правила дома', type: 'h3', upperCase: 'true'})
           .filter__checkbox 
-            +checkbox("Можно курить")
-            +checkbox("Можно с питомцами", "checked")
-            +checkbox("Можно пригласить гостей (до 10 человек)", "checked") 
+            +checkbox('Можно курить')
+            +checkbox('Можно с питомцами', 'checked')
+            +checkbox('Можно пригласить гостей (до 10 человек)', 'checked') 
       .filter__item
         .filter__rich-checkbox-title 
-          +description({text: "rich checkbox buttons", type: "h3", upperCase: "true"}) 
+          +description({text: 'доступность', type: 'h3', upperCase: 'true'}) 
         +rich-checkbox('Широкий коридор','Ширина коридоров в номере не менее 91 см')              
         +rich-checkbox('Помощник для инвалидов','На 1 этаже вас встретит специалист  и проводит до номера.')
       .filter__item
-        +dropdown({type: '2', text: 'DROPDOWN'})
+        +dropdown({type: 'rooms', text: 'DROPDOWN'})
       .filter__item
         details.filter__checkbox
           summary.filter__checkbox__summary дополнительные удобства
-          +checkbox("Завтрак")
-          +checkbox("Письменный стол", "checked")
-          +checkbox("Стул для кормления", "checked")
-          +checkbox("Кроватка", "checked")
-          +checkbox("Телевизор")
-          +checkbox("Шампунь") 
+          +checkbox('Завтрак')
+          +checkbox('Письменный стол', 'checked')
+          +checkbox('Стул для кормления', 'checked')
+          +checkbox('Кроватка', 'checked')
+          +checkbox('Телевизор')
+          +checkbox('Шампунь') 
