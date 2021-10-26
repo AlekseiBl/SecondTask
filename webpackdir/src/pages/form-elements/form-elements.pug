@@ -5,7 +5,9 @@ html(lang='ru')
     include ../../block/logo/logo.pug
     include ../../block/dropdown/dropdown.pug
     include ../../block/datepicker/datepicker.pug
-    include ../../block/checkbox/checkbox.pug
+    include ../../block/checkbox-group/checkbox-group.pug
+    include ../../block/checkbox-rich-group/checkbox-rich-group.pug
+    include ../../block/checkbox-expandable/checkbox-expandable.pug
     include ../../block/description/description.pug
     include ../../block/radio-button/radio-button.pug
     include ../../block/toggle/toggle.pug
@@ -14,7 +16,7 @@ html(lang='ru')
     include ../../block/rate-button/rate-button.pug
     include ../../block/slider/slider.pug
     include ../../block/pagination/pagination.pug
-    include ../../block/bullet/bullet.pug
+    include ../../block/bullet-list/bullet-list.pug
 
     title
   body
@@ -49,13 +51,7 @@ html(lang='ru')
             .form-input--small.form-input--small_subscription
               +input-subscription('SUBSCRIPTION TEXT FIELD','', 'Email')  
           .form-elements__controls
-            .controls 
-              .controls__title-wrap                
-                +description({text: 'checkbox buttons', type: 'h3', upperCase: 'true'})
-              .controls__checkbox 
-                +checkbox('Можно курить')
-                +checkbox('Можно с питомцами', 'checked')
-                +checkbox('Можно пригласить гостей (до 10 человек)', 'checked') 
+            +checkbox-group({description: 'checkbox buttons'})
             .controls
               .controls__title-wrap  
                 +description({text: 'radio buttons', type: 'h3', upperCase: 'true'})
@@ -126,38 +122,14 @@ html(lang='ru')
         .form-elements__row
           .form-elements__row-wrap
             .form-expandable
-              details.expandable-checkbox
-                summary.expandable-checkbox__summary expandable checkbox list
-                +checkbox('Завтрак')
-                +checkbox('Письменный стол', 'checked')
-                +checkbox('Стул для кормления', 'checked')
-                +checkbox('Кроватка', 'checked')
-                +checkbox('Телевизор')
-                +checkbox('Шампунь')            
-              details(open).expandable-checkbox
-                summary.expandable-checkbox__summary expandable checkbox list
-                +checkbox('Завтрак')
-                +checkbox('Письменный стол', 'checked')
-                +checkbox('Стул для кормления', 'checked')
-                +checkbox('Кроватка', 'checked')
-                +checkbox('Телевизор')
-                +checkbox('Шампунь')
+              +checkbox-expandable({description: 'expandable checkbox list'})      
+              +checkbox-expandable({description: 'expandable checkbox list'})    
           .form-elements__row-wrap
             .form-expandable
-              .buttons__title-wrap  
-                +description({text: 'rich checkbox buttons', type: 'h3', upperCase: 'true'}) 
-              +rich-checkbox('Широкий коридор','Ширина коридоров в номере не менее 91 см')              
-              +rich-checkbox('Помощник для инвалидов','На 1 этаже вас встретит специалист  и проводит до номера.')
+              +checkbox-rich-group({description: 'rich checkbox buttons'})            
           .form-elements__row-wrap
             .form-bullet
-              .buttons__title-wrap  
-                +description({text: 'bullet list', type: 'h3', upperCase: 'true'})
-                +bullet('Нельзя с питомцами') 
-                +bullet('Без вечеринок и мероприятий') 
-                +bullet('Время прибытия — после 13:00, а выезд до 12:00') 
-              
-              
-                       
+              +bullet-list({description: 'bullet list'})   
         .form-elements__row
           .form-elements__row-wrap
             ul.features
