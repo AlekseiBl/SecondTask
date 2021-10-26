@@ -1,12 +1,12 @@
 mixin checkbox(title, checked)
   .checkbox-container    
     label.checkbox__label
-      input(class= "checkbox"  type="checkbox" checked=checked)
-      span(class="checkbox__span")= title
+      input(class= 'checkbox'  type='checkbox' checked=checked)
+      span(class='checkbox__span')= title
 
 mixin rich-checkbox(title, text)
   .checkbox-container    
     label.checkbox__label
-      input(class= "checkbox"  type="checkbox")
-      span(class="checkbox__span checkbox__span--rich")= title
-      span(class="checkbox__description")= text
+      input(class= 'checkbox'  type='checkbox')
+      span(class='checkbox__span checkbox__span--rich')= title
+      span(class='checkbox__description')= text
