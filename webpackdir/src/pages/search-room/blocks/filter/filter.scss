@@ -2,10 +2,21 @@
   margin-right: 60px;
 
   &__wrap {
-    width: 260px;
+    width: 266px;
   }
 
   &__item {
+    margin-bottom: 30px;
 
+    &--less-indent {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__info {
+    margin: 14px 0 0;
+    font-size: 12px;
+    line-height: 14px;
+    color: $mainColor--opacity-50;
   }
 }
