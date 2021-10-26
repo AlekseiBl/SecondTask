@@ -1,8 +1,8 @@
 mixin dropdown({type, text, status, isExpanded, isButtons})
   -  
-    var rooms = ["спальни","кровати","ванные комнаты"];
-    var peoples = ["взрослые","дети","младенцы"];
-    if (type===2) {
+    var rooms = ['спальни','кровати','ванные комнаты'];
+    var peoples = ['взрослые','дети','младенцы'];
+    if (type==='rooms') {
       data = rooms
     } else {
       data = peoples
@@ -12,13 +12,13 @@ mixin dropdown({type, text, status, isExpanded, isButtons})
     .dropdown-description--left= text
     .dropdown-description--right  #{status}
   .iqdropdown
-    p(class="iqdropdown-selection" data-buttons = isButtons  data-type=type data-expanded = isExpanded data-selection-text="Гость" data-text-plural="Гостей")
-    div(class="iqdropdown-menu")
+    p(class='iqdropdown-selection' data-buttons = isButtons  data-type=type data-expanded = isExpanded data-selection-text='Гость' data-text-plural='Гостей')
+    div(class='iqdropdown-menu')
       each item in data        
-        div(class="iqdropdown-menu-option" data-id="item"+dataId)
+        div(class='iqdropdown-menu-option' data-id='item'+dataId)
           - dataId +=1;
           div
-            p(class="iqdropdown-item") #{item}
-      div(class="iqdropdown-menu-control")
+            p(class='iqdropdown-item') #{item}
+      div(class='iqdropdown-menu-control')
       
         
