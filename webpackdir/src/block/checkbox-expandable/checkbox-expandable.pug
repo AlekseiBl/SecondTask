@@ -1,0 +1,12 @@
+include ../../block/checkbox/checkbox.pug
+include ../../block/description/description.pug
+
+mixin checkbox-expandable({description})     
+  details.checkbox-expandable    
+    summary.checkbox-expandable__summary= description
+    +checkbox('Завтрак')
+    +checkbox('Письменный стол', 'checked')
+    +checkbox('Стул для кормления', 'checked')
+    +checkbox('Кроватка', 'checked')
+    +checkbox('Телевизор')
+    +checkbox('Шампунь') 

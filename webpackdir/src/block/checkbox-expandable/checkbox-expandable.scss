@@ -1,0 +1,39 @@
+.checkbox-expandable {
+  margin: 22px 0 49px ;
+  
+  &:last-child {
+    margin:0;
+  }
+
+  &__summary {
+    position: relative;
+    margin-bottom: 19px ;
+    list-style: none;
+    font-family: Montserrat,Arial,sans-serif;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer; 
+
+    &::before {
+      background-image: url("../../img/expand_more.png");
+      background-position:center;
+      background-repeat:no-repeat;
+      background-size:contain;
+      content:'';
+      display:inline-block;
+      height:8px;
+      width:17px;
+      position:absolute;
+      right:13px;
+      top:30%    
+    }
+  }
+
+  &[open] {
+    .checkbox-expandable__summary::before {
+      transform: rotate(180deg);
+    }
+  } 
+}
