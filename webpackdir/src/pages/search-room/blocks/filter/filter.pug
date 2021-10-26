@@ -14,7 +14,7 @@ mixin filter
       .filter__item
         +datepickerRange('ДАТА ПРЕБЫВАНИЯ В ОТЕЛЕ')
       .filter__item
-        +dropdown({type: 'peoples', text: 'ГОСТИ', isButtons: 'true'})
+        +dropdown({type: 'peoples', text: 'гости', isButtons: 'true'})
       .filter__item
         +rangeSlider({text:'диапазон цены'})
         p.filter__info Стоимость за сутки пребывания в номере
@@ -31,7 +31,7 @@ mixin filter
         +rich-checkbox('Широкий коридор','Ширина коридоров в номере не менее 91 см')              
         +rich-checkbox('Помощник для инвалидов','На 1 этаже вас встретит специалист  и проводит до номера.')
       .filter__item
-        +dropdown({type: 'rooms', text: 'DROPDOWN'})
+        +dropdown({type: 'rooms', text: 'удобства номера'})
       .filter__item
         details.filter__checkbox
           summary.filter__checkbox__summary дополнительные удобства
