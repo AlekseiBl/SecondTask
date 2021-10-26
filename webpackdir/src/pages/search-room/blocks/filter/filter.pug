@@ -1,7 +1,9 @@
 include ../../../../block/datepicker/datepicker.pug
 include ../../../../block/input/input.pug
 include ../../../../block/dropdown/dropdown.pug
-include ../../../../block/checkbox/checkbox.pug
+include ../../../../block/checkbox-group/checkbox-group.pug
+include ../../../../block/checkbox-rich-group/checkbox-rich-group.pug
+include ../../../../block/checkbox-expandable/checkbox-expandable.pug
 include ../../../../block/description/description.pug
 include ../../../../block/radio-button/radio-button.pug
 include ../../../../block/toggle/toggle.pug
@@ -11,7 +13,7 @@ include ../../../../block/slider/slider.pug
 mixin filter
   .filter
     .filter__wrap 
-      .filter__item
+      .filter__item.filter__item--less-indent
         +datepickerRange('ДАТА ПРЕБЫВАНИЯ В ОТЕЛЕ')
       .filter__item
         +dropdown({type: 'peoples', text: 'гости', isButtons: 'true'})
@@ -19,25 +21,10 @@ mixin filter
         +rangeSlider({text:'диапазон цены'})
         p.filter__info Стоимость за сутки пребывания в номере
       .filter__item
-        .filter__checkbox-title              
-          +description({text: 'правила дома', type: 'h3', upperCase: 'true'})
-          .filter__checkbox 
-            +checkbox('Можно курить')
-            +checkbox('Можно с питомцами', 'checked')
-            +checkbox('Можно пригласить гостей (до 10 человек)', 'checked') 
+        +checkbox-group({description: 'правила дома'})
       .filter__item
-        .filter__rich-checkbox-title 
-          +description({text: 'доступность', type: 'h3', upperCase: 'true'}) 
-        +rich-checkbox('Широкий коридор','Ширина коридоров в номере не менее 91 см')              
-        +rich-checkbox('Помощник для инвалидов','На 1 этаже вас встретит специалист  и проводит до номера.')
+        +checkbox-rich-group({description: 'доступность'})
       .filter__item
         +dropdown({type: 'rooms', text: 'удобства номера'})
       .filter__item
-        details.filter__checkbox
-          summary.filter__checkbox__summary дополнительные удобства
-          +checkbox('Завтрак')
-          +checkbox('Письменный стол', 'checked')
-          +checkbox('Стул для кормления', 'checked')
-          +checkbox('Кроватка', 'checked')
-          +checkbox('Телевизор')
-          +checkbox('Шампунь') 
+        +checkbox-expandable({description: 'дополнительные удобства'}) 
