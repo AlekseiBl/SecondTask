@@ -1,0 +1,11 @@
+include ../../block/checkbox/checkbox.pug
+include ../../block/description/description.pug
+
+mixin checkbox-group({description})  
+  .checkbox-group 
+    .checkbox-group__title                
+      +description({text: description, type: 'h3', upperCase: 'true'})
+    .checkbox-group__checkbox 
+      +checkbox('Можно курить')
+      +checkbox('Можно с питомцами', 'checked')
+      +checkbox('Можно пригласить гостей (до 10 человек)', 'checked') 
