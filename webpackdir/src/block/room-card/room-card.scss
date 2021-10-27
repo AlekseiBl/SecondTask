@@ -92,6 +92,10 @@
       flex-wrap: wrap;
       justify-content: space-between;
 
+      &-padding {
+        padding: 0 2px;
+      }
+
       &:first-child {
         margin-bottom: 10px;
         padding-bottom: 10px;
@@ -111,7 +115,7 @@
     font-weight: 700;
 
     &--special {
-      padding-left: 2px;
+      padding-left: 8px;
       padding-top: 2px;
       font-size: 11px;      
       line-height: 15px;
