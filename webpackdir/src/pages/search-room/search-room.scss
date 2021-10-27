@@ -1,6 +1,12 @@
 .search-room {
+  border-bottom: 1px solid $mainColor--opacity-25;
 
   &__container {
     @include container;
+  }
+
+  &__wrap {
+    padding: 30px 0 74px;
+    display: flex;
   }
 }
