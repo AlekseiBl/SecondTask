@@ -72,6 +72,10 @@
         color: $mainColor--opacity-75;
         font-weight: 700;
       }
+
+      &:hover {       
+        text-shadow: 0 0 1px $mainColor--opacity-75, 0 0 1px $mainColor--opacity-75;
+      }
     }
   }
 
