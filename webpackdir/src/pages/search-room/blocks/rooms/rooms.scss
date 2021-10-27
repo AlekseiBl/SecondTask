@@ -1,0 +1,29 @@
+.rooms {
+
+  &__title-wrap {
+    margin-bottom: 6px;
+  }
+
+  &__list {
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  &__item {
+    margin: 0;
+    margin-bottom: 6px;
+    padding: 0;
+    display: flex;
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+  }
+}

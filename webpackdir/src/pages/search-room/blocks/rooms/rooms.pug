@@ -1,0 +1,137 @@
+include ../../../../block/description/description.pug
+include ../../../../block/room-card/room-card.pug
+include ../../../../block/pagination/pagination.pug
+
+mixin rooms
+  - 
+    const rooms = [
+      {
+        number: '888', isLux: 'true', price:'9 900', rating: '5', review:'145',
+        images: [
+          {src: require('../../block/room-card/img/room-card-0.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-1.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-2.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-0.png'), alt: 'room'}
+        ]
+      },
+      {
+        number: '840', price:'9 900', rating: '4', review:'65',
+        images: [
+          {src: require('../../block/room-card/img/room-card-1.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-1.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-1.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-1.png'), alt: 'room'}
+        ]
+      },
+      {
+        number: '980', isLux: 'true', price:'8 500', rating: '3', review:'35',
+        images: [
+          {src: require('../../block/room-card/img/room-card-2.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-2.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-2.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-2.png'), alt: 'room'}
+        ]
+      },
+      {
+        number: '856', price:'7 300', rating: '5', review:'19',
+        images: [
+          {src: require('../../block/room-card/img/room-card-3.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-3.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-3.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-3.png'), alt: 'room'}
+        ]
+      },
+      {
+        number: '740',  price:'6 000', rating: '4', review:'44',
+        images: [
+          {src: require('../../block/room-card/img/room-card-4.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-4.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-4.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-4.png'), alt: 'room'}
+        ]
+      },
+      {
+        number: '982', price:'5 800', rating: '3', review:'56',
+        images: [
+          {src: require('../../block/room-card/img/room-card-5.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-5.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-5.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-5.png'), alt: 'room'}
+        ]
+      },
+      {
+        number: '678', price:'5 500', rating: '5', review:'25',
+        images: [
+          {src: require('../../block/room-card/img/room-card-6.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-6.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-6.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-6.png'), alt: 'room'}
+        ]
+      },
+      {
+        number: '450', price:'5 300', rating: '4', review:'39',
+        images: [
+          {src: require('../../block/room-card/img/room-card-7.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-7.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-7.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-7.png'), alt: 'room'}
+        ]
+      },
+      {
+        number: '350', price:'5 000', rating: '3', review:'77',
+        images: [
+          {src: require('../../block/room-card/img/room-card-8.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-8.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-8.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-8.png'), alt: 'room'}
+        ]
+      },
+      {
+        number: '666', price:'5 000', rating: '5', review:'25',
+        images: [
+          {src: require('../../block/room-card/img/room-card-9.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-9.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-9.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-9.png'), alt: 'room'}
+        ]
+      },
+      {
+        number: '444', price:'5 000', rating: '3', review:'15',
+        images: [
+          {src: require('../../block/room-card/img/room-card-10.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-10.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-10.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-10.png'), alt: 'room'}
+        ]
+      },
+      {
+        number: '352', price:'5 000', rating: '3', review:'55',
+        images: [
+          {src: require('../../block/room-card/img/room-card-11.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-11.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-11.png'), alt: 'room'},
+          {src: require('../../block/room-card/img/room-card-11.png'), alt: 'room'}
+        ]
+      }
+    ];
+    const pages = [
+        {title: '1', path: '404.html', isActive: 'true'}, 
+        {title: '2', path: '404.html'},
+        {title: '3', path: '404.html'},
+        {title: '...', path: '404.html'},
+        {title: '15', path: '404.html'},
+        {title: 'next', path: '404.html', isNext: 'true'},
+      ];
+
+  section.rooms
+    .rooms__wrap
+      .rooms__title-wrap
+        +description({text: 'Номера, которые мы для вас подобрали', type: 'h1'})
+      .rooms__list-wrap
+        .rooms__list
+          each item in rooms 
+            .rooms__item
+              +room-card(item)
+      .rooms__pagination
+        +pagination(pages)
+
