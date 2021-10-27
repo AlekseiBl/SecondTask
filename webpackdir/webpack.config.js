@@ -67,6 +67,12 @@ module.exports = {
             filename: 'search-room.html',
             minify: false
           }),
+          new HtmlWebpackPlugin({
+            title: 'webpack Boilerplate',
+            template: './src/pages/room-details/room-details.pug',
+            filename: 'room-details.html',
+            minify: false
+          }),
         new CleanWebpackPlugin(),
         // применять изменения только при горячей перезагрузке
         new webpack.HotModuleReplacementPlugin(),
