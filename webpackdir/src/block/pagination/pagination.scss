@@ -1,6 +1,13 @@
 .pagination {
+  margin: 0;
+  padding: 0;
 
-  &__page {      
+  &__wrap {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__page {
     margin-top: 16px;
 
     &--active a {
@@ -37,11 +44,6 @@
         transition: background .2s ease;
       }
     }
-  }
-
-  &__wrap {
-    display: flex;
-    flex-direction: row;
   }
 
   &__link {
