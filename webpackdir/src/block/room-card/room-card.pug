@@ -20,9 +20,9 @@ mixin room-card({number, isLux, price, rating, review, images})
           span.slider__title-text= number
             if (isLux) 
               span.slider__title-text--special люкс 
-        span.slider__day-cost= price
+        span.slider__day-cost= price + '₽'
           span.slider__day-cost-text в сутки 
-      .slider__info-item
+      .slider__info-item.slider__info-item-padding
         +rate-button({rate: rating, lenght: '5'})
         span.slider__review= review
           span.slider__review-text Отзывов 
