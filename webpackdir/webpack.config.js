@@ -21,7 +21,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, './dist'),
         filename: '[name].bundle.js',
-        assetModuleFilename: 'assets/images/[name][ext]',
+        assetModuleFilename: './assets/images/[name][ext]',
     },
     plugins: [
         
