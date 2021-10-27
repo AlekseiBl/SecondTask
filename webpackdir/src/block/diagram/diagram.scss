@@ -1,0 +1,74 @@
+.diagram { 
+  position: relative;
+  display: flex;
+
+  &__canvas {
+    display: flex;
+
+    &-init {
+      fill: none;
+      stroke-width: 1.5; 
+      
+      &:hover {
+        stroke-width: 2;
+      }      
+    }     
+    
+  }  
+
+  &__vote {
+    position: absolute;
+    top: 22px;
+    left: 29px;
+    width: 64px;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $purpleColor;
+
+    &-count {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  &__label {    
+
+    &-list {
+      margin: 29px 0 0 30px;
+      padding: 0;
+      list-style: none;
+    }
+
+    &-item {
+      position: relative;
+      margin-bottom: 8px;
+      padding-left: 15px;
+      font-size: 14px;
+      color: $mainColor--opacity-75;
+
+      &::before {
+        position: absolute;
+        top: 3px;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        content: '';
+        background: linear-gradient(180deg, #919191 0%, #3d4975 100%);
+        border-radius: 50%;        
+      }
+
+      &--orange::before {
+        background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+      }
+
+      &--green::before {
+        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+      }
+
+      &--purple::before {
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+      }
+    }
+  }
+}
