@@ -1,0 +1,49 @@
+mixin diagram 
+  .diagram
+    .diagram__canvas
+      svg.diagram__canvas-chart(width='120' height='120' viewBox='0 0 35 35')       
+        circle.diagram__canvas-init(
+          r='15.9' cx='50%' cy='50%' 
+          stroke-dasharray= '49'+' 100' 
+          stroke-dashoffset= '-25' 
+          stroke='url(#orangeGradient)'
+        )
+        circle.diagram__canvas-init(
+          r='15.9' cx='50%' cy='50%'
+          stroke-dasharray= '24'+' 100' 
+          stroke-dashoffset= '-75' 
+          stroke='url(#greenGradient)'
+          )
+        circle.diagram__canvas-init(
+          r='15.9' cx='50%' cy='50%'
+          stroke-dasharray= '24'+' 100'
+          stroke='url(#purpleGradient)'
+          )
+        circle.diagram__canvas-init(
+          r='15.9' cx='50%' cy='50%'
+          stroke-dasharray= '0'+' 100'
+          stroke-dashoffset= '0'
+          stroke='url(#blackGradient)'
+          )        
+        defs
+          linearGradient(id='orangeGradient' gradientTransform='rotate(90)')
+            stop(offset='0%'  stop-color='#FFE39C') 
+            stop(offset='100%' stop-color='#FFBA9C') 
+          linearGradient(id='purpleGradient' gradientTransform='rotate(90)')
+            stop(offset='0%'  stop-color='#6FCF97') 
+            stop(offset='100%' stop-color='#66D2EA') 
+          linearGradient(id='greenGradient' gradientTransform='rotate(90)')
+            stop(offset='0%'  stop-color='#BC9CFF') 
+            stop(offset='100%' stop-color='#8BA4F9') 
+          linearGradient(id='blackGradient' gradientTransform='rotate(90)')
+            stop(offset='0%'  stop-color='#919191') 
+            stop(offset='100%' stop-color='#3D4975') 
+    p.diagram__vote #[b.diagram__vote-count 260] голосов
+    ul.diagram__label-list
+      li.diagram__label-item.diagram__label-item--orange Великолепно         
+      li.diagram__label-item.diagram__label-item--green Хорошо
+      li.diagram__label-item.diagram__label-item--purple Удовлетворительно
+      li.diagram__label-item Разочарован
+        
+        
+          
