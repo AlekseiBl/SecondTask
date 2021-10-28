@@ -1,0 +1,15 @@
+include ../../block/like-button/like-button.pug
+
+mixin comment({avatarSrc, name, date, likeCount, isActive, text})
+  article.comment
+    .comment__wrap
+      .comment__column 
+        .comment__avatar
+          img.comment__avatar-img(src=avatarSrc, alt=name)
+        .btn-like
+          +like-button({count:likeCount, isActive: isActive})
+      .comment__column
+        p.comment__name= name
+        p.comment__date= date
+        p.comment__text= text
+  
