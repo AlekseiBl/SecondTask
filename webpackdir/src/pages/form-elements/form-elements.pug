@@ -14,6 +14,7 @@ include ../../block/rate-button/rate-button.pug
 include ../../block/slider/slider.pug
 include ../../block/pagination/pagination.pug
 include ../../block/bullet-list/bullet-list.pug
+include ../../block/features/features.pug
 
 doctype html
 html(lang='ru')
@@ -132,17 +133,12 @@ html(lang='ru')
               +bullet-list({description: 'bullet list'})   
         .form-elements__row
           .form-elements__row-wrap
-            ul.features
-              li.features__item
-                div.features__img.features__img-emoticon
-                section.features__content
-                  h2.features__title Комфорт
-                  p.features__description Шумопоглощающие стены
-              li.features__item            
-                div.features__img.features__img-city
-                section.features__content
-                  h2.features__title Удобство
-                  p.features__description Окно в каждой из спален
+            +features({
+              items: [
+                {title: 'Комфорт', description: 'Шумопоглощающие стены', img: 'emoticon'},
+                {title: 'Удобство', description: 'Окно в каждой из спален', img: 'city'}
+              ]
+            })    
           .form-elements__row-wrap--large
             .form-elements__comment
               article.comment
