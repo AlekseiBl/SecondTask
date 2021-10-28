@@ -1,6 +1,6 @@
 .room-details {
   border-bottom: 1px solid $mainColor--opacity-25;
-  
+
   &__container {
     @include container;
   }
@@ -65,10 +65,6 @@
   &__bullet-wrap {
     display: flex;
     justify-content: space-between;    
-  }
-
-  &__bullet {
-    //width: 37%;
   }
 
   &__cancel {
