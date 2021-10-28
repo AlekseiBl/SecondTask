@@ -1,0 +1,16 @@
+mixin features({items})  
+  .features
+    ul.features__list
+      each item in items
+        -
+          const { title, description, img } = item;
+          let imgClass = 'features__img';
+          imgModifiers = ['emoticon', 'city', 'comfort'];
+          if(imgModifiers.includes(img)) {
+            imgClass += ` features__img-${img}`;
+          }
+        li.features__item
+          div(class=imgClass)
+          .features__content
+            h2.features__title= title
+            p.features__description= description
