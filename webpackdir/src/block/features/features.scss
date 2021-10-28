@@ -1,4 +1,7 @@
 .features {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
 
   &__list {
     margin: 0;
@@ -26,6 +29,7 @@
     height: 48px;
     justify-content: center;
     align-items: center;
+    
 
     &-emoticon {
       background: url('./img/emoticon.svg') 50% no-repeat;
@@ -38,11 +42,6 @@
     &-comfort {
       background: url('./img/comfort.svg') 50% no-repeat;
     }
-  }
-
-  &__content {
-    font-size: 14px;
-    line-height: 24px;
   }
 
   &__title {
