@@ -1,0 +1,90 @@
+.room-details {
+  border-bottom: 1px solid $mainColor--opacity-25;
+  
+  &__container {
+    @include container;
+  }
+
+  &__wrap{
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 0 57px;
+    align-items: flex-start;
+  }
+
+  &__content {
+    margin-right: 60px;
+    width: 60%;
+  }
+
+  &__row {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__features {
+
+    &-title {
+      margin-bottom: 23px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__impressions {
+
+    &-title {
+      margin-bottom: 21px;
+    }
+  }
+
+  &__reviews {
+
+    &-title-wrap {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 23px;
+    }
+    
+    &-count {
+      font-size: 14px;
+      line-height: 14px;
+      color: $mainColor--opacity-50;
+    }
+
+    &-wrap {
+      margin-bottom: 23px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__bullet-wrap {
+    display: flex;
+    justify-content: space-between;    
+  }
+
+  &__bullet {
+    //width: 37%;
+  }
+
+  &__cancel {
+    width: 50%;
+    padding-right: 10px;
+
+    &-title {
+      margin-bottom: 20px;
+    }
+
+    &-text {
+      font-size: 14px;
+      line-height: 24px;
+      color: $mainColor--opacity-75;
+    }
+  }
+
+
+}
