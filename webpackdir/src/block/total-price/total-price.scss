@@ -75,12 +75,16 @@
     margin-bottom: 15px;
 
     &-column {
-      max-width: 214px;
+      width: 75%;
       font-style: normal;
       font-weight: normal;
       font-size: 14px;
       line-height: 24px;
       color: $mainColor--opacity-75;
+
+      &--small {
+        width: 25%;
+      }
     }
 
     &-text {
@@ -90,18 +94,20 @@
         position: relative;
         margin: 0 0 16px;        
         line-height: 18px;
+        padding-right: 20px;
 
         &::after {
+          font-family: $font-stack;
           position: absolute;
-          box-sizing: border-box;
-          top: 3px;
-          right: -25px;
+          box-sizing: content-box;
+          top: -1px;
+          right: 1px;
           width: 18px;
           height: 18px;
           font-size: 12px;
           line-height: 19px;
-          font-weight: bold;
-          padding-left: 5.5px;
+          font-weight: 700;
+          text-align: center;
           content: 'i';
           color: $mainColor--opacity-25;
           border: 1px solid $mainColor--opacity-25;
