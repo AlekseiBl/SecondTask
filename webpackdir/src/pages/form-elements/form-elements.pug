@@ -15,6 +15,7 @@ include ../../block/slider/slider.pug
 include ../../block/pagination/pagination.pug
 include ../../block/bullet-list/bullet-list.pug
 include ../../block/features/features.pug
+include ../../block/comment/comment.pug
 
 doctype html
 html(lang='ru')
@@ -141,13 +142,11 @@ html(lang='ru')
             })    
           .form-elements__row-wrap--large
             .form-elements__comment
-              article.comment
-                .comment__wrap
-                  .comment__column 
-                    .comment__avatar
-                    .btn-like
-                      +like-button({count:12, isActive: true})
-                  .comment__column
-                    p.comment__title Мурад Сарафанов
-                    p.comment__date 5 дней назад
-                    p.comment__text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей. 
+              +comment({
+                  avatarSrc: require('../../block/comment/img/murad.jpg'),
+                  name: 'Мурад Сарафанов', 
+                  date: '5 дней назад', 
+                  likeCount: '12', 
+                  isActive: 'true', 
+                  text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
+                })
