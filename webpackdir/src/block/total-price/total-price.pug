@@ -18,13 +18,10 @@ mixin total-price
           +dropdown({type: '1', text: 'ГОСТИ', isButtons: 'true'}) 
         .total-price__calc
           .total-price__calc-column
-            p.total-price__calc-text
-              span.total-price__day-sum 9 990₽ х 4 суток
-            p.total-price__calc-text--extend
-              span.total-price__discount Сбор за услуги: скидка 2 179₽
-            p.total-price__calc-text--extend
-              span.total-price__extend-service Сбор за дополнительные услуги
-          .total-price__calc-column
+            p.total-price__calc-text 9 990₽ х 4 суток
+            p.total-price__calc-text--extend Сбор за услуги: скидка 2 179₽
+            p.total-price__calc-text--extend Сбор за дополнительные услуги
+          .total-price__calc-column--small
             P.total-price__count
               span.total-price__count-sum 39 960₽
             P.total-price__count
