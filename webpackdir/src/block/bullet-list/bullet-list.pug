@@ -4,7 +4,7 @@ include ../../block/description/description.pug
 mixin bullet-list({description})
   .bullet-list
     .bullet-list__title
-      +description({text: 'bullet list', type: 'h3', upperCase: 'true'}) 
+      +description({text: description, type: 'h2'}) 
     .bullet-list__bullet
       +bullet('Нельзя с питомцами') 
       +bullet('Без вечеринок и мероприятий') 
