@@ -1,6 +1,7 @@
 .diagram { 
   position: relative;
   display: flex;
+  padding-right: 30px;
 
   &__canvas {
     display: flex;
@@ -12,8 +13,7 @@
       &:hover {
         stroke-width: 2;
       }      
-    }     
-    
+    } 
   }  
 
   &__vote {
