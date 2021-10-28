@@ -12,13 +12,14 @@ mixin dropdown({type, text, status, isExpanded, isButtons})
     .dropdown-description--left= text
     .dropdown-description--right  #{status}
   .iqdropdown
-    p(class='iqdropdown-selection' data-buttons = isButtons  data-type=type data-expanded = isExpanded data-selection-text='Гость' data-text-plural='Гостей')
-    div(class='iqdropdown-menu')
-      each item in data        
-        div(class='iqdropdown-menu-option' data-id='item'+dataId)
-          - dataId +=1;
-          div
-            p(class='iqdropdown-item') #{item}
-      div(class='iqdropdown-menu-control')
+    p.iqdropdown-selection(data-buttons = isButtons  data-type=type data-expanded = isExpanded data-selection-text='Гость' data-text-plural='Гостей')
+    .iqdropdown-menu
+      .iqdropdown-menu__wrap
+        each item in data        
+          div.iqdropdown-menu-option(data-id='item'+dataId)
+            - dataId +=1;
+            div
+              p.iqdropdown-item #{item}
+        .iqdropdown-menu-control
       
         
