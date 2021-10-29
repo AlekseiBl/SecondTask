@@ -1,7 +1,7 @@
 .diagram { 
   position: relative;
   display: flex;
-  padding-right: 30px;
+  padding-right: 36px;
 
   &__canvas {
     display: flex;
@@ -42,7 +42,7 @@
 
     &-item {
       position: relative;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       padding-left: 15px;
       font-size: 14px;
       color: $mainColor--opacity-75;
