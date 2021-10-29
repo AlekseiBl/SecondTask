@@ -7,8 +7,14 @@ include ../../block/comment/comment.pug
 include ../../block/bullet-list/bullet-list.pug
 
 block content
-  .room-details
-    .room-details__container
+  .room-details    
+    .room-details__image
+      .room-details__image-wrap--large
+        img.room-details__image--large(src=require('./img/room-details-1.png'), alt='комната')
+      .room-details__image-wrap--small
+        img.room-details__image--small(src=require('./img/room-details-2.png'), alt='комната')
+        img.room-details__image--small(src=require('./img/room-details-3.png'), alt='комната')
+    .room-details__container  
       .room-details__wrap
         .room-details__content
           .room-details__row
@@ -24,7 +30,7 @@ block content
               })  
             .room-details__impressions
               .room-details__impressions-title  
-                +description({text: 'Впечатления о номере', type: 'h2'})
+                +description({text: 'Впечатления от номера', type: 'h2'})
               +diagram
           .room-details__row
             .room-details__reviews
@@ -45,7 +51,7 @@ block content
                 +comment({
                   avatarSrc: require('../../block/comment/img/patricia.jpg'),
                   name: 'Патрисия Стёклышкова', 
-                  date: 'неделю назад', 
+                  date: 'Неделю назад', 
                   likeCount: '2',  
                   text: 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'
                 })
