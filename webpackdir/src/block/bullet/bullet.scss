@@ -1,8 +1,10 @@
 .bullet {
+  max-width: 70%;
+  margin-bottom: 10px;
 
   &__text {
     position: relative;
-    padding-left: 18px;
+    padding-left: 20px;
     display: block;
     font-size: 14px;
     line-height: 24px;
