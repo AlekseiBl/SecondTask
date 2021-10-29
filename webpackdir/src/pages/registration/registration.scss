@@ -1,0 +1,14 @@
+.registration-page {
+  background: url('./img/bedroom.png') no-repeat;
+  background-size: cover;
+
+  &__container {
+    @include container;
+  }
+
+  &__wrap {
+    padding: 19px 0 19px;
+    display: flex;
+    justify-content: center;
+  }
+}

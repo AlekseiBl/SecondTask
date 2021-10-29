@@ -1,0 +1,14 @@
+.sign-in {
+  background: url('./img/bedroom-2.png') no-repeat;
+  background-size: cover;
+
+  &__container {
+    @include container;
+  }
+
+  &__wrap {
+    padding: 172px 0 172px;
+    display: flex;
+    justify-content: center;
+  }
+}
