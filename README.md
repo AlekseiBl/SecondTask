@@ -3,11 +3,11 @@
 Сайт подбора отелей.
 
 ## Pages
-***
+
 
 
 ## Installation
-***
+
 ```
 $ git clone https://github.com/AlekseiBl/SecondTask.git
 $ cd webpackdir
@@ -16,7 +16,7 @@ $ npm run build
 ```
 
 ## Run
-***
+
 
 ```
 $ git clone https://github.com/AlekseiBl/SecondTask.git
