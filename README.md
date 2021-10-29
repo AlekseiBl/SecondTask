@@ -2,7 +2,7 @@
 
 Сайт подбора отелей.
 
-[Toxin](https://alekseibl.github.io/SecondTask/index.html)
+[Toxin]()
 
 ## Pages
 
