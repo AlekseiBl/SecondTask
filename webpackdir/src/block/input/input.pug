@@ -1,28 +1,28 @@
 mixin input-default(text, status, value, focus)
-  - let isFocus = "";
+  - let isFocus = '';
   .input-form
     .input-description
       .input-desription--left #{text}
       .input-desription--right #{status}
     - 
-      if (focus==="focus") {
-        isFocus = " input-default__focus"
+      if (focus==='focus') {
+        isFocus = ' input-default__focus'
       } else {
-        isFocus = ""
+        isFocus = ''
       }
     
-    input(type="text" class="input-default"+isFocus placeholder=value onfocus="this.value=''" )
+    input(type='text' class='input-default'+isFocus placeholder=value)
 
 mixin input-placeholder(text)
     .input-form
       .input-description
         .input-desription--left #{text}
-    input(class="input-default input--masked" placeholder="ДД.ММ.ГГГГ")
+    input(class='input-default input--masked' placeholder='ДД.ММ.ГГГГ')
 
-mixin input-subscription (text, status, value)
+mixin input-subscription(text, status, value)
   .input-form
     .input-description
       .input-desription--left #{text}
     .input-subscription
-      input(type="text" class="input-subscription_input" placeholder=value)
-      button(type="submit" class="input-subscription_button")
+      input(type='text' class='input-subscription_input' placeholder=value)
+      button(type='submit' class='input-subscription_button')
