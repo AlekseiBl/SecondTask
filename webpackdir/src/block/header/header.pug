@@ -24,9 +24,9 @@ mixin header({isAuth})
               section.header__authenticated
                 p.header__authenticated-login Юлий Цезарь
             else 
-              .header__auth-login
-                +button({text:'войти', type: 'transparent', isSmall: 'true', isTight: 'true'}) 
+              .header__auth-login                
+                +button({text:'войти', type: 'transparent', isSmall: 'true', isTight: 'true', urlAddress: 'sign-in.html'}) 
               .header__auth-reg
-                +button({text:'зарегистрироваться', type: 'classic', isMedium: 'true', isTight: 'true'})
+                +button({text:'зарегистрироваться', type: 'classic', isMedium: 'true', isTight: 'true', urlAddress: 'registration.html'})
                 
                 

@@ -6,11 +6,11 @@ mixin checkbox-rich-group({description})
     .checkbox-rich-group__title                
       +description({text: description, type: 'h3', upperCase: 'true'})
     .checkbox-rich-group__checkbox 
-      +rich-checkbox(
-        'Широкий коридор',
-        'Ширина коридоров в номере не менее 91 см'
-      )              
-      +rich-checkbox(
-        'Помощник для инвалидов',
-        'На 1 этаже вас встретит специалист  и проводит до номера.'
-      ) 
+      +rich-checkbox({
+        title: 'Широкий коридор',
+        text: 'Ширина коридоров в номере не менее 91 см'
+      })              
+      +rich-checkbox({
+        title: 'Помощник для инвалидов',
+        text: 'На 1 этаже вас встретит специалист  и проводит до номера.'
+      }) 

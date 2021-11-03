@@ -6,6 +6,6 @@ mixin checkbox-group({description})
     .checkbox-group__title                
       +description({text: description, type: 'h3', upperCase: 'true'})
     .checkbox-group__checkbox 
-      +checkbox('Можно курить')
-      +checkbox('Можно с питомцами', 'checked')
-      +checkbox('Можно пригласить гостей (до 10 человек)', 'checked') 
+      +checkbox({ title: 'Можно курить'})
+      +checkbox({ title: 'Можно с питомцами', checked: 'checked'})
+      +checkbox({ title: 'Можно пригласить гостей (до 10 человек)', checked: 'checked'}) 

@@ -6,12 +6,12 @@ mixin datepicker({textStart, textEnd})
     div(class="input-desription--left")= textEnd
     input(id="date__end" type="text" class="datepicker-here datepicker--small datepicker-end" data-range="true" data-multiple-dates-separator=" - "  placeholder="ДД.ММ.ГГГГ")
 
-mixin datepicker-inline(text)
+mixin datepicker-inline({text})
   div(class="datepicker-cont")
     div(class="input-desription--left")= text
     div(type="text" class="datepicker-here datepicker--filter" data-range="true" data-clear-button="true" data-apply-button="true" data-multiple-dates-separator=" - " placeholder="ДД.ММ.ГГГГ")
 
-mixin datepickerRange(text)
+mixin datepickerRange({text})
   div(class="datepicker-cont")
     div(class="input-desription--left")= text
     input(id="dateRange__start" type="text" class="datepicker-here datepicker--filter datepicker--border" data-range="true" data-clear-button="true" data-multiple-dates-separator=" - "  data-apply-button="true" placeholder="ДД.ММ.ГГГГ")
