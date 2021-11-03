@@ -1,4 +1,4 @@
-mixin button({text, type, isVisited, isLarge, isMedium, isSmall, isTight, withArrow})
+mixin button({text, type, isVisited, isLarge, isMedium, isSmall, isTight, withArrow, urlAddress})
   -
     let buttonClass = 'btn';
 
@@ -33,9 +33,9 @@ mixin button({text, type, isVisited, isLarge, isMedium, isSmall, isTight, withAr
       buttonClass += ` btn--tight`;
     }
 
-  button(type='submit' class=buttonClass)
-    span.btn__text= text
-
-
-    
-
+  if (urlAddress) 
+    button(type='button' class=buttonClass onClick=`location.href='${urlAddress}'`)
+        span.btn__text= text
+  else 
+    button(type='submit' class=buttonClass)
+      span.btn__text= text
