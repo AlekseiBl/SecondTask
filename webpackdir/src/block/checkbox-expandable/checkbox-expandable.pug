@@ -4,9 +4,9 @@ include ../../block/description/description.pug
 mixin checkbox-expandable({description})     
   details.checkbox-expandable    
     summary.checkbox-expandable__summary= description
-    +checkbox('Завтрак')
-    +checkbox('Письменный стол', 'checked')
-    +checkbox('Стул для кормления', 'checked')
-    +checkbox('Кроватка', 'checked')
-    +checkbox('Телевизор')
-    +checkbox('Шампунь') 
+    +checkbox({title: 'Завтрак'})
+    +checkbox({title: 'Письменный стол', checked: 'checked'})
+    +checkbox({title: 'Стул для кормления', checked: 'checked'})
+    +checkbox({title: 'Кроватка', checked: 'checked'})
+    +checkbox({title: 'Телевизор'})
+    +checkbox({title: 'Шампунь'}) 
