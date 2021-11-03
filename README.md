@@ -39,7 +39,7 @@ $ npm run start:dev
 
 * [item-quantity-dropdown](https://www.npmjs.com/package/item-quantity-dropdown)
 
-*[air-datepicker](https://github.com/t1m0n/air-datepicker)
+* [air-datepicker](https://github.com/t1m0n/air-datepicker)
 
 
 
