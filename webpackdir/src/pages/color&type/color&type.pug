@@ -1,20 +1,19 @@
 doctype html
-html(lang="ru")
+html(lang='ru')
   head
     include ../../block/logo/logo.pug
-    include ../../block/description/description.pug
-    //meta charset="utf-8" - косяк синтаксиса, разобраться    
+    include ../../block/description/description.pug  
     title
   body                
     - 
       var color_array = [
-        {style: "color-type__square square--dark-shade-100", color_name:"Dark Shade 100%", color_hex:"#1F2041"}, 
-        {style: "color-type__square square--dark-shade-75", color_name:"Dark Shade 75%", color_hex:"#1F2041"},
-        {style: "color-type__square square--dark-shade-50", color_name:"Dark Shade 50%", color_hex:"#1F2041"},
-        {style: "color-type__square square--dark-shade-25", color_name:"Dark Shade 25%", color_hex:"#1F2041"},
-        {style: "color-type__square square--dark-shade-5", color_name:"Dark Shade 5%", color_hex:"#1F2041"},
-        {style: "color-type__square square--purple", color_name:"Purple", color_hex:"#BC9CFF"},
-        {style: "color-type__square square--green", color_name:"Green", color_hex:"#6FCF97"}]
+        {style: 'color-type__square square--dark-shade-100', color_name:'Dark Shade 100%', color_hex:'#1F2041'}, 
+        {style: 'color-type__square square--dark-shade-75', color_name:'Dark Shade 75%', color_hex:'#1F2041'},
+        {style: 'color-type__square square--dark-shade-50', color_name:'Dark Shade 50%', color_hex:'#1F2041'},
+        {style: 'color-type__square square--dark-shade-25', color_name:'Dark Shade 25%', color_hex:'#1F2041'},
+        {style: 'color-type__square square--dark-shade-5', color_name:'Dark Shade 5%', color_hex:'#1F2041'},
+        {style: 'color-type__square square--purple', color_name:'Purple', color_hex:'#BC9CFF'},
+        {style: 'color-type__square square--green', color_name:'Green', color_hex:'#6FCF97'}]
          
     mixin div-square()
       each item in color_array
@@ -34,25 +33,24 @@ html(lang="ru")
           .color-type__column-2-1
             .color-type__heading.color-type__heading--h1 H1
           .color-type__column-2-2
-            //h1.color-type__desription--h1 This one is the sub-section or widget title
             .color-type__description--h1
-              +description({text: "This one is the sub-section or widget title", type: "h1"})
+              +description({text: 'This one is the sub-section or widget title', type: 'h1'})
         .color-type__row-2-1 
           .color-type__column-2-1
             .color-type__heading.color-type__heading--h2 H2
           .color-type__column-2-2
             .color-type__description--h2
-              +description({text: "Next one is the item title inside widgets", type: "h2"})
+              +description({text: 'Next one is the item title inside widgets', type: 'h2'})
         .color-type__row-2-1.color-type__row-2-1--height 
           .color-type__column-2-1
             .color-type__heading.color-type__heading--h3 H3
           .color-type__column-2-2
             .color-type__description--h3
-              +description({text: "this is a label or cta text", type: "h3", upperCase: "true"}) 
+              +description({text: 'this is a label or cta text', type: 'h3', upperCase: 'true'}) 
         .color-type__row-2-1 
           .color-type__column-2-1
             .color-type__heading.color-type__heading--p Body
           .color-type__column-2-2.color-type__column-2-2--width
             .color-type__description--p
-              +description({text: "This is the body text which is used for most of the design, like paragraphs, lists, etc.", type: "body"}) 
+              +description({text: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.', type: 'body'}) 
         

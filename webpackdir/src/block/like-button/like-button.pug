@@ -1,10 +1,10 @@
 mixin like-button({count, isActive})
   -
-    let likeButtonClass = "like-btn__button";
+    let likeButtonClass = 'like-btn__button';
 
     if(isActive) {
-      likeButtonClass +=" like-btn__button--active"
+      likeButtonClass +=' like-btn__button--active'
     }
 
   .like-btn
-    button(class=likeButtonClass, type="button")= count     
+    button(class=likeButtonClass, type='button')= count     

@@ -1,14 +1,14 @@
 mixin description({text, type, upperCase})
   -
-    const types = ["h1", "h2", "h3", "body"];
+    const types = ['h1', 'h2', 'h3', 'body'];
     const typeTag = {
-      "h1": "h1",
-      "h2": "h2",
-      "h3": "h3",
-      "body": "p"
+      'h1': 'h1',
+      'h2': 'h2',
+      'h3': 'h3',
+      'body': 'p'
     };
 
-    let descriptionClass = "description";
+    let descriptionClass = 'description';
 
     if(types.includes(type)) {
       descriptionClass += ` description--${type}`;
