@@ -7,7 +7,7 @@ include ../../block/login/login.pug
 
 
 doctype html
-html(lang="ru")
+html(lang='ru')
   head 
     title      
   body
@@ -22,7 +22,7 @@ html(lang="ru")
         +login
       .cards__column
         .cards__datepicker
-          +datepicker-inline("")
+          +datepicker-inline({})
         .cards__slider
           +room-card({
             number: '888', isLux: 'true', price:'9900', rating: '5', review:'145',
