@@ -2,7 +2,20 @@
 
 Сайт подбора отелей.
 
-[Toxin]()
+[Toxin](https://alekseibl.github.io/SecondTask/landing.html)
+[Search room](https://alekseibl.github.io/SecondTask/search-room.html)
+[Room details](https://alekseibl.github.io/SecondTask/room-details.html)
+[Registration](https://alekseibl.github.io/SecondTask/registration.html)
+[Sign in](https://alekseibl.github.io/SecondTask/sign-in.html)
+
+UI Kit
+
+[Color&Type](https://alekseibl.github.io/SecondTask/color&type.html)
+[Form elements](https://alekseibl.github.io/SecondTask/form-elements.html)
+[Cards](https://alekseibl.github.io/SecondTask/cards.html)
+[Headers&Footers](https://alekseibl.github.io/SecondTask/headers&footers.html)
+
+
 
 ## Pages
 
