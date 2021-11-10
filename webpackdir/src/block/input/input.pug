@@ -1,4 +1,4 @@
-mixin input-default(text, status, value, focus)
+mixin input-default({text, status, value, focus})
   - let isFocus = '';
   .input-form
     .input-description
@@ -13,13 +13,13 @@ mixin input-default(text, status, value, focus)
     
     input(type='text' class='input-default'+isFocus placeholder=value)
 
-mixin input-placeholder(text)
+mixin input-placeholder({text})
     .input-form
       .input-description
         .input-desription--left #{text}
     input(class='input-default input--masked' placeholder='ДД.ММ.ГГГГ')
 
-mixin input-subscription(text, status, value)
+mixin input-subscription({text, status, value})
   .input-form
     .input-description
       .input-desription--left #{text}

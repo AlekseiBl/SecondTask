@@ -39,19 +39,19 @@ html(lang='ru')
         .form-elements__row
           .form-elements__inputs
             .form-input        
-              +input-default('TEXT FIELD','DEFAULT', 'Email')        
+              +input-default({text: 'TEXT FIELD', status: 'DEFAULT', value: 'Email'})        
             .form-input  
-              +input-default('TEXT FIELD','HOVER / FOCUS', 'This is pretty awesome', 'focus') 
+              +input-default({text: 'TEXT FIELD', status: 'HOVER / FOCUS', value: 'This is pretty awesome', focus: 'focus'}) 
             .form-input              
               +dropdown({type: 'peoples', text: 'dropdown', isButtons: 'true'})
             .form-input.form-input--last 
-              +input-placeholder('MASKED TEXT FIELD')
+              +input-placeholder({text: 'MASKED TEXT FIELD'})
             .input__date-inputs
               +datepicker({id: '1', textStart: 'DATE DROPDOWN', textEnd: 'DATE DROPDOWN'})
             .form-input--small
               +datepickerRange({text: ''})
             .form-input--small.form-input--small_subscription
-              +input-subscription('SUBSCRIPTION TEXT FIELD','', 'Email')  
+              +input-subscription({text: 'SUBSCRIPTION TEXT FIELD', value: 'Email'})  
           .form-elements__controls
             +checkbox-group({description: 'checkbox buttons'})
             .controls

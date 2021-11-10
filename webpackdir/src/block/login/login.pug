@@ -3,12 +3,12 @@ include ../../block/input/input.pug
 
 mixin login
   .login 
-    form(action="404.html")
+    form(action='404.html')
       .login__wrap
         .login__title Войти
         .login__auth-wrap
-          +input-default("","", "Email")
-          +input-default("","", "Пароль")
+          +input-default({value: 'Email'})
+          +input-default({value: 'Пароль'})
         .login__apply
           +button({text:'войти', type: 'classic', isLarge: 'true', withArrow: 'true'}) 
         .login__registration

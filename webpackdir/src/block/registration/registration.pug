@@ -4,19 +4,19 @@ include ../../block/toggle/toggle.pug
 
 mixin registration
   .registration
-    form(action="404.html")
+    form(action='404.html')
       .registration__wrap
         .registration__title Регистрация аккаунта
         .registration__name-wrap
-          +input-default("","", "Имя")
-          +input-default("","", "Фамилия")
+          +input-default({value:  'Имя'})
+          +input-default({value: 'Фамилия'})
         .registration__radio-buttons
           +radio-button
         .registration__input-date
-          +input-placeholder("Дата рождения")
+          +input-placeholder({text:'Дата рождения'})
         .registration__auth-wrap
-          +input-default("ДАННЫЕ ДЛЯ ВХОДА В СЕРВИС","", "Email")
-          +input-default("","", "Пароль")
+          +input-default({text: 'ДАННЫЕ ДЛЯ ВХОДА В СЕРВИС', value: 'Email'})
+          +input-default({value: 'Пароль'})
         .registration__toggle 
           +toggle-button({})
         .registration__registration
